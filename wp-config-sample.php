@@ -37,6 +37,10 @@ define( 'DB_CHARSET', 'utf8' );
 /** The database collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
 
+/** If image size is equal or bigger then load via high load mechanism.  */
+define( 'MIN_SIZE_OF_IMG_TO_HIGH_LOAD', 600000 );
+define( 'MAX_PARALLEL_HIGH_LOADS', 2 );
+
 /**#@+
  * Authentication unique keys and salts.
  *
