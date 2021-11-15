@@ -1,0 +1,47 @@
+{
+  "name": "u_ilve",
+  "version": "1.0.0",
+  "description": "Turnkey website. Special for you.",
+  "author": "Ilia Vetrov",
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+    "WordPress",
+    "Theme",
+    "Ilia Vetrov",
+    "ilvetrov"
+  ],
+  "homepage": "https://t.me/ilvetrov",
+  "scripts": {
+    "build": "gulp build",
+    "dev": "gulp dev"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.14.1",
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.0",
+    "glob": "^7.1.6",
+    "gsap": "^3.7.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-chmod": "^3.0.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-uglify-es": "^1.0.4",
+    "gulplog": "^1.0.0",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-jpeg-recompress": "^7.0.0",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-optipng": "^7.1.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-svgo": "^7.1.0",
+    "sass": "^1.39.0",
+    "through2": "^4.0.2",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0",
+    "watchify": "^4.0.0"
+  }
+}
