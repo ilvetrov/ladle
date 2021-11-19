@@ -1,6 +1,7 @@
 const { checkDisabled } = require("./check-disabled");
 const { checkThatObjectIsInScrollArea } = require("./distance-checking");
 const { OptimizedScroll } = require("./optimized-scroll-event");
+const { removeFromArray } = require("./remove-from-array");
 
 const maxParallelHighLoads = Number(document.querySelector('[meta="max-parallel-high-loads"]')?.content) || 400_000;
 

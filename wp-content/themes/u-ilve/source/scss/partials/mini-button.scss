@@ -1,0 +1,59 @@
+.mini-button {
+  display: inline-block;
+  height: 3.13rem;
+  width: 100%;
+  border-radius: .313rem;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: background-color .2s, color .2s;
+
+  &__text {
+    font-weight: 700;
+    letter-spacing: .06em;
+    line-height: 1.65;
+  }
+  &__arrow {
+    position: relative;
+    bottom: 1px;
+    width: 1.25rem;
+    margin-left: 3px;
+    transition: opacity .2s, transform .2s, filter .2s;
+  }
+
+  &:hover, &:focus {
+    background-color: #f7f7f7;
+  }
+  
+  &:not(#{&}_accent) & {
+    &__arrow {
+      filter: invert(1);
+    }
+  }
+
+  &_not-active {
+    color: #aaaaaa;
+    cursor: default;
+    background-color: #f2f2f2 !important;
+  }
+  &_not-active & {
+    &__arrow {
+      opacity: .3;
+    }
+  }
+
+  &_accent {
+    background-color: $accent-color;
+    color: #fff;
+  }
+  &_accent:hover, &_accent:focus {
+    background-color: darken($accent-color, $amount: 10);
+  }
+  &_accent:hover &, &_accent:focus & {
+    &__arrow {
+      transform: translateX(10%);
+    }
+  }
+}

@@ -13,6 +13,18 @@
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
+  font-weight: 500;
+  src: url('/wp-content/themes/u-ilve/assets/fonts/montserrat-500.eot');
+  src: local(''),
+       url('/wp-content/themes/u-ilve/assets/fonts/montserrat-500.eot?#iefix') format('embedded-opentype'),
+       url('/wp-content/themes/u-ilve/assets/fonts/montserrat-500.woff2') format('woff2'),
+       url('/wp-content/themes/u-ilve/assets/fonts/montserrat-500.woff') format('woff'),
+       url('/wp-content/themes/u-ilve/assets/fonts/montserrat-500.ttf') format('truetype'),
+       url('/wp-content/themes/u-ilve/assets/fonts/montserrat-500.svg#Montserrat') format('svg');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
   font-weight: 600;
   src: url('/wp-content/themes/u-ilve/assets/fonts/montserrat-600.eot');
   src: local(''),

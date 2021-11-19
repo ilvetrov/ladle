@@ -1,0 +1,74 @@
+.header {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+
+  &__block {
+    border-bottom: .063rem rgba(255, 255, 255, .2) solid;
+  }
+}
+.header-top {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo-wrap {
+    margin-right: 1.25rem;
+  }
+  &__site-descr {
+    max-width: 11.875rem;
+  }
+}
+.header-descr {
+  line-height: 1.5;
+  letter-spacing: .02em;
+  color: #fff;
+
+  &_dim {
+    color: rgba(255, 255, 255, .6);
+  }
+}
+.header-family-block {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.header-menu {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__links {
+    display: flex;
+
+    > li {
+      margin-right: 2.5rem;
+
+      > a {
+        color: rgba(255, 255, 255, .6);
+        font-size: 1.125rem;
+        line-height: 1.07;
+        letter-spacing: .02em;
+        @extend .not-link-style;
+        @extend .click-extender;
+        transition: color .2s;
+
+        &:hover, &:focus {
+          color: #fff;
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

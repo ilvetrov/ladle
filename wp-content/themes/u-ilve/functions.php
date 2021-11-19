@@ -7,3 +7,7 @@ require_once get_template_directory() . '/inc/scripts-styles.php';
 require_once get_template_directory() . '/inc/cache.php';
 
 require_once get_template_directory() . '/inc/async-img.php';
+
+if (is_admin()) {
+  require_once get_template_directory() . '/inc/created-by.php';
+}

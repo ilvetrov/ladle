@@ -16,6 +16,7 @@
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="preload" href="/wp-content/themes/u-ilve/assets/fonts/montserrat-400.woff2" as="font" crossorigin="anonymous">
+	<link rel="preload" href="/wp-content/themes/u-ilve/assets/fonts/montserrat-500.woff2" as="font" crossorigin="anonymous">
 	<link rel="preload" href="/wp-content/themes/u-ilve/assets/fonts/montserrat-600.woff2" as="font" crossorigin="anonymous">
 	<link rel="preload" href="/wp-content/themes/u-ilve/assets/fonts/montserrat-700.woff2" as="font" crossorigin="anonymous">
 	<meta meta="max-parallel-high-loads" content="<?php echo MAX_PARALLEL_HIGH_LOADS; ?>">
@@ -26,37 +27,107 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'u_ilve'); ?></a>
-
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if (is_front_page() && is_home()):
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
-				<?php
-			else:
-				?>
-				<p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
-				<?php
-			endif;
-			$u_ilve_description = get_bloginfo('description', 'display');
-			if ($u_ilve_description || is_customize_preview()):
-				?>
-				<p class="site-description"><?php echo $u_ilve_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'u_ilve'); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+	<header id="header" class="header">
+		<div class="header__top header__block header-top">
+			<div class="container-size">
+				<div class="header-top__container">
+					<div class="header-top__logo-block header-family-block">
+						<div class="header-top__logo-wrap">
+							<a href="/" class="logo click-extender">
+								<img <?php img_async_src('logo.png'); ?> alt="Ковш" class="header-top__logo logo__icon">
+							</a>
+							<!-- /.logo -->
+						</div>
+						<!-- /.header-top__logo-wrap -->
+						<div class="header-top__site-descr">
+							<span class="header-descr header-descr_dim">Аренда собственной спецтехники в г. Уфа</span>
+						</div>
+						<!-- /.header-top__descr -->
+					</div>
+					<!-- /.header-top__logo-block -->
+					<div class="header-top__payment-block payment-block header-family-block">
+						<img <?php img_async_src('terminal.png'); ?> alt="Терминал" class="payment-block__icon">
+						<div class="payment-block__descr">
+							<span class="header-descr"><span class="semi-bold">Принимаем любые формы оплаты:</span> наличный, безналичный, с НДС</span>
+						</div>
+						<!-- /.payment-block__descr -->
+					</div>
+					<!-- /.header-top__payment-block -->
+					<div class="header-top__messengers-block">
+						<ul class="messengers">
+							<li class="messengers__item">
+								<a href="https://t.me/" target="_blank" class="messengers__link click-extender click-extender_small">
+									<img <?php img_async_src('tg.png'); ?> alt="Telegram" class="messengers__icon">
+								</a>
+								<!-- /.messengers__link -->
+							</li>
+							<!-- /.messengers__item -->
+							<li class="messengers__item">
+								<a href="https://wa.me/79279353399" target="_blank" class="messengers__link click-extender click-extender_small">
+									<img <?php img_async_src('whatsapp.png'); ?> alt="WhatsApp" class="messengers__icon">
+								</a>
+								<!-- /.messengers__link -->
+							</li>
+							<!-- /.messengers__item -->
+							<li class="messengers__item">
+								<a href="viber://chat/?number=%279279353399"" class="messengers__link click-extender click-extender_small">
+									<img <?php img_async_src('viber.png'); ?> alt="Viber" class="messengers__icon">
+								</a>
+								<!-- /.messengers__link -->
+							</li>
+							<!-- /.messengers__item -->
+						</ul>
+						<!-- /.messengers -->
+					</div>
+					<!-- /.header-top__messengers-block -->
+					<div class="header-top__contact-block header-family-block">
+						<div class="header-top__phone-block phone-block">
+							<div class="phone-block__link-wrap">
+								<a href="tel:79279353399" class="phone phone-block__link not-link-style click-extender">
+									<img <?php img_async_src('phone.png'); ?> alt="Телефон" class="phone-icon phone__icon">
+									<span class="phone__number">+7 (927) 935-33-99</span>
+								</a>
+								<!-- /.phone -->
+							</div>
+							<!-- /.phone-block__link-wrap -->
+							<div class="phone-block__time phone-block__time_yellow">
+								Ежедневно 10:00 — 22:00
+							</div>
+							<!-- /.phone-block__time -->
+						</div>
+						<!-- /.header-top__phone-block -->
+					</div>
+					<!-- /.header-top__contact-block -->
+				</div>
+				<!-- /.header-top__container -->
+			</div>
+			<!-- /.container-size -->
+		</div>
+		<!-- /.header__top -->
+		<div class="header__menu header__block header-menu">
+			<div class="container-size">
+				<div class="header-menu__container">
+					<div class="header-menu__calculate-appeal">
+						<a href="/#test-calculator" class="calculate-appeal not-link-style click-extender">
+							<img <?php img_async_src('calc-white.png'); ?> alt="Тест-калькулятор" class="calculate-appeal__icon">
+							<div class="calculate-appeal__text">
+								Рассчитать стоимость
+							</div>
+							<!-- /.calculate-appeal__text -->
+						</a>
+						<!-- /.calculate-appeal -->
+					</div>
+					<!-- /.header-menu__calculate-appeal -->
+					<?php wp_nav_menu([
+						'menu' => 'header-menu',
+						'container' => '',
+						'menu_class' => 'header-menu__links'
+					]); ?>
+				</div>
+				<!-- /.header-menu__container -->
+			</div>
+			<!-- /.container-size -->
+		</div>
+		<!-- /.header__menu -->
+	</header>
+	<!-- /#header -->

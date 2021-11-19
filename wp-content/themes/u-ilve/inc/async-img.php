@@ -7,7 +7,7 @@ function img_async_src(String $src, $scroll = true, $isBackground = false, $full
 
 function get_img_async_src(String $src, $scroll = true, $isBackground = false, $fullPath = false, $manual = false)
 {
-  $outputSrc = $fullPath ? $src : (get_template_directory_uri() . '/assets/img/' . $src);
+  $outputSrc = get_output_src($src, $fullPath);
   if (preg_match('/\.svg$/', $src)) {
     if ($isBackground) {
       echo " style=\"background-image: url($outputSrc)\"";
@@ -17,10 +17,7 @@ function get_img_async_src(String $src, $scroll = true, $isBackground = false, $
     return;
   }
   if (!$isBackground) {
-    $imageSize = cache('size_of_' . $outputSrc, function() use ($outputSrc)
-    {
-      return getimagesize($outputSrc);
-    });
+    $imageSize = get_img_size($src, $fullPath);
     $width = $imageSize[0];
     $height = $imageSize[1];
     $blankForSrc = create_blank_for_src($width, $height);
@@ -33,6 +30,20 @@ function get_img_async_src(String $src, $scroll = true, $isBackground = false, $
   $htmlOutput = trim($htmlOfBlank . ' ' . $htmlOfAsyncAttribute);
 
   return $htmlOutput;
+}
+
+function get_img_size(String $src, $fullPath = false)
+{
+  $outputSrc = get_output_src($src, $fullPath);
+  return cache('size_of_' . $outputSrc, function() use ($outputSrc)
+  {
+    return getimagesize($outputSrc);
+  });
+}
+
+function get_output_src(String $src, $fullPath = false)
+{
+  return $fullPath ? $src : (get_template_directory_uri() . '/assets/img/' . $src);
 }
 
 function get_link_properties(String $src, $scroll = true, $isBackground = false, $fullPath = false, $manual = false)

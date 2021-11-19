@@ -1,0 +1,31 @@
+.section-backgrounds {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.section-title {
+  letter-spacing: .02em;
+  font-size: 2.25rem;
+  line-height: 1.67;
+
+  &_white {
+    color: #fff;
+  }
+  &_center {
+    text-align: center;
+  }
+  &_small {
+    font-size: 2rem;
+    line-height: 1.88;
+  }
+}
+.section-descr {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  letter-spacing: .02em;
+
+  &_center {
+    text-align: center;
+  }
+}

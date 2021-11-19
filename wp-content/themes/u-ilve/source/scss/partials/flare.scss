@@ -1,0 +1,58 @@
+$flare-width: 3.8rem;
+
+.flare {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: block;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  
+  &__wrap {
+    position: absolute;
+    left: -$flare-width * 2;
+    right: -$flare-width * 2;
+    top: 0;
+    bottom: 0;
+    animation: flare 3.5s ease-out infinite;
+  }
+  &__line {
+    position: absolute;
+    background-color: rgba(255, 255, 255, .4);
+    height: 100%;
+    width: 3.8rem;
+    top: 0;
+    left: 0;
+    transform: skew(-30deg);
+  }
+
+  &_one-time & {
+    &__wrap {
+      animation: none;
+    }
+  }
+  &_one-time.activated & {
+    &__wrap {
+      animation: flare 2s ease-out 1;
+    }
+  }
+}
+
+@keyframes flare {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.flare-parent, .flare-neighbor {
+  position: relative;
+}
