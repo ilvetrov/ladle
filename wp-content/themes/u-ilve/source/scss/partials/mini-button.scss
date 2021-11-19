@@ -33,12 +33,12 @@
     }
   }
 
-  &_not-active {
+  &.blocked {
     color: #aaaaaa;
     cursor: default;
     background-color: #f2f2f2 !important;
   }
-  &_not-active & {
+  &.blocked & {
     &__arrow {
       opacity: .3;
     }

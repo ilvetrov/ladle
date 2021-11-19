@@ -1,0 +1,70 @@
+.look-at-me {
+  animation: lookAtMeAnimation .5s 1;
+}
+.mobile-view {
+  .look-at-me {
+    animation: lookAtMeVerticalAnimation .5s 1;
+  }
+}
+@keyframes lookAtMeAnimation {
+  0% {
+    transform: translateX(0px);
+  }
+  20% {
+    transform: translateX(-1rem);
+  }
+  40% {
+    transform: translateX(.73rem);
+  }
+  60% {
+    transform: translateX(-.5rem);
+  }
+  80% {
+    transform: translateX(.3rem);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes lookAtMeVerticalAnimation {
+  0% {
+    transform: translateY(0px);
+  }
+  20% {
+    transform: translateY(-.6rem);
+  }
+  40% {
+    transform: translateY(.5rem);
+  }
+  60% {
+    transform: translateY(-.3rem);
+  }
+  80% {
+    transform: translateY(.2rem);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.look-at-me-inline {
+  animation: lookAtMeInlineAnimation .75s 1;
+}
+@keyframes lookAtMeInlineAnimation {
+  0% {
+    color: initial;
+    background-color: initial;
+  }
+  20% {
+    color: #fff;
+    background-color: #ff0000;
+  }
+  70% {
+    color: #fff;
+    background-color: #ff0000;
+  }
+  100% {
+    color: initial;
+    background-color: initial;
+  }
+}
