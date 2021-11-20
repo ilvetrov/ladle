@@ -91,7 +91,17 @@ class Quiz {
           case 'checkbox':
             return 'checkbox';
             break;
-        
+            
+          case 'radio':
+            return 'checkbox';
+            break;
+
+          case 'text':
+            return 'text';
+            
+          case 'date':
+            return 'date';
+
           default:
             break;
         }
@@ -112,6 +122,14 @@ class Quiz {
       case 'checkbox':
         return element.checked;
         break;
+
+      case 'text':
+        return element.value.trim() !== '';
+        break;
+
+      case 'date':
+        return element.value !== '';
+        break;
     
       default:
         break;
@@ -126,6 +144,14 @@ class Quiz {
     const type = Quiz.detectInsertingType(element);
     switch (type) {
       case 'checkbox':
+        return 'input';
+        break;
+    
+      case 'text':
+        return 'input';
+        break;
+    
+      case 'date':
         return 'input';
         break;
     

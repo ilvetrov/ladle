@@ -10,6 +10,13 @@ function crb_attach_theme_options()
   ->set_icon('dashicons-admin-site')
   ->set_page_menu_position(21)
   ->add_tab('Квиз', [
+    Field::make('text', 'quiz_final_title', 'Заголовок финальной секции')
+      ->set_required(),
+    Field::make('text', 'quiz_final_descr', 'Описание финальной секции'),
+    Field::make('checkbox', 'quiz_final_has_name', 'Спрашивать имя?')
+      ->set_help_text('Если оставить пустым, то будет только одно поле с телефоном.'),
+    Field::make('text', 'quiz_final_button', 'Текст финальной кнопки')
+      ->set_required(),
     Field::make('complex', 'quiz_questions', 'Квиз. Вопросы')
     ->set_required()
     ->setup_labels([

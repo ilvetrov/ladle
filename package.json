@@ -38,13 +38,13 @@
     "imagemin-optipng": "^7.1.0",
     "imagemin-pngquant": "^9.0.2",
     "imagemin-svgo": "^7.1.0",
+    "js-datepicker": "^5.18.0",
     "sass": "^1.39.0",
     "through2": "^4.0.2",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0",
-    "watchify": "^4.0.0"
-  },
-  "dependencies": {
+    "watchify": "^4.0.0",
     "nouislider": "^15.5.0"
-  }
+  },
+  "dependencies": {}
 }

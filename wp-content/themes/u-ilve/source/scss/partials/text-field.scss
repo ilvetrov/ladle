@@ -1,0 +1,33 @@
+.text-field {
+  width: 100%;
+  background-color: #f7f7f7;
+  border: .0625rem solid #e6e6e6;
+  border-radius: .313rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  line-height: 1.4;
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+  letter-spacing: .06em;
+
+  &_small {
+    width: auto;
+  }
+  &_form {
+    display: inline-block;
+    text-align: center;
+  }
+}
+
+.button-field {
+  @extend .text-field;
+  @extend .text-field_form;
+  font-weight: 700;
+  background-color: $accent-color;
+  color: #fff;
+  transition: background-color .2s;
+
+  &:hover, &:focus {
+    background-color: darken($accent-color, $amount: 10);
+  }
+}
