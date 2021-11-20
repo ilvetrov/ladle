@@ -29,6 +29,7 @@ class Quiz {
     toButtons.forEach(toButton => {
       const toPosition = Number(toButton.getAttribute('data-quiz-to'));
       toButton.addEventListener('click', () => {
+        if (toButton.classList.contains('blocked') && toButton.classList.contains('js-quiz-order-dot')) return;
         if (toButton.classList.contains('blocked')) {
           lookAtMeAnimation(this.blocks[this.currentPosition].contentElement);
           return;
@@ -48,21 +49,18 @@ class Quiz {
   initActionExistsButtons(buttons) {
     buttons.forEach(button => {
       button.addEventListener(Quiz.getChangingEvent(button), () => {
+        const buttonActionName = button.getAttribute('data-quiz-action-exists');
+        const sameButtons = Array.from(buttons).filter(testButton => testButton.getAttribute('data-quiz-action-exists') === buttonActionName);
         
         let exists = false;
-        for (let i = 0; i < buttons.length; i++) {
-          const checkingButton = buttons[i];
+        for (let i = 0; i < sameButtons.length; i++) {
+          const checkingButton = sameButtons[i];
           if (Quiz.checkThatActionExists(checkingButton)) {
             exists = true;
             break;
           }
         }
-        if (exists) {
-          this.actionExistsSubscribers.forEach(subscriber => subscriber.actionHandler());
-        } else {
-          this.actionExistsSubscribers.forEach(subscriber => subscriber.nonActionHandler());
-        }
-
+        this.actionExistsSubscribers.filter(subscriber => subscriber.getAttribute('data-quiz-action-subscribe') === button.getAttribute('data-quiz-action-exists')).forEach(subscriber => exists ? subscriber.actionHandler() : subscriber.nonActionHandler());
       });
     });
   }
@@ -181,7 +179,7 @@ class QuizBlock {
   show() {
     // this.blockElement.classList.remove('disabled');
     this.blockElement.classList.remove('hidden-right');
-    this.blockElement.classList.remove('hidden-left');
+    this.blockElement.classList.remove( 'hidden-left');
   }
 
   /**
@@ -192,7 +190,7 @@ class QuizBlock {
   static hideAll(name, exception) {
     const blocks = this.all[name];
     /**
-     * @type {number[]}
+     * @type {number}
      */
     const exceptionOrder = typeof exception === 'number' ? exception : exception.order;
     for (const order in blocks) {
@@ -237,7 +235,7 @@ const handlers = {
    */
   activateNextButton: (nextButton) => {
     nextButton.classList.remove('blocked');
-    nextButton.classList.add('mini-button_accent');
+    nextButton.classList.contains('mini-button') && nextButton.classList.add('mini-button_accent');
     (nextButton.getElementsByClassName('flare') || [])[0]?.classList.add('activated');
   },
   /**
@@ -245,7 +243,7 @@ const handlers = {
    */
   deactivateNextButton: (nextButton) => {
     nextButton.classList.add('blocked');
-    nextButton.classList.remove('mini-button_accent');
+    nextButton.classList.contains('mini-button') && nextButton.classList.remove('mini-button_accent');
     (nextButton.getElementsByClassName('flare') || [])[0]?.classList.remove('activated');
   },
 }

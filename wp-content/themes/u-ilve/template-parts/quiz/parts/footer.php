@@ -16,7 +16,7 @@
         class="mini-button blocked not-button-style flare-parent"
         data-quiz-to="<?php echo $args['current_order'] + 1; ?>"
         data-quiz-of="<?php echo $args['name']; ?>"
-        data-quiz-action-subscribe="<?php echo $args['name']; ?>-exists"
+        data-quiz-action-subscribe="<?php echo $args['question_name']; ?>-exists"
         data-quiz-action-handler="activateNextButton"
         data-quiz-non-action-handler="deactivateNextButton"
       >

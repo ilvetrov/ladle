@@ -8,7 +8,8 @@
           'question' => $question,
           'questions' => $quiz_questions,
           'current_order' => $question_order,
-          'name' => $args['name']
+          'name' => $args['name'],
+          'question_name' => $question_name
         ]); ?>
         <div class="quiz__content">
           <?php get_template_part('template-parts/quiz/types/' . $question['type'], '', [
