@@ -30,6 +30,8 @@ function crb_attach_theme_options()
           'text_field' => 'Текстовое поле',
           'date' => 'Дата',
         ]),
+      Field::make('checkbox', 'need_action', 'Требовать действие')
+        ->set_help_text('Если отмечено, тогда пользователя не пустят к следующему вопросу, пока он не выберет/наберёт что-то в текущем.'),
 
       // Select
       Field::make('html', 'select_html', 'Описание типа')

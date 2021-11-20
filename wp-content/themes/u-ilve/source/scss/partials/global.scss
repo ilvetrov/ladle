@@ -50,3 +50,14 @@ strong {
   background: #ff2626;
   color: #fff;
 }
+.hide-number-arrows {
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  &[type=number] {
+    -moz-appearance: textfield;
+  }
+}

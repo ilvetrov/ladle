@@ -12,11 +12,6 @@
           "
           data-quiz-to="<?php echo $question_order; ?>"
           data-quiz-of="<?php echo $args['name']; ?>"
-          <?php if ($question_order - $args['current_order'] <= 1): ?>
-            data-quiz-action-subscribe="<?php echo $args['question_name']; ?>-exists"
-            data-quiz-action-handler="activateNextButton"
-            data-quiz-non-action-handler="deactivateNextButton"
-          <?php endif; ?>
         >
           <div class="quiz-order-dot__text">
             <?php echo $question_order + 1; ?>

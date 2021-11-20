@@ -85,6 +85,23 @@
   &__button {
     width: 10rem;
   }
+  &__range-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.56rem;
+  }
+  &__range-days {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: .938rem;
+  }
+  &__range-day {
+    font-size: .875rem;
+    font-weight: 600;
+    color: #bdbdbd;
+  }
 }
 
 .quiz-wrap {
@@ -122,7 +139,7 @@
   line-height: 1;
   letter-spacing: .02em;
   background-color: #d5d5d5;
-  color: rgba(0, 0, 0, .3);
+  color: rgba(0, 0, 0, .2);
   transition: background-color .2s;
 
   &__text {

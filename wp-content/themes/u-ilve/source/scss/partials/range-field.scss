@@ -1,0 +1,17 @@
+.range-field {
+  position: relative;
+
+  &__input {
+    width: 5rem;
+    height: 3.125rem;
+    border-radius: .625rem;
+    text-align: center;
+    border: 1px solid #ececec;
+  }
+  &__label {
+    position: absolute;
+    right: -1rem;
+    top: 50%;
+    transform: translateX(100%) translateY(-50%);
+  }
+}

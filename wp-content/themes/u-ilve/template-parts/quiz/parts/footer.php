@@ -13,12 +13,23 @@
     <?php endif; ?>
     <div class="quiz__button <?php echo ($args['current_order'] === 0 ? 'quiz__button_single' : ''); ?>">
       <button
-        class="mini-button blocked not-button-style flare-parent"
+        class="
+          mini-button
+          flare-parent
+          not-button-style
+          <?php if ($args['question']['need_action']): ?>
+            blocked
+          <?php else: ?>
+            mini-button_accent
+          <?php endif; ?>
+        "
         data-quiz-to="<?php echo $args['current_order'] + 1; ?>"
         data-quiz-of="<?php echo $args['name']; ?>"
-        data-quiz-action-subscribe="<?php echo $args['question_name']; ?>-exists"
-        data-quiz-action-handler="activateNextButton"
-        data-quiz-non-action-handler="deactivateNextButton"
+        <?php if ($args['question']['need_action']): ?>
+          data-quiz-action-subscribe="<?php echo $args['question_name']; ?>-exists"
+          data-quiz-action-handler="activateNextButton"
+          data-quiz-non-action-handler="deactivateNextButton"
+        <?php endif; ?>
       >
         <div class="flare flare_one-time">
           <div class="flare__wrap">
