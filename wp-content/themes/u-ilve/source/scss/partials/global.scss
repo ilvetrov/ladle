@@ -10,7 +10,7 @@ body {
   line-height: 1.30;
   color: $default-color;
   box-sizing: border-box;
-  min-height: 3000px; // for dev
+  min-height: 7000px; // for dev
 }
 * {
   box-sizing: inherit;
@@ -47,7 +47,7 @@ strong {
   max-height: 0px;
 }
 ::selection {
-  background: #ff2626;
+  background: #ff6e6e;
   color: #fff;
 }
 .hide-number-arrows {

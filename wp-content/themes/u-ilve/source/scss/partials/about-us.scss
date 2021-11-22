@@ -1,0 +1,45 @@
+.about-us {
+  padding-top: 6.875rem;
+  padding-bottom: 6.25rem;
+
+  &__title {
+    margin-bottom: 1.6rem;
+  }
+  &__descr {
+    margin-bottom: 3.5rem;
+  }
+}
+
+.our-benefit {
+  display: inline-block;
+  padding-top: 3.125rem;
+  padding-bottom: 3.7rem;
+  background-color: #fff;
+  box-shadow: 0 0 2.5rem rgba($color: #000, $alpha: .05);
+  border-radius: .625rem;
+  max-width: 24.375rem;
+  
+  &__content {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  &__icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5625rem;
+  }
+  &__title {
+    font-size: 1.125rem;
+    letter-spacing: .02em;
+    line-height: 1.44;
+    font-weight: 600;
+    margin-bottom: 1.37rem;
+    text-align: center;
+  }
+  &__descr {
+    line-height: 1.2;
+    letter-spacing: .02em;
+    color: rgba($color: #000, $alpha: .6);
+    text-align: center;
+  }
+}

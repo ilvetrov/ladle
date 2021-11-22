@@ -217,7 +217,8 @@
         ""
     ],
     "pgcache.reject.cookie": [
-        "wptouch_switch_toggle"
+        "wptouch_switch_toggle",
+        "wptt"
     ],
     "pgcache.reject.request_head": false,
     "pgcache.purge.front_page": false,

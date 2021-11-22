@@ -9,11 +9,9 @@
   align-items: center;
   overflow: hidden;
   transition: background-color .2s, color .2s;
+  letter-spacing: .06em;
+  line-height: 1.65;
 
-  &__text {
-    letter-spacing: .06em;
-    line-height: 1.65;
-  }
   &__arrow {
     position: relative;
     bottom: 1px;
@@ -55,6 +53,13 @@
   &_accent:hover &, &_accent:focus & {
     &__arrow {
       transform: translateX(10%);
+    }
+  }
+  &_secondary {
+    background-color: #d9d9d9;
+    
+    &:hover, &:focus {
+      background-color: #e2e2e2;
     }
   }
 }

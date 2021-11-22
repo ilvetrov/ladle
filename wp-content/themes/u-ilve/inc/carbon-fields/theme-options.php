@@ -166,5 +166,37 @@ function crb_attach_theme_options()
           ]
         ]),
     ])
+  ])
+  ->add_tab('Характеристики', [
+    Field::make('complex', 'technique_specifications', 'Характеристики спецтехники')
+      ->setup_labels([
+        'plural_name' => 'характеристики',
+        'singular_name' => 'характеристику'
+      ])
+      ->add_fields([
+        Field::make('text', 'name', 'Название')
+          ->set_required()
+          ->set_help_text('Например: <code>Производитель</code>, <code>Масса техники</code>.'),
+        Field::make('text', 'sign', 'Символ единицы измерения')
+          ->set_help_text('Например: <code>кг</code>, <code>л/с</code>, <code>куб.м</code>.<br>Необязательно.'),
+        Field::make('text', 'id', 'ID')
+          ->set_required()
+          ->set_help_text('
+          Уникальный идентификатор. Задайте один раз и не меняйте.
+          <br><strong>Правила создания:</strong>
+          <br>• Индентификатор должен быть на латинице (английские буквы).
+          <br>Например: <code>country</code>, <code>weight</code>, <code>strana</code>.
+          <br>• Вместо пробела должен быть знак _.
+          <br>Например: <code>engine_power</code>, <code>dvigat_moch</code>.
+          <br>• Не должен начинаться с цифры.
+          <br>Например: пишите <code>engine_3</code> вместо <code>3_engine</code>.
+          <br>• Может быть или на английском языке, или транслитом.
+          <br>Например: <code>country</code> или <code>strana</code> — всё хорошо.
+          <br>• Пишите маленькими буквами.
+          <br>Например: <code>metr</code> вместо <code>Metr</code>.
+          <br>• Не меняйте. Создали один раз — и оставьте так.
+          <br>Если поменяете, то характеристика слетит у всех спецтехники.
+          '),
+      ])
   ]);
 }

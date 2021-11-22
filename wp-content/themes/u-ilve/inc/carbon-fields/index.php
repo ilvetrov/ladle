@@ -8,6 +8,7 @@ function crb_load() {
 }
 
 require_once 'theme-options.php';
+require_once 'technique-options.php';
 
 $cached_theme_options = [];
 function carbon_get_cached_theme_option($field_name)
@@ -29,4 +30,15 @@ function carbon_get_cached_term_meta($id, $name, $container_id = '')
     $cached_term_options[$cache_name] = carbon_get_term_meta($id, $name, $container_id);
   }
   return $cached_term_options[$cache_name];
+}
+
+$cached_post_options = [];
+function carbon_get_cached_post_meta($id, $name, $container_id = '')
+{
+  global $cached_post_options;
+  $cache_name = "$id-$name-$container_id";
+  if (!array_key_exists($cache_name, $cached_post_options)) {
+    $cached_post_options[$cache_name] = carbon_get_post_meta($id, $name, $container_id);
+  }
+  return $cached_post_options[$cache_name];
 }

@@ -1,0 +1,73 @@
+.other-companies {
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  &__container {
+    position: relative;
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+  }
+  &__content {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+  }
+  &__background {
+    position: absolute;
+    left: -5.3rem;
+    bottom: -5.23rem;
+    pointer-events: none;
+    user-select: none;
+  }
+}
+.other-companies-problems {
+  padding-top: 2.7rem;
+  padding-bottom: 3.31rem;
+  padding-left: 3.125rem;
+  padding-right: 3.125rem;
+  background-color: #fff;
+  border-radius: .625rem;
+
+  &__list {
+    margin-bottom: 1.5rem;
+  }
+  &__item {
+    font-size: 1.125rem;
+    line-height: 2;
+    letter-spacing: .02em;
+    display: flex;
+    align-items: center;
+  }
+  &__icon {
+    margin-right: .875rem;
+    width: 1.375rem;
+    height: auto;
+  }
+}
+.other-companies-our-experience {
+  padding-left: 1.81rem;
+  padding-right: 1.4rem;
+  padding-top: 1.3rem;
+  padding-bottom: 1.15rem;
+  background-color: $accent-color;
+  border-radius: .625rem;
+  position: relative;
+  
+  &__arrow {
+    position: absolute;
+    left: 1.375rem;
+    top: -.45rem;
+    background-color: $accent-color;
+    width: 2.125rem;
+    height: 2.125rem;
+    border-radius: .6rem;
+    transform: rotate(45deg);
+  }
+  &__content {
+    position: relative;
+    color: #fff;
+    font-size: 1.125rem;
+    line-height: 1.44;
+    letter-spacing: .06em;
+  }
+}

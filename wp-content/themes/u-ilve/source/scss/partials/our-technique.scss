@@ -1,0 +1,129 @@
+.our-technique {
+  padding-top: 5.38rem;
+  padding-bottom: 6.375rem;
+  background-color: #f7f7f7;
+
+  &__title {
+    margin-bottom: 1.438rem;
+  }
+  &__descr {
+    margin-bottom: 3.5rem;
+  }
+}
+
+.technique-preview {
+  width: 24.375rem;
+  position: relative;
+
+  &__image-wrap {
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    justify-content: center;
+    margin-bottom: 1.9rem;
+  }
+  &__image {
+    height: 10.875rem;
+    width: auto;
+    max-width: 97%;
+  }
+  &__background {
+    position: absolute;
+    top: 7.6875rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    border: .0625rem solid #e8e8e8;
+    border-radius: .625rem;
+  }
+  &__wrap {
+    position: relative;
+  }
+  &__content {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-bottom: 3.375rem;
+  }
+  &__title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 1.44;
+    letter-spacing: .02em;
+    margin-bottom: .9375rem;
+  }
+  &__specifications {
+    margin-bottom: 1rem;
+  }
+  &__specification {
+    margin-bottom: .5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__price-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1.5625rem;
+  }
+  &__price-text {
+    line-height: 1.625;
+    letter-spacing: .02em;
+    color: rgba($color: #000, $alpha: .6);
+  }
+  &__price {
+    font-size: 1.25rem;
+    line-height: 1.3;
+    letter-spacing: .02em;
+    font-weight: 600;
+  }
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+  }
+  &__button {
+    width: 9.375rem;
+  }
+  &__calc-appeal-wrap {
+    display: flex;
+    justify-content: center;
+  }
+  &__calc-appeal {
+    color: $accent-color;
+    letter-spacing: .02em;
+    line-height: 1.3;
+    text-align: center;
+    border-bottom: .0625rem dashed $accent-color;
+    transition: color .2s, border-bottom-color .2s;
+
+    &:hover, &:focus {
+      color: #8b2a00;
+      border-bottom-color: #8b2a00;
+    }
+  }
+}
+
+.technique-specification {
+  font-size: .875rem;
+  line-height: 1.6;
+  letter-spacing: .02em;
+  border-bottom: .0625rem solid rgba($color: #000, $alpha: .1);
+  
+  &__content {
+    padding-left: .4375rem;
+    padding-right: .4375rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__name {
+    margin-bottom: .5rem;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}

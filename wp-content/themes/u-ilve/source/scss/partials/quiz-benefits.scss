@@ -1,0 +1,104 @@
+.quiz-benefits {
+  border-radius: .625rem;
+  overflow: hidden;
+  padding-top: 3.06rem;
+  padding-bottom: 3.25rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  height: 100%;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__content {
+    margin-top: 2.19rem;
+  }
+  &__title {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    letter-spacing: .02em;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: .57rem;
+  }
+  &__descr {
+    font-size: 1.125rem;
+    line-height: 1.19;
+    letter-spacing: .02em;
+    color: rgba($color: #fff, $alpha: .6);
+    text-align: center;
+    margin-bottom: 1.813rem;
+  }
+  &__list {
+    padding-left: 2.19rem;
+  }
+  &__item {
+    margin-bottom: 1.125rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.quiz-benefit {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &__order-wrap {
+    width: 5.38rem;
+    min-width: 5.38rem;
+    max-width: 5.38rem;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+  }
+  &__order {
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: .54;
+    letter-spacing: .02em;
+    color: rgba($color: #fff, $alpha: .5);
+  }
+  &__icon {
+    height: 3.25rem;
+    position: absolute;
+  }
+  &__text {
+    font-size: .875rem;
+    line-height: 1.43;
+    letter-spacing: .02em;
+  }
+}
+
+.quiz-person {
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+
+  &__position {
+    font-size: 1rem;
+    line-height: 1.19;
+    letter-spacing: .02em;
+    font-weight: 600;
+    margin-bottom: .125rem;
+  }
+  &__name {
+    font-size: 1.125rem;
+    line-height: 2;
+    letter-spacing: .02em;
+    margin-bottom: .67rem;
+  }
+  &__descr {
+    font-size: 1rem;
+    line-height: 1.19;
+    letter-spacing: .02em;
+    color: rgba($color: #fff, $alpha: .6);
+  }
+  &__image {
+    width: 7.8125rem;
+    height: 7.8125rem;
+    border-radius: 7.8125rem;
+  }
+}

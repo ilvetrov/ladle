@@ -1,0 +1,12 @@
+.adaptive-gallery {
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  &__item {
+    display: inline-block;
+    margin-bottom: .9375rem;
+  }
+}
