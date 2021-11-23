@@ -31,6 +31,23 @@
     }
   }
 
+  &_all-width {
+    width: 100%;
+  }
+  &_all-width & {
+    &__text {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  &_small & {
+    &__text {
+      padding-top: 1.49rem;
+      padding-bottom: 1.49rem;
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+  }
   &_wide & {
     &__text {
       padding-left: 3.19rem;

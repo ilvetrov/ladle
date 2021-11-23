@@ -1,0 +1,101 @@
+.consultation-section {
+  padding-top: 5.3rem;
+  padding-bottom: 6.5rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+  }
+  &__title {
+    margin-bottom: 1.5rem;
+  }
+  &__descr {
+    margin-bottom: 3.44rem;
+  }
+  &__person-block {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 0;
+    transform: translateX(-97%);
+  }
+  &__desktop-static {
+    position: relative;
+    z-index: 1;
+    max-width: max-content;
+  }
+  &__specialist-benefits {
+    max-width: max-content;
+  }
+  &__right-side {
+    position: relative;
+  }
+}
+.consultation-specialist-benefits {
+  max-width: max-content;
+
+  &__title {
+    max-width: max-content;
+    font-size: 1.375rem;
+    line-height: 1.25;
+    letter-spacing: .02em;
+    margin-bottom: 1.75rem;
+    color: #fff;
+    font-weight: 700;
+  }
+  &__benefit {
+    max-width: 16.8rem;
+    margin-bottom: 1.25rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.consultation-person {
+  &__photo {
+    position: absolute;
+    bottom: -6.5rem;  
+    left: -50%;
+    transform: translateX(2.063rem);
+    pointer-events: none;
+    user-select: none;
+  }
+  &__name-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+  &__name {
+    display: inline-block;
+    padding-top: .9375rem;
+    padding-bottom: .9375rem;
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+    background-color: #fff;
+    border-radius: .3125rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    margin-bottom: .25rem;
+    line-height: 1.25;
+  }
+  &__position {
+    width: 13.44rem;
+    display: inline-block;
+    padding-top: 1.125rem;
+    padding-bottom: 1.125rem;
+    font-size: .875rem;
+    text-align: center;
+    background-color: #fff;
+    border-radius: .3125rem;
+    color: rgba($color: #000, $alpha: .6);
+    letter-spacing: .02em;
+    margin-left: 2.625rem;
+    line-height: 1.2;
+  }
+}

@@ -1,0 +1,15 @@
+.main-text-section {
+  padding-top: 6rem;
+  padding-bottom: 6.5rem;
+
+  &__title {
+    font-size: 1.5rem;
+    line-height: 1.25;
+    margin-bottom: 1.25rem;
+    font-weight: 700;
+  }
+  &__text {
+    font-size: .875rem;
+    line-height: 1.5;
+  }
+}

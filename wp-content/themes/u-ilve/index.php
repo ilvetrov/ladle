@@ -150,19 +150,19 @@ get_header();
 									<?php
 									$benefits = [
 										[
-											'icon' => '',
+											'icon' => 'excavator-icon.png',
 											'text' => 'Бесплатный подбор спецтехники под задачу'
 										],
 										[
-											'icon' => '',
+											'icon' => 'calculator-icon.png',
 											'text' => 'Расчёт точной<br> стоимости аренды'
 										],
 										[
-											'icon' => '',
+											'icon' => 'time-icon.png',
 											'text' => 'Точное время прибытия техники на объект'
 										],
 										[
-											'icon' => '',
+											'icon' => 'discount-icon.png',
 											'text' => 'Закреплённую скидку<br> -10% на первый заказ'
 										],
 									];
@@ -176,7 +176,10 @@ get_header();
 													</div>
 													<!-- /.quiz-benefit__order -->
 													<div class="quiz-benefit__icon">
-	
+														<div class="benefit-icon" <?php img_async_src('round-wrap.png', true, true); ?>>
+															<img <?php img_async_src($benefit['icon']) ?> alt="" class="benefit-icon__inner">
+														</div>
+														<!-- /.benefit-icon -->
 													</div>
 													<!-- /.quiz-benefit__icon -->
 												</div>
@@ -822,6 +825,170 @@ get_header();
 			<!-- /.container-size -->
 		</section>
 		<!-- /.steps-to-get-section -->
+
+		<section class="main-text-section">
+			<div class="container-size">
+				<div class="main-text-section__container">
+					<h2 class="main-text-section__title">
+						Главный текст для SEO-оптимизации
+					</h2>
+					<!-- /.main-text-section__title -->
+					<h2 class="main-text-section__text">
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. At quas repellat nisi iusto velit necessitatibus quae ea molestiae fugit autem corporis illo, tenetur commodi veniam consectetur. Quod totam repellat facilis?
+						Consequuntur provident quia quaerat laborum nobis nihil, ipsum iusto expedita quos laboriosam placeat dolor voluptatem libero sed natus distinctio incidunt omnis earum illo. Quia dolor veniam ex. Provident, laboriosam ratione!
+						Ad veritatis earum doloremque eos doloribus reprehenderit atque, architecto iste soluta praesentium! Perspiciatis ipsum voluptatem sapiente nesciunt quasi ab accusantium suscipit sint ut, voluptas numquam impedit est minus consectetur maxime?
+						Nobis, voluptatem adipisci laboriosam sequi ratione porro odit dicta molestiae tempora quos repellendus itaque quae ad aperiam saepe temporibus tenetur totam fugit aspernatur enim, eaque debitis consectetur magnam! Praesentium, molestias!
+					</h2>
+					<!-- /.main-text-section__text -->
+				</div>
+				<!-- /.main-text-section__container -->
+			</div>
+			<!-- /.container-size -->
+		</section>
+		<!-- /.main-text-section -->
+
+		<section class="consultation-section" <?php img_async_src('consultation-background.jpg', true, true); ?>>
+			<div class="container-size">
+				<div class="consultation-section__container">
+					<div class="consultation-section__left-side">
+						<div class="consultation-section__desktop-static">
+							<h2 class="section-title section-title_white consultation-section__title">
+								<strong>Получите <span class="accent">бесплатную</span></strong><br> консультацию специалиста
+							</h2>
+							<!-- /.section-title -->
+							<div class="section-descr section-descr_white  consultation-section__descr">
+								И закрепите за собой скидку <span class="semi-bold">-10% на первый заказ</span>
+							</div>
+							<!-- /.section-descr -->
+						</div>
+						<!-- /.consultation-section__desktop-static -->
+						<div class="consultation-person consultation-section__person-block">
+							<img <?php img_async_src('consultation-person.png'); ?> alt="Главный механик" class="consultation-person__photo">
+							<div class="consultation-person__name-block">
+								<div class="consultation-person__name">
+									Андрей Русланович
+								</div>
+								<!-- /.consultation-person__name -->
+								<div class="consultation-person__position">
+									Главный механик<br> автопарка «Ковш»
+								</div>
+								<!-- /.consultation-person__position -->
+							</div>
+							<!-- /.consultation-person__name-block -->
+						</div>
+						<!-- /.consultation-person -->
+						<div class="consultation-section__desktop-static">
+							<div class="consultation-section__specialist-benefits">
+								<div class="consultation-specialist-benefits">
+									<div class="consultation-specialist-benefits__title">
+										Андрей Вам поможет:
+									</div>
+									<!-- /.consultation-specialist-benefits__title -->
+									<div class="consultation-specialist-benefits__benefits">
+	
+										<div class="consultation-specialist-benefits__benefit">
+											<div class="benefit-small benefit-small_wide">
+												<div class="benefit-small__icon benefit-icon" <?php img_async_src('round-wrap.png', true, true); ?>>
+													<img <?php img_async_src('excavator-icon.png') ?> alt="" class="benefit-icon__inner">
+												</div>
+												<!-- /.benefit-small__icon -->
+												<div class="benefit-small__descr">
+													Подобрать технику под Ваши запросы
+												</div>
+												<!-- /.benefit-small__descr -->
+											</div>
+											<!-- /.benefit-small -->
+										</div>
+										<!-- /.consultation-specialist-benefits__benefit -->
+										<div class="consultation-specialist-benefits__benefit">
+											<div class="benefit-small benefit-small_wide">
+												<div class="benefit-small__icon benefit-icon" <?php img_async_src('round-wrap.png', true, true); ?>>
+													<img <?php img_async_src('calculator-icon.png') ?> alt="" class="benefit-icon__inner">
+												</div>
+												<!-- /.benefit-small__icon -->
+												<div class="benefit-small__descr">
+													Рассчитать стоимость аренды спецтехники
+												</div>
+												<!-- /.benefit-small__descr -->
+											</div>
+											<!-- /.benefit-small -->
+										</div>
+										<!-- /.consultation-specialist-benefits__benefit -->
+										<div class="consultation-specialist-benefits__benefit">
+											<div class="benefit-small benefit-small_wide">
+												<div class="benefit-small__icon benefit-icon" <?php img_async_src('round-wrap.png', true, true); ?>>
+													<img <?php img_async_src('discount-icon.png') ?> alt="" class="benefit-icon__inner">
+												</div>
+												<!-- /.benefit-small__icon -->
+												<div class="benefit-small__descr">
+													Закрепит за Вами скидку 10% на заказ
+												</div>
+												<!-- /.benefit-small__descr -->
+											</div>
+											<!-- /.benefit-small -->
+										</div>
+										<!-- /.consultation-specialist-benefits__benefit -->
+										<div class="consultation-specialist-benefits__benefit">
+											<div class="benefit-small benefit-small_wide">
+												<div class="benefit-small__icon benefit-icon" <?php img_async_src('round-wrap.png', true, true); ?>>
+													<img <?php img_async_src('question-icon.png') ?> alt="" class="benefit-icon__inner">
+												</div>
+												<!-- /.benefit-small__icon -->
+												<div class="benefit-small__descr">
+													Ответить на все актуальные вопросы
+												</div>
+												<!-- /.benefit-small__descr -->
+											</div>
+											<!-- /.benefit-small -->
+										</div>
+										<!-- /.consultation-specialist-benefits__benefit -->
+	
+									</div>
+									<!-- /.consultation-specialist-benefits__benefits -->
+								</div>
+								<!-- /.consultation-specialist-benefits -->
+							</div>
+							<!-- /.consultation-section__specialist-benefits -->
+						</div>
+						<!-- /.consultation-section__desktop-static -->
+					</div>
+					<!-- /.consultation-section__left-side -->
+
+					<div class="consultation-section__right-side">
+						<div class="consultation-section__form">
+							<form action="/" class="contact-form">
+								<div class="contact-form__title">
+									Оставьте заявку
+								</div>
+								<!-- /.contact-form__title -->
+								<div class="contact-form__descr">
+									На бесплатный подбор,<br> консультацию и скидку
+								</div>
+								<!-- /.contact-form__descr -->
+								<input type="text" placeholder="Ваш телефон (+7...)" class="text-field text-field_form text-field_small-height">
+								<button href="#" class="big-button big-button_accent big-button_all-width big-button_small not-link-style flare-parent not-button-style">
+									<div class="flare">
+										<div class="flare__wrap">
+											<div class="flare__line"></div>
+										</div>
+										<!-- /.flare__wrap -->
+									</div>
+									<!-- /.flare -->
+									<div class="big-button__text flare-neighbor">Получить консультацию</div>
+								</button>
+								<!-- /.big-button -->
+							</form>
+							<!-- /.contact-form -->
+						</div>
+						<!-- /.consultation-section__form -->
+					</div>
+					<!-- /.consultation-section__right-side -->
+				</div>
+				<!-- /.consultation-section__container -->
+			</div>
+			<!-- /.container-size -->
+		</section>
+		<!-- /.consultation-section -->
 
 	</main><!-- #main -->
 
