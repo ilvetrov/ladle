@@ -151,6 +151,7 @@ function setSrcForBackground(linkProperties, imageElement) {
   function setNow() {
     requestAnimationFrame(() => {
       backgroundSetter(linkProperties, imageElement);
+      setLoadedClass(imageElement);
     });
   }
 }
@@ -169,12 +170,17 @@ function setSrcForImg(linkProperties, imageElement) {
   function setNow() {
     requestAnimationFrame(() => {
       tagImgSetter(linkProperties, imageElement);
+      setLoadedClass(imageElement);
     });
   }
 }
 
 function tagImgSetter(linkProperties, imageElement) {
   imageElement.src = linkProperties.src;
+}
+
+function setLoadedClass(imageElement) {
+  imageElement.classList.add('image-loaded');
 }
 
 function setAfterLoad(linkProperties, callback, errorCallback = false) {

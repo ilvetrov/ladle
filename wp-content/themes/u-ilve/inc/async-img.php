@@ -35,10 +35,15 @@ function get_img_async_src(String $src, $scroll = true, $isBackground = false, $
 function get_img_size(String $src, $fullPath = false)
 {
   $outputSrc = get_output_src($src, $fullPath);
-  return cache('size_of_' . $outputSrc, function() use ($outputSrc)
+  return cache('size_of_' . $outputSrc, function() use ($outputSrc, $fullPath)
   {
+    if ($fullPath && check_third_party($outputSrc)) return [100, 100];
     return getimagesize($outputSrc);
   });
+}
+function check_third_party(String $link)
+{
+  return explode(get_site_url(), $link)[0] === $link;
 }
 
 function get_output_src(String $src, $fullPath = false)
@@ -48,14 +53,18 @@ function get_output_src(String $src, $fullPath = false)
 
 function get_link_properties(String $src, $scroll = true, $isBackground = false, $fullPath = false, $manual = false)
 {
-  $serverPath = $fullPath ? (getcwd() . explode(get_site_url(), $src)[1]) : (get_template_directory() . '/assets/img/' . $src);
+  if ($fullPath && check_third_party($src)) {
+    $serverPath = $src;
+  } else {
+    $serverPath = $fullPath ? (getcwd() . explode(get_site_url(), $src)[1]) : (get_template_directory() . '/assets/img/' . $src);
+  }
   $outputSrc = $fullPath ? $src : (get_template_directory_uri() . '/assets/img/' . $src);
   return [
     "scroll" => $scroll,
     "isBackground" => $isBackground,
     "manual" => $manual,
     "src" => $outputSrc,
-    "isHigh" => filesize($serverPath) >= MIN_SIZE_OF_IMG_TO_HIGH_LOAD
+    "isHigh" => ($fullPath && check_third_party($src)) ? true : (filesize($serverPath) >= MIN_SIZE_OF_IMG_TO_HIGH_LOAD)
   ];
 }
 

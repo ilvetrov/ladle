@@ -1,0 +1,23 @@
+.benefit-small {
+  display: flex;
+  align-items: center;
+  justify-self: flex-start;
+
+  &__icon {
+    margin-right: 1.063rem;
+  }
+  &__descr {
+    line-height: 1.5;
+    letter-spacing: .02em;
+    color: #fff;
+  }
+
+  &_wide & {
+    &__icon {
+      margin-right: 1.25rem;
+    }
+    &__descr {
+      line-height: 1.35;
+    }
+  }
+}

@@ -81,7 +81,7 @@ class SourceToPublic {
 			const watchifyBundle = () => {
 				return watchifyBuild.bundle()
 				.on('error', (data) => {
-					log.error(data.annotated);
+					log.error(data);
 				})
 				.pipe(source(getFileName(entryPath)))
 				.pipe(buffer())

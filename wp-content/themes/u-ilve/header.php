@@ -45,14 +45,14 @@
 						<!-- /.header-top__descr -->
 					</div>
 					<!-- /.header-top__logo-block -->
-					<div class="header-top__payment-block payment-block header-family-block">
-						<img <?php img_async_src('terminal.png'); ?> alt="Терминал" class="payment-block__icon">
-						<div class="payment-block__descr">
-							<span class="header-descr"><span class="semi-bold">Принимаем любые формы оплаты:</span> наличный, безналичный, с НДС</span>
+					<div class="benefit-small header-top__payment-block">
+						<img <?php img_async_src('terminal.png'); ?> alt="Терминал" class="benefit-small__icon">
+						<div class="benefit-small__descr header-top__payment-text">
+							<span class="semi-bold">Принимаем любые формы оплаты:</span> наличный, безналичный, с НДС
 						</div>
-						<!-- /.payment-block__descr -->
+						<!-- /.benefit-small__descr -->
 					</div>
-					<!-- /.header-top__payment-block -->
+					<!-- /.benefit-small -->
 					<div class="header-top__messengers-block">
 						<ul class="messengers">
 							<li class="messengers__item">

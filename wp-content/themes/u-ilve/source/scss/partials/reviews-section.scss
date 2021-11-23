@@ -1,0 +1,39 @@
+.reviews-section {
+  padding-top: 11.4rem;
+  padding-bottom: 6.25rem;
+
+  &__title {
+    margin-bottom: 1.63rem;
+  }
+  &__descr {
+    margin-bottom: 3.5rem;
+  }
+}
+
+.review {
+  width: 24.37rem;
+  
+  &__video {
+    margin-bottom: 1.69rem;
+  }
+  &__title {
+    display: block;
+    font-size: 1.125rem;
+    line-height: 1.25;
+    padding-right: 1.7rem;
+    letter-spacing: .02em;
+    margin-bottom: .8rem;
+  }
+}
+
+.review-date {
+  font-size: .875rem;
+  letter-spacing: .02em;
+  color: rgba($color: #000, $alpha: .6);
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    margin-right: .6rem;
+  }
+}

@@ -483,6 +483,225 @@ get_header();
 			<!-- /.container-size -->
 		</section>
 		<!-- /.our-technique -->
+
+		<section class="founder-section" <?php img_async_src('founder-background.jpg', true, true); ?>>
+			<div class="container-size">
+				<div class="founder-section__container">
+					<div class="founder-section__logo-background">
+						<img <?php img_async_src('logo-founder-background.png'); ?> alt="">
+					</div>
+					<!-- /.founder-section__logo-background -->
+					<div class="founder-section__person-background">
+						<div class="founder-section__person-wrap">
+							<img <?php img_async_src('founder.png'); ?> alt="Виктор Викторович — компания Ковш">
+						</div>
+						<!-- /.founder-section__person-wrap -->
+					</div>
+					<!-- /.founder-section__person-background -->
+					<div class="founder-section__wrap">
+						<h2 class="section-title section-title_white founder-section__title">
+							<strong>Здравствуйте, я Виктор Викторович</strong>
+						</h2>
+						<!-- /.section-title -->
+						<div class="section-descr section-descr_white founder-section__descr">
+							Основатель компании “Ковш” по аренде<br> собственной спецтехники в городе Уфа
+						</div>
+						<!-- /.section-descr -->
+						<div class="founder-section__about-block">
+							<div class="founder-about-company founder-section__text-about-us">
+								<div class="founder-about-title founder-about-company__title">
+									<strong><span class="accent">В двух словах о том,</span> как мы решили</strong> открыть своё предприятие
+								</div>
+								<!-- /.founder-about-title -->
+								<div class="founder-about-company__text">
+									Раньше мы были строительной компанией и часто встречались с проблемами аренды спецтехники. Спустя время, мы решили самостоятельно закупить спецтехнику для нашего предприятия. К нам начали обращаться с вопросом о том, что могли бы мы сдать технику в аренду. Первый клиент, второй, третий и мы поняли, что пора открывать свою компанию по аренде спецтехники в городе Уфа
+								</div>
+								<!-- /.founder-about-company__text -->
+							</div>
+							<!-- /.founder-about-company -->
+							<div class="founder-about-benefits founder-section__advantages">
+								<div class="founder-about-title founder-about-title_white founder-about-benefits__title">
+									<strong>С нами <span class="accent">удобно и комфортно</span></strong>
+								</div>
+								<!-- /.founder-about-title -->
+								<div class="founder-about-benefits__list">
+									<div class="founder-about-benefits__item">
+										<div class="benefit-small benefit-small_wide">
+											<img <?php img_async_src('terminal.png'); ?> alt="Терминал" class="benefit-small__icon">
+											<div class="benefit-small__descr">
+												<span class="semi-bold">Принимаем любые формы оплаты:</span> наличный, безналичный, с НДС
+											</div>
+											<!-- /.benefit-small__descr -->
+										</div>
+										<!-- /.benefit-small -->
+									</div>
+									<!-- /.founder-about-benefits__item -->
+									<div class="founder-about-benefits__item">
+										<div class="benefit-small benefit-small_wide">
+											<img <?php img_async_src('health-icon.png'); ?> alt="Стетоскоп" class="benefit-small__icon">
+											<div class="benefit-small__descr">
+												<span class="semi-bold">Все водители проходят медпроверку</span> перед началом каждого рабочего дня
+											</div>
+											<!-- /.benefit-small__descr -->
+										</div>
+										<!-- /.benefit-small -->
+									</div>
+									<!-- /.founder-about-benefits__item -->
+									<div class="founder-about-benefits__item">
+										<div class="benefit-small benefit-small_wide">
+											<img <?php img_async_src('experience-icon.png'); ?> alt="Портфель" class="benefit-small__icon">
+											<div class="benefit-small__descr">
+												<span class="semi-bold">В нашей команде</span> работают специалисты со стажем 5+ лет
+											</div>
+											<!-- /.benefit-small__descr -->
+										</div>
+										<!-- /.benefit-small -->
+									</div>
+									<!-- /.founder-about-benefits__item -->
+									<div class="founder-about-benefits__item">
+										<div class="benefit-small benefit-small_wide">
+											<img <?php img_async_src('document-icon.png'); ?> alt="Документ" class="benefit-small__icon">
+											<div class="benefit-small__descr">
+												<span class="semi-bold">Предоставляем все закрывающие документы</span> и сопроводительную документацию точно в срок
+											</div>
+											<!-- /.benefit-small__descr -->
+										</div>
+										<!-- /.benefit-small -->
+									</div>
+									<!-- /.founder-about-benefits__item -->
+
+								</div>
+								<!-- /.founder-about-benefits__list -->
+							</div>
+							<!-- /.founder-about-benefits -->
+						</div>
+						<!-- /.founder-section__about-block -->
+						<?php
+						$photos = [
+							'example-photo.png',
+							'example-photo.png',
+							'example-photo.png',
+							'example-photo.png',
+							'example-photo.png',
+						];
+						?>
+						<div class="founder-section__gallery">
+							<div class="not-gallery">
+								<?php foreach ($photos as $photo_order => $photo): ?>
+									<div class="not-gallery__item">
+										<div class="founder-section__gallery-photo <?php echo ($photo_order + 1 === count($photos) ? 'last' : ''); ?>">
+											<img <?php img_async_src($photo); ?> alt="">
+										</div>
+										<!-- /.founder-section__gallery-photo -->
+									</div>
+									<!-- /.not-gallery__item -->
+								<?php endforeach; ?>
+							</div>
+							<!-- /.not-gallery -->
+						</div>
+						<!-- /.founder-section__gallery -->
+					</div>
+					<!-- /.founder-section__wrap -->
+				</div>
+				<!-- /.founder-section__container -->
+			</div>
+			<!-- /.container-size -->
+		</section>
+		<!-- /.founder-section -->
+
+		<section class="reviews-section">
+			<div class="container-size">
+				<div class="reviews-section__container">
+					<div class="section-title section-title_center reviews-section__title">
+						<strong>Наши <span class="accent">клиенты</span> - это</strong> частные лица и строительные компании
+					</div>
+					<!-- /.section-title -->
+					<div class="section-descr section-descr_center reviews-section__descr">
+						Посмотрите видеоотзывы и узнайте что говорят о нашей компании
+					</div>
+					<!-- /.section-descr -->
+					<?php
+					$reviews = [
+						[
+							'video_link' => 'https://www.youtube.com/watch?v=XsVJ8PCV-0M',
+							'title' => 'Аренда экскаватора на 2 дня для выкапывания траншеи 7 м',
+							'date' => '05.12.21'
+						],
+						[
+							'video_link' => 'https://youtu.be/XsVJ8PCV-0M',
+							'title' => 'Аренда экскаватора на 2 дня для выкапывания траншеи 7 м',
+							'date' => '05.12.21'
+						],
+						[
+							'video_link' => 'https://www.youtube.com/watch?v=XsVJ8PCV-0M',
+							'title' => 'Аренда экскаватора на 2 дня для выкапывания траншеи 7 м',
+							'date' => '05.12.21'
+						],
+					];
+					?>
+					<div class="reviews-section__gallery">
+						<div class="adaptive-gallery">
+							<div class="adaptive-gallery__wrap">
+								<?php foreach ($reviews as $review): ?>
+									<?php
+									$video_link = $review['video_link'];
+									preg_match('/[\/=]([^\/=]+?)$/', $video_link, $video_id_raw);
+									$video_id = @$video_id_raw[1];
+									$video_image = "http://i.ytimg.com/vi/$video_id/maxresdefault.jpg";
+									?>
+									
+									<div class="adaptive-gallery__item">
+										<div class="review reviews-section__review">
+											<div class="review__video">
+												<?php ob_start(); ?>
+													<div class="review-video-inserted">
+														<div class="review-video-inserted__background"></div>
+														<div class="review-video-inserted__container">
+															<iframe width="560" height="315" src="http://www.youtube.com/embed/<?php echo $video_id; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+														</div>
+														<!-- /.review-video-inserted__container -->
+													</div>
+												<?php $video_embed = ob_get_clean(); ?>
+												<a href="<?php echo $video_link; ?>" class="review-video inactive" target="_blank" onclick="return replaceElementWithDynamicTag(this, false);" data-dynamic-tag="<?php echo htmlspecialchars(remove_whitespaces($video_embed)); ?>" data-dynamic-tag-manual>
+													<div class="review-video__background" <?php img_async_src($video_image, true, true, true); ?>></div>
+													<div class="review-video__control-background"></div>
+													<div class="review-video__control-wrap">
+														<div class="review-video__control">
+															<img <?php img_async_src('video-arrow.png'); ?> alt="Посмотреть" title="Посмотреть">
+														</div>
+														<!-- /.review-video__control -->
+													</div>
+													<!-- /.review-video__control-wrap -->
+												</a>
+												<!-- /.review-video -->
+											</div>
+											<!-- /.review__video -->
+											<a href="<?php echo $video_link; ?>" target="_blank" class="review__title not-link-style">
+												<?php echo $review['title']; ?>
+											</a>
+											<!-- /.review__title -->
+											<div class="review-date review__date">
+												<img <?php img_async_src('date.png'); ?> alt="Календарь" class="review-date__icon"> Дата: <?php echo $review['date']; ?>
+											</div>
+											<!-- /.review-date -->
+										</div>
+										<!-- /.review -->
+									</div>
+									<!-- /.adaptive-gallery__item -->
+								<?php endforeach; ?>
+							</div>
+							<!-- /.adaptive-gallery__wrap -->
+						</div>
+						<!-- /.adaptive-gallery -->
+					</div>
+					<!-- /.reviews-section__gallery -->
+				</div>
+				<!-- /.reviews-section__container -->
+			</div>
+			<!-- /.container-size -->
+		</section>
+		<!-- /.reviews-section -->
+
 	</main><!-- #main -->
 
 <?php
