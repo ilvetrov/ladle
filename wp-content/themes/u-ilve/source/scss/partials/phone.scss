@@ -21,6 +21,23 @@
       transform: rotate(-13deg);
     }
   }
+
+  &_black {
+    color: #000;
+
+    &:hover, &:focus {
+      color: rgba($color: #000, $alpha: .8);
+
+      .phone__icon {
+        opacity: .7;
+      }
+    }
+  }
+  &_black & {
+    &__icon {
+      filter: invert(1);
+    }
+  }
 }
 .phone-block {
   display: flex;
@@ -41,6 +58,9 @@
 
     &_yellow {
       color: #68f846;
+    }
+    &_black-yellow {
+      color: #4acf2b;
     }
   }
 }

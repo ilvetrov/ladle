@@ -54,46 +54,12 @@
 					</div>
 					<!-- /.benefit-small -->
 					<div class="header-top__messengers-block">
-						<ul class="messengers">
-							<li class="messengers__item">
-								<a href="https://t.me/" target="_blank" class="messengers__link click-extender click-extender_small">
-									<img <?php img_async_src('tg.png'); ?> alt="Telegram" class="messengers__icon">
-								</a>
-								<!-- /.messengers__link -->
-							</li>
-							<!-- /.messengers__item -->
-							<li class="messengers__item">
-								<a href="https://wa.me/79279353399" target="_blank" class="messengers__link click-extender click-extender_small">
-									<img <?php img_async_src('whatsapp.png'); ?> alt="WhatsApp" class="messengers__icon">
-								</a>
-								<!-- /.messengers__link -->
-							</li>
-							<!-- /.messengers__item -->
-							<li class="messengers__item">
-								<a href="viber://chat/?number=%279279353399"" class="messengers__link click-extender click-extender_small">
-									<img <?php img_async_src('viber.png'); ?> alt="Viber" class="messengers__icon">
-								</a>
-								<!-- /.messengers__link -->
-							</li>
-							<!-- /.messengers__item -->
-						</ul>
-						<!-- /.messengers -->
+						<?php get_template_part('template-parts/messengers'); ?>
 					</div>
 					<!-- /.header-top__messengers-block -->
 					<div class="header-top__contact-block header-family-block">
-						<div class="header-top__phone-block phone-block">
-							<div class="phone-block__link-wrap">
-								<a href="tel:79279353399" class="phone phone-block__link not-link-style click-extender">
-									<img <?php img_async_src('phone.png'); ?> alt="Телефон" class="phone-icon phone__icon">
-									<span class="phone__number">+7 (927) 935-33-99</span>
-								</a>
-								<!-- /.phone -->
-							</div>
-							<!-- /.phone-block__link-wrap -->
-							<div class="phone-block__time phone-block__time_yellow">
-								Ежедневно 10:00 — 22:00
-							</div>
-							<!-- /.phone-block__time -->
+						<div class="header-top__phone-block">
+							<?php get_template_part('template-parts/phone-block'); ?>
 						</div>
 						<!-- /.header-top__phone-block -->
 					</div>

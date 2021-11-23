@@ -612,9 +612,9 @@ get_header();
 		<section class="reviews-section">
 			<div class="container-size">
 				<div class="reviews-section__container">
-					<div class="section-title section-title_center reviews-section__title">
-						<strong>Наши <span class="accent">клиенты</span> - это</strong> частные лица и строительные компании
-					</div>
+					<h2 class="section-title section-title_center reviews-section__title">
+						<strong>Наши <span class="accent">клиенты</span> - это</strong> частные лица<br> и строительные компании
+					</h2>
 					<!-- /.section-title -->
 					<div class="section-descr section-descr_center reviews-section__descr">
 						Посмотрите видеоотзывы и узнайте что говорят о нашей компании
@@ -701,6 +701,127 @@ get_header();
 			<!-- /.container-size -->
 		</section>
 		<!-- /.reviews-section -->
+
+		<section class="steps-to-get-section">
+			<div class="container-size">
+				<div class="steps-to-get-section__container">
+					<h2 class="section-title section-title_center steps-to-get-section__title">
+						<strong>Как получить <span class="accent">спецтехнику</span></strong><br> и решить задачу на объекте
+					</h2>
+					<!-- /.section-title -->
+					<div class="section-descr section-descr_center steps-to-get-section__descr">
+						5 шагов до выполнения
+					</div>
+					<!-- /.section-descr -->
+					<?php
+					$steps = [
+						[
+							'image' => 'keyboard-mouse.png',
+							'title' => 'Оставьте заявку',
+							'text' => 'Оставьте заявку на сайте, позвоните нам либо напишите в мессенджер',
+						],
+						[
+							'image' => 'excavator.png',
+							'title' => 'Подберём технику',
+							'text' => 'Мы позвоним, подберем технику под Ваши задачи и рассчитаем стоимость',
+							'non_nature_image' => true,
+						],
+						[
+							'image' => 'truck.png',
+							'title' => 'Доставим технику',
+							'text' => 'Выполним доставку спецтехники прямо на Ваш объект бесплатно',
+							'non_nature_image' => true,
+						],
+						[
+							'image' => 'excavator-2.png',
+							'title' => 'Выполним работы',
+							'text' => 'Опытный водитель спецтехники выполнит все поставленные задачи',
+							'non_nature_image' => true,
+						],
+					];
+					?>
+					<div class="steps-to-get-section__steps">
+						<div class="adaptive-gallery">
+							<div class="adaptive-gallery__wrap">
+								<?php foreach ($steps as $step_order => $step): ?>
+									<div class="adaptive-gallery__item">
+										<div class="step-to-get steps-to-get__step">
+											<div class="step-to-get__wrap">
+												<div class="step-to-get__order-wrap">
+													<div class="step-to-get__order-icon" <?php img_async_src('round-wrap.png', true, true); ?>>
+														<div class="step-to-get__order">
+															<?php echo $step_order + 1; ?>
+														</div>
+														<!-- /.step-to-get__order -->
+													</div>
+													<!-- /.step-to-get__order-icon -->
+												</div>
+												<!-- /.step-to-get__order-wrap -->
+												<div class="step-to-get__content">
+													<div class="step-to-get__image-wrap <?php echo @$step['non_nature_image'] ? 'step-to-get__image-wrap_bottom-padding' : ''; ?>">
+														<img <?php img_async_src($step['image']); ?> alt="" class="step-to-get__image">
+													</div>
+													<!-- /.step-to-get__image-wrap -->
+													<div class="step-to-get__text-content">
+														<div class="step-to-get__title">
+															<?php echo $step['title']; ?>
+														</div>
+														<!-- /.step-to-get__title -->
+														<div class="step-to-get__text">
+															<?php echo $step['text']; ?>
+														</div>
+														<!-- /.step-to-get__text -->
+													</div>
+													<!-- /.step-to-get__text-content -->
+												</div>
+												<!-- /.step-to-get__content -->
+											</div>
+											<!-- /.step-to-get__wrap -->
+										</div>
+										<!-- /.step-to-get -->
+									</div>
+									<!-- /.adaptive-gallery__item -->
+								<?php endforeach; ?>
+							</div>
+							<!-- /.adaptive-gallery__wrap -->
+						</div>
+						<!-- /.adaptive-gallery -->
+					</div>
+					<!-- /.steps-to-get-section__steps -->
+
+					<div class="steps-to-get-section__call-to-us">
+						<div class="steps-to-get-section__call-button steps-to-get-section__call-method">
+							<a href="#" class="big-button big-button_accent not-link-style flare-parent">
+								<div class="flare">
+									<div class="flare__wrap">
+										<div class="flare__line"></div>
+									</div>
+									<!-- /.flare__wrap -->
+								</div>
+								<!-- /.flare -->
+								<div class="big-button__text flare-neighbor">Получить консультацию <img <?php img_async_src('right-arrow.png'); ?> alt="Стрелка вперёд" class="big-button__arrow"></div>
+							</a>
+							<!-- /.big-button -->
+						</div>
+						<!-- /.steps-to-get-section__call-button -->
+						<div class="steps-to-get-section__messengers steps-to-get-section__call-method">
+							<?php get_template_part('template-parts/messengers'); ?>
+						</div>
+						<!-- /.steps-to-get-section__messengers -->
+						<div class="steps-to-get-section__phone-block steps-to-get-section__call-method">
+							<?php get_template_part('template-parts/phone-block', '', [
+								'black' => true
+							]); ?>
+						</div>
+						<!-- /.steps-to-get-section__phone-block -->
+					</div>
+					<!-- /.steps-to-get-section__call-to-us -->
+				</div>
+				<!-- /.steps-to-get-section__container -->
+			</div>
+			<!-- /.container-size -->
+		</section>
+		<!-- /.steps-to-get-section -->
 
 	</main><!-- #main -->
 
