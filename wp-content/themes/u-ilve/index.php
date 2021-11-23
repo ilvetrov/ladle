@@ -650,7 +650,7 @@ get_header();
 									$video_link = $review['video_link'];
 									preg_match('/[\/=]([^\/=]+?)$/', $video_link, $video_id_raw);
 									$video_id = @$video_id_raw[1];
-									$video_image = "http://i.ytimg.com/vi/$video_id/maxresdefault.jpg";
+									$video_image = "https://i.ytimg.com/vi/$video_id/maxresdefault.jpg";
 									?>
 									
 									<div class="adaptive-gallery__item">
@@ -660,7 +660,7 @@ get_header();
 													<div class="review-video-inserted">
 														<div class="review-video-inserted__background"></div>
 														<div class="review-video-inserted__container">
-															<iframe width="560" height="315" src="http://www.youtube.com/embed/<?php echo $video_id; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+															<iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo $video_id; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 														</div>
 														<!-- /.review-video-inserted__container -->
 													</div>
