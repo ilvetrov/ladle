@@ -1,13 +1,26 @@
 .logo {
   display: inline-block;
-  
-  // &__icon {
-  //   transition: transform .2s;
-  // }
+}
 
-  // &:hover &, &:focus & {
-  //   &__icon {
-  //     transform: scale(.9);
-  //   }
-  // }
+.logo-and-descr {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &__logo-wrap {
+    margin-right: 1.25rem;
+  }
+  &__site-descr {
+    max-width: 11.875rem;
+  }
+}
+
+.site-descr {
+  line-height: 1.5;
+  letter-spacing: .02em;
+  color: #fff;
+
+  &_dim {
+    color: rgba(255, 255, 255, .6);
+  }
 }

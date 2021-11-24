@@ -31,18 +31,10 @@
 		<div class="header__top header__block header-top">
 			<div class="container-size">
 				<div class="header-top__container">
-					<div class="header-top__logo-block header-family-block">
-						<div class="header-top__logo-wrap">
-							<a href="/" class="logo click-extender">
-								<img <?php img_async_src('logo.png'); ?> alt="Ковш" class="header-top__logo logo__icon">
-							</a>
-							<!-- /.logo -->
-						</div>
-						<!-- /.header-top__logo-wrap -->
-						<div class="header-top__site-descr">
-							<span class="header-descr header-descr_dim">Аренда собственной спецтехники в г. Уфа</span>
-						</div>
-						<!-- /.header-top__descr -->
+					<div class="header-top__logo-block">
+						<?php get_template_part('template-parts/logo-and-descr', '', [
+							'text_dim' => true
+						]); ?>
 					</div>
 					<!-- /.header-top__logo-block -->
 					<div class="benefit-small header-top__payment-block">

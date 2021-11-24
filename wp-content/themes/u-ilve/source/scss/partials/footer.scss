@@ -1,0 +1,64 @@
+.footer {
+  background-color: #000;
+
+  &__container {
+    padding-top: 4.31rem;
+    padding-bottom: 4.2rem;
+  }
+  &__blocks {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo {
+    padding-bottom: 1.3rem;
+  }
+  &__copyright {
+    margin-bottom: .81rem;
+  }
+  &__dim-text {
+    letter-spacing: .02em;
+    color: rgba($color: #fff, $alpha: .6);
+  }
+  &__privacy-policy {
+    border-bottom: 1px dashed rgba($color: #fff, $alpha: .6);
+    transition: border-bottom-color .2s, color .2s;
+
+    &:hover, &:focus {
+      color: #fff;
+      border-bottom-color: #fff;
+    }
+  }
+  &__block-title {
+    font-size: 1.25rem;
+    line-height: 1.2;
+    letter-spacing: .02em;
+    color: #fff;
+    margin-bottom: .8rem;
+  }
+  &__links {
+    > li {
+      margin-bottom: .35rem;
+    }
+    a {
+      @extend .not-link-style;
+      color: #fff;
+      line-height: 1.2;
+      letter-spacing: .02em;
+      transition: color .2s;
+
+      &:hover, &:focus {
+        color: #dddddd;
+      }
+    }
+  }
+  &__save-site {
+    max-width: 16.8rem;
+    line-height: 1.2;
+    margin-bottom: 1.13rem;
+  }
+  &__author {
+    font-size: .75rem;
+    letter-spacing: .02em;
+    color: rgba($color: #fff, $alpha: .6);
+  }
+}
