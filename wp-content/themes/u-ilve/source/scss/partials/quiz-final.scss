@@ -40,20 +40,6 @@
     margin-bottom: .9375rem;
   }
   &__policy {
-    font-size: 14px;
-    letter-spacing: .02em;
     margin-top: 20px;
-    color: #999;
-    line-height: 1.2;
-
-    a {
-      border-bottom: 1px dashed #999;
-      transition: border-bottom-color .2s, color .2s;
-
-      &:hover, &:focus {
-        color: #555;
-        border-bottom-color: #555;
-      }
-    }
   }
 }

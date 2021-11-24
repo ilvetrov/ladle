@@ -30,9 +30,9 @@
     </button>
   </form>
   <!-- /.quiz-final__form -->
-  <div class="quiz-final__policy">
+  <div class="privacy-policy quiz-final__policy">
     Оставляя заявку, Вы соглашаетесь<br> с <a href="#" target="_blank" class="not-link-style">политикой конфиденциальности</a>
   </div>
-  <!-- /.quiz-final__policy -->
+  <!-- /.privacy-policy -->
 </div>
 <!-- /.quiz-final -->

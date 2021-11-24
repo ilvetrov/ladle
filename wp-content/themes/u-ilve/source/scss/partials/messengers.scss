@@ -12,6 +12,11 @@
   }
   &__icon {
     transition: transform .2s;
+
+    &_small {
+      height: 1.56rem;
+      width: auto;
+    }
   }
   &__link {
     &:hover, &:focus {

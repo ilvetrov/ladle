@@ -67,27 +67,4 @@
       height: 100%;
     }
   }
-  &__background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
-    user-select: none;
-    background-color: rgba($color: #000, $alpha: .5);
-    animation: waitingOpacity 3s ease-in-out infinite;
-  }
-}
-
-@keyframes waitingOpacity {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: .4;
-  }
-  100% {
-    opacity: 1;
-  }
 }

@@ -1,5 +1,6 @@
 const { htmlStringToJs } = require("./html-string-to-js");
 const { OptimizedScroll } = require("./optimized-scroll-event");
+const { checkThatObjectIsInScrollArea } = require("./distance-checking");
 const { replaceElement } = require("./replace-element");
 
 const elements = document.querySelectorAll('[data-dynamic-tag]');

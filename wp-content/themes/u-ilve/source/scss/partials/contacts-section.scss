@@ -1,0 +1,101 @@
+.contacts-section {
+  padding-top: 4.875rem;
+  padding-bottom: 5.875rem;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &__title {
+    margin-bottom: .625rem;
+  }
+  &__map-block {
+    padding-top: 1.25rem;
+  }
+  &__map {
+    position: relative;
+    width: 25rem;
+    height: 16.9rem;
+    border-radius: .625rem;
+    box-shadow: 0 .625rem .625rem rgba($color: #000, $alpha: .1);
+    overflow: hidden;
+  }
+}
+.contacts-list {
+  &__item {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    margin-bottom: .75rem;
+
+    &_phone {
+      margin-bottom: 1rem;
+    }
+  }
+  &__icon {
+    display: flex;
+    height: .875rem;
+    width: auto;
+    margin-right: .44rem;
+    position: relative;
+    bottom: .313rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__text {
+    line-height: 1.375;
+    letter-spacing: .02em;
+  }
+  &__header-text {
+    font-size: .875rem;
+    line-height: 1.2;
+    color: rgba($color: #000, $alpha: .6);
+    letter-spacing: .02em;
+
+    &_single-row {
+      max-width: 8.2rem;
+      margin-right: .19rem;
+    }
+    &_separate-row {
+      margin-bottom: .25rem;
+    }
+  }
+  &__single-row {
+    display: flex;
+    align-items: center;
+    max-width: 16rem;
+    justify-content: flex-start;
+    margin-top: 1.063rem;
+    margin-bottom: 1.2rem;
+  }
+  &__dashed-link {
+    border-bottom: 1px dashed #000;
+    transition: border-bottom-color .2s, color .2s;
+
+    &:hover, &:focus {
+      color: #444;
+      border-bottom-color: #444;
+    }
+  }
+}
+
+.contacts-benefits {
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: .625rem;
+  }
+  &__icon {
+    margin-right: .813rem;
+  }
+  &__text {
+    font-size: 1.125rem;
+    line-height: 1.11;
+    letter-spacing: .02em;
+  }
+}

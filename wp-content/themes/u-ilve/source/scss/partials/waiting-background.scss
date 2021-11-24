@@ -1,0 +1,35 @@
+.waiting-background-style {
+  animation: waitingOpacity 3s ease-in-out infinite;
+  background-color: rgba($color: #000, $alpha: .5);
+  
+  &_light {
+    background-color: rgba($color: #000, $alpha: .05);
+  }
+}
+
+.waiting-background {
+  @extend .waiting-background-style;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  user-select: none;
+
+  &_light {
+    @extend .waiting-background-style_light;
+  }
+}
+
+@keyframes waitingOpacity {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .4;
+  }
+  100% {
+    opacity: 1;
+  }
+}

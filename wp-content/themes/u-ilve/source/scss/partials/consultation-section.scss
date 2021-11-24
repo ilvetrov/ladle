@@ -34,6 +34,9 @@
   &__right-side {
     position: relative;
   }
+  &__form {
+    margin-bottom: 1.875rem;
+  }
 }
 .consultation-specialist-benefits {
   max-width: max-content;
@@ -97,5 +100,29 @@
     letter-spacing: .02em;
     margin-left: 2.625rem;
     line-height: 1.2;
+  }
+}
+
+.row-contact-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  &__title {
+    color: #fff;
+    text-align: center;
+    letter-spacing: .02em;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  &__methods {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: .3125rem;
+  }
+  &__messengers {
+    margin-right: 2.19rem;
   }
 }

@@ -22,19 +22,29 @@
     }
   }
 
+  &_big-text {
+    font-size: 1.375rem;
+  }
+  &_big-text & {
+    &__icon {
+      bottom: .15rem;
+    }
+  }
+
   &_black {
     color: #000;
 
     &:hover, &:focus {
       color: rgba($color: #000, $alpha: .8);
 
-      .phone__icon {
+      .phone__icon:not(.phone-icon_red) {
         opacity: .7;
       }
     }
   }
+  
   &_black & {
-    &__icon {
+    &__icon:not(.phone-icon_red) {
       filter: invert(1);
     }
   }

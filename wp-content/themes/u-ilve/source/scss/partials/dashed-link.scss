@@ -1,0 +1,24 @@
+.dashed-link {
+  a {
+    border-bottom: 1px dashed #999;
+    transition: border-bottom-color .2s, color .2s;
+
+    &:hover, &:focus {
+      color: #555;
+      border-bottom-color: #555;
+    }
+  }
+
+  &_darker {
+    color: rgba($color: #000, $alpha: .6);
+
+    a {
+      border-bottom-color: rgba($color: #000, $alpha: .6);
+      
+      &:hover, &:focus {
+        color: rgba($color: #000, $alpha: .8);
+        border-bottom-color: rgba($color: #000, $alpha: .8);
+      }
+    }
+  }
+}
