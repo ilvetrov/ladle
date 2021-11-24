@@ -102,6 +102,33 @@
     line-height: 1.2;
   }
 }
+.consultation-person-small {
+  &__name {
+    width: 10rem;
+    font-size: .75rem;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: .02em;
+    padding-top: .75rem;
+    padding-bottom: .69rem;
+    font-weight: 700;
+    background-color: #fff;
+    border-radius: .3125rem;
+    margin-bottom: .188rem;
+  }
+  &__position {
+    width: 10rem;
+    font-size: .75rem;
+    line-height: 1.2;
+    text-align: center;
+    color: rgba($color: #000, $alpha: .6);
+    padding-top: .69rem;
+    padding-bottom: .69rem;
+    background-color: #fff;
+    border-radius: .3125rem;
+    letter-spacing: .02em;
+  }
+}
 
 .row-contact-us {
   display: flex;

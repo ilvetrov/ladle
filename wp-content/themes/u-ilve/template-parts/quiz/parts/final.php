@@ -17,7 +17,7 @@
     <?php if (carbon_get_cached_theme_option('quiz_final_has_name')): ?>
       <input type="text" placeholder="Ваше имя" class="text-field text-field_form quiz-final__input">
     <?php endif; ?>
-    <input type="text" placeholder="Ваш телефон (+7...)" class="text-field text-field_form quiz-final__input">
+    <input type="tel" placeholder="Ваш телефон (+7...)" class="text-field text-field_form quiz-final__input">
     <button type="submit" class="button-field not-button-style flare-parent">
       <div class="flare">
         <div class="flare__wrap">

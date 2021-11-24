@@ -450,7 +450,7 @@ get_header();
 												</div>
 												<!-- /.technique-preview__price-wrap -->
 												<div class="technique-preview__buttons">
-													<button class="mini-button mini-button_accent not-button-style technique-preview__button">
+													<button class="mini-button mini-button_accent not-button-style technique-preview__button" data-pop-up-open-button="rent-order">
 														Заказать
 													</button>
 													<!-- /.mini-button -->
@@ -794,7 +794,7 @@ get_header();
 
 					<div class="steps-to-get-section__call-to-us">
 						<div class="steps-to-get-section__call-button steps-to-get-section__call-method">
-							<a href="#" class="big-button big-button_accent not-link-style flare-parent">
+							<button class="big-button big-button_accent not-button-style flare-parent" data-pop-up-open-button="call-order">
 								<div class="flare">
 									<div class="flare__wrap">
 										<div class="flare__line"></div>
@@ -803,7 +803,7 @@ get_header();
 								</div>
 								<!-- /.flare -->
 								<div class="big-button__text flare-neighbor">Получить консультацию <img <?php img_async_src('right-arrow.png'); ?> alt="Стрелка вперёд" class="big-button__arrow"></div>
-							</a>
+							</button>
 							<!-- /.big-button -->
 						</div>
 						<!-- /.steps-to-get-section__call-button -->
@@ -956,33 +956,11 @@ get_header();
 
 					<div class="consultation-section__right-side">
 						<div class="consultation-section__form">
-							<form action="/" class="contact-form">
-								<div class="contact-form__title">
-									Оставьте заявку
-								</div>
-								<!-- /.contact-form__title -->
-								<div class="contact-form__descr">
-									На бесплатный подбор,<br> консультацию и скидку
-								</div>
-								<!-- /.contact-form__descr -->
-								<input type="text" placeholder="Ваш телефон (+7...)" class="text-field text-field_form text-field_small-height contact-form__input">
-								<button href="#" class="big-button big-button_accent big-button_all-width big-button_small not-link-style flare-parent not-button-style contact-form__button">
-									<div class="flare">
-										<div class="flare__wrap">
-											<div class="flare__line"></div>
-										</div>
-										<!-- /.flare__wrap -->
-									</div>
-									<!-- /.flare -->
-									<div class="big-button__text flare-neighbor">Получить консультацию</div>
-								</button>
-								<!-- /.big-button -->
-								<div class="privacy-policy privacy-policy_darker contact-from__privacy-policy">
-									Оставляя заявку, Вы соглашаетесь<br> с <a href="#" target="_blank" class="not-link-style">политикой конфиденциальности</a>
-								</div>
-								<!-- /.privacy-policy -->
-							</form>
-							<!-- /.contact-form -->
+							<?php get_template_part('template-parts/contact-form', '', [
+								'title_text' => 'Оставьте заявку',
+								'descr_text' => 'На бесплатный подбор,<br> консультацию и скидку',
+								'button_text' => 'Получить консультацию',
+							]); ?>
 						</div>
 						<!-- /.consultation-section__form -->
 						<div class="row-contact-us consultation-section__contact-us">

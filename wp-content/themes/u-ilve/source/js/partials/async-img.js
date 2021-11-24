@@ -120,6 +120,7 @@ function actionsWhenInScrollArea(imageElement, linkProperties, callback) {
     const interval = setInterval(() => {
       if (!checkDisabled(imageElement)) {
         clearInterval(interval);
+        imageElement.removeAttribute('loading');
 
         if (linkProperties.isHigh) {
           addToHighLoadPlan({

@@ -14,18 +14,41 @@
     text-align: center;
     letter-spacing: .02em;
     margin-bottom: .75rem;
+
+    &.left-side {
+      text-align: left;
+    }
   }
   &__descr {
     line-height: 1.2;
     letter-spacing: .02em;
     text-align: center;
     margin-bottom: 1.75rem;
+
+    &.left-side {
+      text-align: left;
+    }
+    &.small {
+      font-size: .875rem;
+    }
+    &.closer {
+      margin-bottom: 1.55rem;
+    }
   }
   &__input {
     margin-bottom: .9375rem;
   }
   &__button {
     margin-bottom: 1.4375rem;
+  }
+
+  &.integrated {
+    width: 100%;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    background-color: unset;
   }
 }
 
@@ -46,6 +69,9 @@
     }
   }
 
+  &.left-side {
+    text-align: left;
+  }
   &_darker {
     color: rgba($color: #000, $alpha: .6);
 

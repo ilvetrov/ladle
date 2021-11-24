@@ -89,3 +89,36 @@
 		<!-- /.header__menu -->
 	</header>
 	<!-- /#header -->
+	<?php get_template_part('template-parts/contact-pop-up', '', [
+		'pop_up_name' => 'call-order',
+		'title_text' => 'Оставьте заявку<br> на обратный звонок',
+		'descr_text' => 'Мы перезвоним в течении 5 минут',
+		'button_text' => 'Позвоните мне',
+		'class_form' => 'integrated',
+		'class_title' => 'left-side',
+		'class_descr' => 'left-side small closer',
+		'class_privacy_policy' => 'left-side',
+	]); ?>
+	<?php get_template_part('template-parts/contact-pop-up', '', [
+		'pop_up_name' => 'rent-order',
+		'title_text' => 'Оставьте заявку<br> на аренду техники',
+		'descr_text' => 'Мы перезвоним в течении 5 минут',
+		'button_text' => 'Заказать аренду',
+		'class_form' => 'integrated',
+		'class_title' => 'left-side',
+		'class_descr' => 'left-side small closer',
+		'class_privacy_policy' => 'left-side',
+	]); ?>
+	<div class="top-level-buttons">
+		<?php get_template_part('template-parts/top-level-button', '', [
+			'text' => 'Рассчитать стоимость',
+			'icon' => 'calc.png'
+		]); ?>
+		<?php get_template_part('template-parts/top-level-button', '', [
+			'icon' => 'chat.png'
+		]); ?>
+		<?php get_template_part('template-parts/top-level-button', '', [
+			'icon' => 'call-red-line.png'
+		]); ?>
+	</div>
+	<!-- /.top-level-buttons -->
