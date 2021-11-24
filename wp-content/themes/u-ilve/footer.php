@@ -36,7 +36,7 @@
 						</div>
 						<!-- /.footer__block-title -->
 						<?php wp_nav_menu([
-							'menu' => 'footer-menu-sections',
+							'theme_location' => 'footer-menu-sections',
 							'container' => '',
 							'menu_class' => 'footer__links'
 						]); ?>
@@ -48,7 +48,7 @@
 						</div>
 						<!-- /.footer__block-title -->
 						<?php wp_nav_menu([
-							'menu' => 'footer-menu-links',
+							'theme_location' => 'footer-menu-links',
 							'container' => '',
 							'menu_class' => 'footer__links'
 						]); ?>

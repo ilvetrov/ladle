@@ -77,7 +77,7 @@
 					</div>
 					<!-- /.header-menu__calculate-appeal -->
 					<?php wp_nav_menu([
-						'menu' => 'header-menu',
+						'theme_location' => 'header-menu',
 						'container' => '',
 						'menu_class' => 'header-menu__links'
 					]); ?>
