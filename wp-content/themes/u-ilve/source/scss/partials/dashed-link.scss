@@ -1,6 +1,6 @@
 .dashed-link {
   a {
-    border-bottom: 1px dashed #999;
+    border-bottom: .0625rem dashed #999;
     transition: border-bottom-color .2s, color .2s;
 
     &:hover, &:focus {

@@ -20,7 +20,7 @@
     color: rgba($color: #fff, $alpha: .6);
   }
   &__privacy-policy {
-    border-bottom: 1px dashed rgba($color: #fff, $alpha: .6);
+    border-bottom: .0625rem dashed rgba($color: #fff, $alpha: .6);
     transition: border-bottom-color .2s, color .2s;
 
     &:hover, &:focus {

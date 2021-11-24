@@ -55,7 +55,7 @@ const currentHighLoads = [];
 
 initAllNotManualAsyncImg();
 window.addEventListener('load', function() {
-  setTimeout(() => setInterval(() => requestAnimationFrame(startHighLoad), 1000), 2000);
+  setTimeout(() => setInterval(() => requestAnimationFrame(startHighLoad), 500), 1000);
 });
 function initAllNotManualAsyncImg() {
   for (let elementIteration = 0; elementIteration < imagesElements.length; elementIteration++) {

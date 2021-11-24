@@ -73,7 +73,7 @@
     margin-bottom: 1.2rem;
   }
   &__dashed-link {
-    border-bottom: 1px dashed #000;
+    border-bottom: .0625rem dashed #000;
     transition: border-bottom-color .2s, color .2s;
 
     &:hover, &:focus {
