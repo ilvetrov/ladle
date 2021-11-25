@@ -8,3 +8,4 @@ wp-content/cache/
 *.sqlite
 wp-config.php
 composer.lock
+wp-content/advanced-cache.php
