@@ -221,6 +221,10 @@ get_header();
 						</div>
 						<!-- /.other-companies__left-side -->
 						<div class="other-companies__right-side">
+							<div class="other-companies__background">
+								<img <?php img_async_src('other-technique.png'); ?> alt="Трактор" class="other-companies__background-img">
+							</div>
+							<!-- /.other-companies__background -->
 							<div class="other-companies__problems">
 								<div class="other-companies-problems">
 									<div class="other-companies-problems__content">
@@ -266,10 +270,6 @@ get_header();
 						<!-- /.other-companies__right-side -->
 					</div>
 					<!-- /.other-companies__content -->
-					<div class="other-companies__background">
-						<img <?php img_async_src('other-technique.png'); ?> alt="Трактор" class="other-companies__background-img">
-					</div>
-					<!-- /.other-companies__background -->
 				</div>
 				<!-- /.other-companies__container -->
 			</div>
