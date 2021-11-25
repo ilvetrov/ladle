@@ -2,6 +2,7 @@
   position: absolute;
   width: 100%;
   z-index: 10;
+  overflow: hidden;
 
   &__block {
     border-bottom: .063rem rgba(255, 255, 255, .2) solid;
@@ -16,8 +17,30 @@
     align-items: center;
     justify-content: space-between;
   }
+  &__logo-block {
+    @media (max-width: 425px) {
+      width: 100%;
+    }
+  }
+  &__payment-block {
+    @media (max-width: 1330px) {
+      display: none;
+    }
+  }
   &__payment-text {
     max-width: 19.5rem;
+  }
+  &__messengers-block {
+    margin-right: 3.125rem;
+
+    @media (max-width: 910px) {
+      display: none;
+    }
+  }
+  &__phone-block {
+    @media (max-width: 645px) {
+      display: none;
+    }
   }
 }
 .header-family-block {
@@ -33,6 +56,29 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+  &__contacts {
+    display: flex;
+    align-items: center;
+
+    @media (min-width: 911px) {
+      display: none;
+    }
+  }
+  &__phone {
+    margin-left: 1.25rem;
+
+    @media (min-width: 646px) {
+      display: none;
+    }
+    @media (max-width: 425px) {
+      margin-left: .875rem;
+    }
+  }
+  &__calculate-appeal {
+    @media (max-width: 910px) {
+      display: none;
+    }
   }
   &__links {
     display: flex;
@@ -57,6 +103,15 @@
       &:last-child {
         margin-right: 0;
       }
+    }
+
+    @media (max-width: 1330px) {
+      display: none;
+    }
+  }
+  &__mobile-button {
+    @media (min-width: 1331px) {
+      display: none;
     }
   }
 }

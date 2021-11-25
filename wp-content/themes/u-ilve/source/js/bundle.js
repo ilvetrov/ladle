@@ -6,5 +6,6 @@ require('./partials/quiz').Quiz.initAll();
 require('./partials/range-slider');
 require('./partials/date-picker');
 require('./partials/pop-up');
+require('./partials/dynamic-styles');
 
 window.replaceElementWithDynamicTag = require('./partials/dynamic-tag').replaceElementWithDynamicTag;

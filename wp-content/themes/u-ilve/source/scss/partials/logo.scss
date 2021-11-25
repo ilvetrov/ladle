@@ -13,6 +13,10 @@
   &__site-descr {
     max-width: 11.875rem;
   }
+
+  @media (max-width: 425px) {
+    justify-content: space-between;
+  }
 }
 
 .site-descr {

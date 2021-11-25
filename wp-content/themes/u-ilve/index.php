@@ -24,7 +24,7 @@ get_header();
 					<div class="hello-tractor">
 						<div class="hello-tractor__wrap" style="--image-height:<?php echo get_img_size('tractor.png')[1]; ?>px;">
 							<div class="container-size">
-								<div class="hello-tractor__container">
+								<div class="hello-tractor__container dys-hello-tractor-container">
 									<div class="hello-tractor__message">
 										<div class="hello-tractor-message">
 											<div class="hello-tractor-message__background-shadow" <?php img_async_src('hello-tractor-message.png', true, true); ?>></div>
@@ -46,7 +46,7 @@ get_header();
 							<!-- /.container-size -->
 						</div>
 						<!-- /.hello-tractor__wrap -->
-						<div class="hello-tractor__image-wrap">
+						<div class="hello-tractor__image-wrap dys-hello-tractor">
 							<img <?php img_async_src('tractor.png'); ?> alt="Трактор" class="hello-tractor__image">
 						</div>
 						<!-- /.hello-tractor__image-wrap -->
@@ -70,7 +70,7 @@ get_header();
 									<!-- /.flare__wrap -->
 								</div>
 								<!-- /.flare -->
-								<div class="big-button__text flare-neighbor">Получить подбор спецтехники <img <?php img_async_src('right-arrow.png'); ?> alt="Стрелка вперёд" class="big-button__arrow"></div>
+								<div class="big-button__text flare-neighbor">Получить подбор спецтехники <img <?php img_async_src('right-arrow.png'); ?> alt="Стрелка вперёд" class="big-button__arrow big-button__arrow_too-big-for-mobile"></div>
 							</a>
 							<!-- /.big-button -->
 							<a href="#" class="big-button not-link-style big-button_wide"><div class="big-button__text">Перейти в каталог</div></a>
@@ -215,7 +215,7 @@ get_header();
 					<div class="other-companies__content">
 						<div class="other-companies__left-side">
 							<h2 class="section-title section-title_white">
-								<strong>Примерно <span class="accent">87% компаний</span></strong> недобросовестно относятся к своим заказчикам
+								<strong>Примерно <span class="accent">87% компаний</span></strong> недобросовестно относятся к своим заказчикам
 							</h2>
 							<!-- /.section-title -->
 						</div>

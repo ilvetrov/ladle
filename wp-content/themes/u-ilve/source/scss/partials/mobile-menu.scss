@@ -1,0 +1,38 @@
+.mobile-menu-button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  div {
+    height: .125rem;
+    background-color: $accent-color;
+    transform-origin: right center;
+    transition: transform .2s;
+
+    &:nth-child(1) {
+      width: 2.125rem;
+      margin-bottom: .375rem;
+    }
+    &:nth-child(2) {
+      width: 1.625rem;
+      margin-bottom: .375rem;
+    }
+    &:nth-child(3) {
+      width: 1.125rem;
+    }
+  }
+  
+  &:hover, &:focus {
+    div {
+      &:nth-child(1) {
+        transform: scaleX(.8);
+      }
+      &:nth-child(2) {
+        transform: scaleX(.8);
+      }
+      &:nth-child(3) {
+        transform: scaleX(.8);
+      }
+    }
+  }
+}

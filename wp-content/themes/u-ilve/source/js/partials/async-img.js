@@ -230,6 +230,7 @@ function startHighLoad() {
 }
 
 window.addEventListener('load', function() {
+  if (window.innerWidth <= 1330) return;
   const disabledCheckInterval = setInterval(() => {
     if (currentImagesLoadList.length === 0 && currentImagesLoadListLastAccessTime > 2000 && window.scrollY > 400) {
       clearInterval(disabledCheckInterval);

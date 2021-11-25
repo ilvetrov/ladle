@@ -6,6 +6,10 @@
   &__item {
     margin-right: .937rem;
 
+    @media (max-width: 425px) {
+      margin-right: .375rem;
+    }
+
     &:last-child {
       margin-right: 0;
     }
@@ -16,6 +20,10 @@
     &_small {
       height: 1.56rem;
       width: auto;
+    }
+
+    @media (max-width: 425px) {
+      height: 1.375rem;
     }
   }
   &__link {

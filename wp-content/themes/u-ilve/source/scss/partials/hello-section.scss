@@ -12,6 +12,20 @@
   &__container {
     padding-top: 5.63rem;
     padding-bottom: 9.37rem;
+
+    @media (max-width: 760px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-bottom: 18rem;
+    }
+    @media (max-width: 625px) {
+      padding-top: 14.4vw;
+    }
+    @media (max-width: 359px) {
+      padding-top: 12vw;
+    }
   }
   &__title {
     font-size: 2.875rem;
@@ -21,6 +35,17 @@
     letter-spacing: .02em;
     max-width: 50rem;
     margin-bottom: 1.69rem;
+
+    @media (max-width: 760px) {
+      text-align: center;
+      max-width: none;
+    }
+    @media (max-width: 638px) {
+      font-size: 7.2vw;
+    }
+    @media (max-width: 361px) {
+      font-size: 1.625rem;
+    }
   }
   &__descr {
     font-size: 1.5rem;
@@ -29,9 +54,30 @@
     margin-bottom: 3.83rem;
     max-width: 38.2rem;
     letter-spacing: .02em;
+
+    @media (max-width: 760px) {
+      text-align: center;
+      max-width: none;
+    }
+    @media (max-width: 638px) {
+      font-size: 3.7vw;
+    }
+    @media (max-width: 487px) {
+      font-size: 1.125rem;
+    }
+    @media (max-width: 425px) {
+      margin-bottom: 2.63rem;
+    }
   }
   &__accent-button {
     margin-right: 1.63rem;
+
+    @media (max-width: 907px) {
+      margin-bottom: .9375rem;
+    }
+    @media (max-width: 760px) {
+      margin-right: 0;
+    }
   }
 }
 
@@ -57,12 +103,35 @@
     display: flex;
     justify-content: flex-end;
     padding-top: 5.63rem;
+
+    @media (max-width: 1330px) {
+      display: none;
+    }
   }
   &__image-wrap {
     position: relative;
     right: -7.3rem;
     pointer-events: none;
     user-select: none;
+
+    @media (max-width: 1785px) {
+      right: var(--right, -1000vw);
+    }
+    @media (max-width: 760px) {
+      right: auto;
+      left: 5rem;
+      height: 23.81rem;
+    }
+  }
+  &__image {
+    @media (max-width: 760px) {
+      height: 100%;
+    }
+  }
+
+  @media (max-width: 760px) {
+    justify-content: center;
+    bottom: -3.5rem;
   }
 }
 

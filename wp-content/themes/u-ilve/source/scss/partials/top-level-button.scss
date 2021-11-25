@@ -21,6 +21,9 @@
     transform: none;
     top: 16vh;
   }
+  @media (max-width: 1785px) {
+    display: none;
+  }
 }
 
 .top-level-button {

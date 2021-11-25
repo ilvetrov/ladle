@@ -45,11 +45,11 @@
 						<!-- /.benefit-small__descr -->
 					</div>
 					<!-- /.benefit-small -->
-					<div class="header-top__messengers-block">
-						<?php get_template_part('template-parts/messengers'); ?>
-					</div>
-					<!-- /.header-top__messengers-block -->
 					<div class="header-top__contact-block header-family-block">
+						<div class="header-top__messengers-block">
+							<?php get_template_part('template-parts/messengers'); ?>
+						</div>
+						<!-- /.header-top__messengers-block -->
 						<div class="header-top__phone-block">
 							<?php get_template_part('template-parts/phone-block'); ?>
 						</div>
@@ -65,6 +65,19 @@
 		<div class="header__menu header__block header-menu">
 			<div class="container-size">
 				<div class="header-menu__container">
+					<div class="header-menu__contacts">
+						<div class="header-menu__messengers">
+							<?php get_template_part('template-parts/messengers'); ?>
+						</div>
+						<!-- /.header-menu__messengers -->
+						<div class="header-menu__phone">
+							<?php get_template_part('template-parts/phone', '', [
+								'without_icon' => true
+							]); ?>
+						</div>
+						<!-- /.header-menu__phone -->
+					</div>
+					<!-- /.header-menu__contacts -->
 					<div class="header-menu__calculate-appeal">
 						<a href="/#test-calculator" class="calculate-appeal not-link-style click-extender">
 							<img <?php img_async_src('calc-white.png'); ?> alt="Тест-калькулятор" class="calculate-appeal__icon">
@@ -76,11 +89,20 @@
 						<!-- /.calculate-appeal -->
 					</div>
 					<!-- /.header-menu__calculate-appeal -->
-					<?php wp_nav_menu([
-						'theme_location' => 'header-menu',
-						'container' => '',
-						'menu_class' => 'header-menu__links'
-					]); ?>
+					<div class="header-menu__right-block">
+						<?php wp_nav_menu([
+							'theme_location' => 'header-menu',
+							'container' => '',
+							'menu_class' => 'header-menu__links'
+						]); ?>
+						<button class="mobile-menu-button not-button-style click-extender header-menu__mobile-button">
+							<div></div>
+							<div></div>
+							<div></div>
+						</button>
+						<!-- /.mobile-menu-button -->
+					</div>
+					<!-- /.header-menu__right-block -->
 				</div>
 				<!-- /.header-menu__container -->
 			</div>
