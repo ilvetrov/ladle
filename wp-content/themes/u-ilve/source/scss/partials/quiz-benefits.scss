@@ -10,8 +10,12 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  &__content {
-    margin-top: 2.19rem;
+  &__person {
+    margin-bottom: 2.19rem;
+
+    @media (max-width: 1330px) {
+      display: none;
+    }
   }
   &__title {
     font-size: 1.25rem;
@@ -31,6 +35,10 @@
   }
   &__list {
     padding-left: 2.19rem;
+
+    @media (max-width: 1330px) {
+      padding-left: 0;
+    }
   }
   &__item {
     margin-bottom: 1.125rem;
@@ -71,6 +79,7 @@
     font-size: .875rem;
     line-height: 1.43;
     letter-spacing: .02em;
+    min-width: 11.875rem;
   }
 }
 

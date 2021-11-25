@@ -1,0 +1,16 @@
+@mixin hideMin($width) {
+  .hide-min-#{$width} {
+    @media (min-width: #{$width}px) { display: none; }
+  }
+}
+@mixin hideMax($width) {
+  .hide-max-#{$width} {
+    @media (max-width: #{$width}px) { display: none; }
+  }
+}
+
+// Min
+@include hideMin(616);
+
+// Max
+@include hideMax(615);

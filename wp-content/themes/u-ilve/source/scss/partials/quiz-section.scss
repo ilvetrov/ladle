@@ -5,12 +5,31 @@
   &__message {
     text-align: center;
     margin-bottom: 1.1rem;
+
+    @media (max-width: 1000px) {
+      margin-bottom: 1.625rem;
+    }
   }
   &__title {
     margin-bottom: 1.55rem;
+
+    @media (max-width: 1000px) {
+      margin-bottom: 1.25rem;
+    }
   }
   &__descr {
     margin-bottom: 3.5rem;
+
+    @media (max-width: 1000px) {
+      margin-bottom: 1.9375rem;
+    }
+  }
+
+  @media (max-width: 900px) {
+    padding-bottom: 4.375rem;
+  }
+  @media (max-width: 760px) {
+    padding-top: 7.75rem;
   }
 }
 
@@ -27,4 +46,10 @@
   font-weight: 700;
   line-height: 1.5;
   letter-spacing: .02em;
+
+  @media (max-width: 700px) {
+    font-size: 1rem;
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
 }

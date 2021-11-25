@@ -97,11 +97,11 @@ get_header();
 					</div>
 					<!-- /.quiz-section__message -->
 					<h2 class="quiz-section__title section-title section-title_center">
-						<strong>Пройдите тест-калькулятор <span class="accent">за 1 минуту</span></strong> <br>и получите подбор спецтехники под Ваши задачи
+						<strong>Пройдите<br class="hide-min-616"> тест-калькулятор <span class="accent">за 1 минуту</span></strong> <br class="hide-max-615">и получите подбор спецтехники под Ваши задачи
 					</h2>
 					<!-- /.quiz-section__title -->
 					<div class="section-descr section-descr_center quiz-section__descr">
-						И закрепите за собой скидку -10% на первый заказ
+						И закрепите за собой скидку -10% на первый заказ
 					</div>
 					<!-- /.section-descr -->
 					<div class="quiz-wrap">

@@ -1,4 +1,12 @@
 const { lookAtMeAnimation } = require("./look-at-me");
+const { smoothScrollToElement } = require("./smooth-scroll");
+const { getWindowWidth } = require("./width-resize-event");
+
+const verticalBreakpoint = 1280;
+  
+function verticalCheck() {
+  return getWindowWidth() <= verticalBreakpoint;
+}
 
 class Quiz {
   /**
@@ -6,6 +14,7 @@ class Quiz {
    * @param {Element} quiz
    */
   constructor(quiz) {
+    this.quizElement = quiz;
     this.name = Quiz.getName(quiz);
     this.blocksElements = document.querySelectorAll(`[data-quiz-block][data-quiz-of="${this.name}"]`);
     this.blocks = QuizBlock.initAll(this.name, this.blocksElements);
@@ -38,6 +47,9 @@ class Quiz {
         this.isInSwitching = true;
         this.currentPosition = toPosition;
         QuizBlock.hideAll(this.name, toPosition).then(() => this.isInSwitching = false);
+        if (verticalCheck()) {
+          smoothScrollToElement(this.quizElement, 10);
+        }
       });
     });
   }
@@ -196,17 +208,22 @@ class QuizBlock {
   hide(toRight = false) {
     this.blockElement.classList.add('hidden-' + (toRight ? 'right' : 'left'));
     this.blockElement.classList.remove('hidden-' + (!toRight ? 'right' : 'left'));
-
-    // setTimeout(() => {
-    //   this.blockElement.classList.add('disabled');
-    // }, QuizBlock.trasitionForHidden + 50);
+    
+    if (verticalCheck()) {
+      setTimeout(() => {
+        this.blockElement.classList.add('obedient');
+      }, QuizBlock.trasitionForHidden);
+    }
   }
 
   show() {
-    // this.blockElement.classList.remove('disabled');
+    if (verticalCheck()) {
+      this.blockElement.classList.remove('obedient');
+    }
     this.blockElement.classList.remove('hidden-right');
-    this.blockElement.classList.remove( 'hidden-left');
+    this.blockElement.classList.remove('hidden-left');
   }
+
 
   /**
    * 
