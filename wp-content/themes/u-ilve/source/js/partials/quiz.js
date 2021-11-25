@@ -2,7 +2,7 @@ const { lookAtMeAnimation } = require("./look-at-me");
 const { smoothScrollToElement } = require("./smooth-scroll");
 const { getWindowWidth } = require("./width-resize-event");
 
-const verticalBreakpoint = 1280;
+const verticalBreakpoint = 1100;
   
 function verticalCheck() {
   return getWindowWidth() <= verticalBreakpoint;
