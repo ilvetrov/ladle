@@ -7,6 +7,15 @@
   }
   &__descr {
     margin-bottom: 3.5rem;
+
+    @media (max-width: 1000px) {
+      margin-bottom: 2.1875rem;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    padding-top: 8.875rem;
+    padding-bottom: 4rem;
   }
 }
 
@@ -23,6 +32,10 @@
     padding-right: 1.7rem;
     letter-spacing: .02em;
     margin-bottom: .8rem;
+  }
+
+  @media (max-width: 450px) {
+    width: 21.25rem;
   }
 }
 

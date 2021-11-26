@@ -1,7 +1,7 @@
 .founder-section {
   background-repeat: no-repeat;
   background-size: cover;
-    padding-top: 5.3125rem;
+  padding-top: 5.3125rem;
 
   &__container {
     position: relative;
@@ -12,6 +12,10 @@
     right: 0;
     pointer-events: none;
     user-select: none;
+
+    @media (max-width: 1330px) {
+      display: none;
+    }
   }
   &__person-background {
     position: absolute;
@@ -20,30 +24,81 @@
     transform: translateX(-50%);
     pointer-events: none;
     user-select: none;
+    z-index: 1;
+
+    @media (max-width: 1330px) {
+      bottom: auto;
+      top: 0;
+      transform: translateX(-50%) translateY(-70%);
+    }
   }
   &__person-wrap {
     transform: translateX(5.63rem);
+
+    @media (max-width: 1330px) {
+      transform: none;
+
+      img {
+        height: 28.125rem;
+        width: auto;
+      }
+    }
   }
   &__wrap {
-    position: relative;
+    
   }
   &__title {
     margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 2;
+
+    @media (max-width: 1330px) {
+      text-align: center;
+    }
   }
   &__descr {
     margin-bottom: 3.5rem;
+    position: relative;
+    z-index: 2;
+
+    @media (max-width: 1330px) {
+      text-align: center;
+      margin-bottom: 21.25rem;
+    }
   }
   &__about-block {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 1.56rem;
+
+    @media (max-width: 1330px) {
+      position: relative;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    @media (max-width: 768px) {
+      margin-bottom: -36px;
+    }
   }
   &__text-about-us {
     max-width: 35rem;
+    position: relative;
+    z-index: 2;
+
+    @media (max-width: 1330px) {
+      margin-bottom: 3.375rem;
+    }
+  }
+  &__advantages {
+    position: relative;
+    z-index: 2;
   }
   &__gallery {
     transform: translateY(50%);
+    position: relative;
+    z-index: 2;
   }
   &__gallery-photo {
     border-radius: .625rem;
@@ -64,6 +119,16 @@
   &_white {
     color: #fff;
   }
+
+  @media (max-width: 768px) {
+    text-align: center;
+    font-size: 1.125rem;
+
+    &_inner {
+      font-size: 1rem;
+      text-align: left;
+    }
+  }
 }
 
 .founder-about-company {
@@ -76,11 +141,26 @@
 
   &__title {
     margin-bottom: 1.1rem;
+
+    @media (max-width: 768px) {
+      margin-bottom: .8rem;
+    }
   }
   &__text {
     line-height: 1.375;
     letter-spacing: .02em;
     color: rgba($color: #000, $alpha: .6);
+
+    @media (max-width: 768px) {
+      font-size: .875rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 1.9375rem;
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+    padding-bottom: 2.1875rem;
   }
 }
 
@@ -94,6 +174,11 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    @media (max-width: 445px) {
+      width: auto;
+      font-size: .875rem;
     }
   }
 }

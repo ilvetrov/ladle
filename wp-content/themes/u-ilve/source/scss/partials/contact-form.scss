@@ -50,6 +50,14 @@
     padding-bottom: 0;
     background-color: unset;
   }
+
+  @media (max-width: 768px) {
+    padding-top: 1.6875rem;
+    padding-bottom: 2rem;
+    padding-left: .9375rem;
+    padding-right: .9375rem;
+    max-width: 21.25rem;
+  }
 }
 
 .privacy-policy {

@@ -1,4 +1,4 @@
-<ul class="messengers">
+<ul class="messengers <?php echo @$args['early_min'] ? 'messengers_early-min' : ''; ?>">
   <li class="messengers__item">
     <a href="https://t.me/" target="_blank" class="messengers__link click-extender click-extender_small">
       <img <?php img_async_src('tg.png'); ?> alt="Telegram" class="messengers__icon <?php echo (@$args['small_icons'] ? 'messengers__icon_small' : ''); ?>">

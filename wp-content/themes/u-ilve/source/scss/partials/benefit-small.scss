@@ -5,6 +5,12 @@
 
   &__icon {
     margin-right: 1.063rem;
+
+    @media (max-width: 445px) {
+      width: 2.5rem;
+      height: auto;
+      margin-right: .8rem;
+    }
   }
   &__descr {
     line-height: 1.5;

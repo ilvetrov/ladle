@@ -115,6 +115,8 @@
       width: 100%;
     }
     @media (max-width: 900px) {
+      width: 20rem;
+      
       &:last-child {
         margin-bottom: 0;
       }

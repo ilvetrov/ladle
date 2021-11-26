@@ -11,17 +11,69 @@
   }
   &__steps {
     margin-bottom: 1.5625rem;
+
+    @media (max-width: 1330px) {
+      width: 21.25rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: 480px) {
+      width: 21.25rem;
+    }
   }
   &__call-to-us {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: 1000px) {
+      flex-direction: column;
+      max-width: max-content;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
   &__call-method {
     margin-right: 3.125rem;
 
     &:last-child {
       margin-right: 0;
+    }
+
+    @media (max-width: 1000px) {
+      margin-right: 0;
+    }
+  }
+  &__call-button {
+    @media (max-width: 1000px) {
+      margin-bottom: 1.75rem;
+    }
+    @media (max-width: 425px) {
+      width: 100%;
+    }
+  }
+  &__contacts {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 1000px) {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+  &__big-button-arrow {
+    @media (max-width: 425px) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    padding-top: 3.75rem;
+    padding-bottom: 4rem;
+  }
+  @media (max-width: 425px) {
+    .big-button {
+      width: 100%;
     }
   }
 }
@@ -96,5 +148,10 @@
     line-height: 1.2;
     color: rgba($color: #000, $alpha: .6);
     letter-spacing: .02em;
+  }
+
+  @media (max-width: 1330px) {
+    max-width: none;
+    width: 21.25rem;
   }
 }

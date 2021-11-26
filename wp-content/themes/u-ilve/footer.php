@@ -15,7 +15,7 @@
 		<div class="container-size">
 			<div class="footer__container">
 				<div class="footer__blocks">
-					<div class="footer__block">
+					<div class="footer__block footer__about-block">
 						<div class="footer__logo">
 							<?php get_template_part('template-parts/logo-and-descr'); ?>
 						</div>
@@ -24,13 +24,16 @@
 							Copyright 2021 © Все права защищены.
 						</div>
 						<!-- /.footer__copyright -->
-						<a href="#" target="_blank" class="footer__privacy-policy footer__dim-text not-link-style">
-							Политика конфиденциальности
-						</a>
-						<!-- /.footer__privacy-policy -->
+						<div class="footer__privacy-policy-wrap">
+							<a href="#" target="_blank" class="footer__privacy-policy footer__dim-text not-link-style">
+								Политика конфиденциальности
+							</a>
+							<!-- /.footer__privacy-policy -->
+						</div>
+						<!-- /.footer__privacy-policy-wrap -->
 					</div>
 					<!-- /.footer__block -->
-					<div class="footer__block">
+					<div class="footer__block footer__sections-block">
 						<div class="footer__block-title">
 							<strong>Разделы сайта</strong>
 						</div>
@@ -42,7 +45,7 @@
 						]); ?>
 					</div>
 					<!-- /.footer__block -->
-					<div class="footer__block">
+					<div class="footer__block footer__good-links-block">
 						<div class="footer__block-title">
 							<strong>Полезные ссылки</strong>
 						</div>
@@ -54,7 +57,7 @@
 						]); ?>
 					</div>
 					<!-- /.footer__block -->
-					<div class="footer__block">
+					<div class="footer__block footer__bookmark-block">
 						<div class="footer__block-title">
 							Сохраните сайт Ctrl+D
 						</div>

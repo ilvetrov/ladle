@@ -214,7 +214,7 @@ get_header();
 				<div class="other-companies__container">
 					<div class="other-companies__content">
 						<div class="other-companies__left-side">
-							<h2 class="section-title section-title_white">
+							<h2 class="section-title section-title_white other-companies__title">
 								<strong>Примерно <span class="accent">87% компаний</span></strong> недобросовестно относятся к своим заказчикам
 							</h2>
 							<!-- /.section-title -->
@@ -330,11 +330,11 @@ get_header();
 					];
 					?>
 					<div class="about-us__benefits">
-						<div class="adaptive-gallery">
-							<div class="adaptive-gallery__wrap">
+						<div class="adaptive-gallery our-benefit-shadow our-benefit-shadow_mobile js-adaptive-gallery" data-current-item="0" >
+							<div class="adaptive-gallery__wrap js-adaptive-gallery-wrap">
 								<?php foreach ($about_us_benefits as $benefit): ?>
-									<div class="adaptive-gallery__item">
-										<div class="our-benefit about-us__benefit">
+									<div class="adaptive-gallery__item js-adaptive-gallery-item">
+										<div class="our-benefit our-benefit-shadow our-benefit-shadow_desktop about-us__benefit">
 											<div class="our-benefit__icon">
 												<img <?php img_async_src($benefit['icon']); ?> alt="">
 											</div>
@@ -357,6 +357,17 @@ get_header();
 								<?php endforeach; ?>
 							</div>
 							<!-- /.adaptive-gallery__wrap -->
+							<div class="adaptive-gallery__buttons">
+								<button class="adaptive-gallery__prev-button adaptive-gallery__button not-button-style js-adaptive-gallery-prev">
+									<img <?php img_async_src('left-arrow-button.png'); ?> alt="Назад">
+								</button>
+								<!-- /.adaptive-gallery__prev-button -->
+								<button class="adaptive-gallery__next-button adaptive-gallery__button not-button-style js-adaptive-gallery-next">
+									<img <?php img_async_src('right-arrow-button.png'); ?> alt="Вперёд">
+								</button>
+								<!-- /.adaptive-gallery__next-button -->
+							</div>
+							<!-- /.adaptive-gallery__buttons -->
 						</div>
 						<!-- /.adaptive-gallery -->
 					</div>
@@ -380,7 +391,7 @@ get_header();
 					<!-- /.our-technique__title -->
 					<div class="our-technique__descr">
 						<div class="section-descr section-descr_center">
-							Личный состав проходит медпроверку ежедневно
+							Личный состав проходит медпроверку ежедневно
 						</div>
 						<!-- /.section-descr -->
 					</div>
@@ -390,10 +401,10 @@ get_header();
 						'post_type' => 'technique'
 					]);
 					?>
-					<div class="adaptive-gallery">
-						<div class="adaptive-gallery__wrap">
+					<div class="adaptive-gallery js-adaptive-gallery">
+						<div class="adaptive-gallery__wrap js-adaptive-gallery-wrap">
 							<?php foreach ($our_technique as $technique): ?>
-								<div class="adaptive-gallery__item">
+								<div class="adaptive-gallery__item js-adaptive-gallery-item">
 									<div class="technique-preview">
 										<div class="technique-preview__background"></div>
 										<div class="technique-preview__wrap">
@@ -478,6 +489,17 @@ get_header();
 							<?php endforeach; ?>
 						</div>
 						<!-- /.adaptive-gallery__wrap -->
+						<div class="adaptive-gallery__buttons adaptive-gallery__buttons_top">
+							<button class="adaptive-gallery__prev-button adaptive-gallery__button not-button-style js-adaptive-gallery-prev">
+								<img <?php img_async_src('left-arrow-button.png'); ?> alt="Назад">
+							</button>
+							<!-- /.adaptive-gallery__prev-button -->
+							<button class="adaptive-gallery__next-button adaptive-gallery__button not-button-style js-adaptive-gallery-next">
+								<img <?php img_async_src('right-arrow-button.png'); ?> alt="Вперёд">
+							</button>
+							<!-- /.adaptive-gallery__next-button -->
+						</div>
+						<!-- /.adaptive-gallery__buttons -->
 					</div>
 					<!-- /.adaptive-gallery -->
 				</div>
@@ -494,25 +516,25 @@ get_header();
 						<img <?php img_async_src('logo-founder-background.png'); ?> alt="">
 					</div>
 					<!-- /.founder-section__logo-background -->
-					<div class="founder-section__person-background">
-						<div class="founder-section__person-wrap">
-							<img <?php img_async_src('founder.png'); ?> alt="Виктор Викторович — компания Ковш">
-						</div>
-						<!-- /.founder-section__person-wrap -->
-					</div>
-					<!-- /.founder-section__person-background -->
 					<div class="founder-section__wrap">
 						<h2 class="section-title section-title_white founder-section__title">
 							<strong>Здравствуйте, я Виктор Викторович</strong>
 						</h2>
 						<!-- /.section-title -->
 						<div class="section-descr section-descr_white founder-section__descr">
-							Основатель компании “Ковш” по аренде<br> собственной спецтехники в городе Уфа
+							Основатель компании “Ковш” по аренде<br class="hide-max-425"> собственной спецтехники в городе Уфа
 						</div>
 						<!-- /.section-descr -->
 						<div class="founder-section__about-block">
+							<div class="founder-section__person-background">
+								<div class="founder-section__person-wrap">
+									<img <?php img_async_src('founder.png'); ?> alt="Виктор Викторович — компания Ковш">
+								</div>
+								<!-- /.founder-section__person-wrap -->
+							</div>
+							<!-- /.founder-section__person-background -->
 							<div class="founder-about-company founder-section__text-about-us">
-								<div class="founder-about-title founder-about-company__title">
+								<div class="founder-about-title founder-about-title_inner founder-about-company__title">
 									<strong><span class="accent">В двух словах о том,</span> как мы решили</strong> открыть своё предприятие
 								</div>
 								<!-- /.founder-about-title -->
@@ -589,7 +611,7 @@ get_header();
 						];
 						?>
 						<div class="founder-section__gallery">
-							<div class="not-gallery">
+							<div class="not-gallery non-containerized-tech">
 								<?php foreach ($photos as $photo_order => $photo): ?>
 									<div class="not-gallery__item">
 										<div class="founder-section__gallery-photo <?php echo ($photo_order + 1 === count($photos) ? 'last' : ''); ?>">
@@ -643,8 +665,8 @@ get_header();
 					];
 					?>
 					<div class="reviews-section__gallery">
-						<div class="adaptive-gallery">
-							<div class="adaptive-gallery__wrap">
+						<div class="adaptive-gallery js-adaptive-gallery">
+							<div class="adaptive-gallery__wrap js-adaptive-gallery-wrap">
 								<?php foreach ($reviews as $review): ?>
 									<?php
 									$video_link = $review['video_link'];
@@ -653,7 +675,7 @@ get_header();
 									$video_image = "https://i.ytimg.com/vi/$video_id/maxresdefault.jpg";
 									?>
 									
-									<div class="adaptive-gallery__item">
+									<div class="adaptive-gallery__item js-adaptive-gallery-item">
 										<div class="review reviews-section__review">
 											<div class="review__video">
 												<?php ob_start(); ?>
@@ -694,6 +716,17 @@ get_header();
 								<?php endforeach; ?>
 							</div>
 							<!-- /.adaptive-gallery__wrap -->
+							<div class="adaptive-gallery__buttons adaptive-gallery__buttons_top">
+								<button class="adaptive-gallery__prev-button adaptive-gallery__button not-button-style js-adaptive-gallery-prev">
+									<img <?php img_async_src('left-arrow-button.png'); ?> alt="Назад">
+								</button>
+								<!-- /.adaptive-gallery__prev-button -->
+								<button class="adaptive-gallery__next-button adaptive-gallery__button not-button-style js-adaptive-gallery-next">
+									<img <?php img_async_src('right-arrow-button.png'); ?> alt="Вперёд">
+								</button>
+								<!-- /.adaptive-gallery__next-button -->
+							</div>
+							<!-- /.adaptive-gallery__buttons -->
 						</div>
 						<!-- /.adaptive-gallery -->
 					</div>
@@ -744,10 +777,10 @@ get_header();
 					];
 					?>
 					<div class="steps-to-get-section__steps">
-						<div class="adaptive-gallery">
-							<div class="adaptive-gallery__wrap">
+						<div class="adaptive-gallery js-adaptive-gallery">
+							<div class="adaptive-gallery__wrap js-adaptive-gallery-wrap">
 								<?php foreach ($steps as $step_order => $step): ?>
-									<div class="adaptive-gallery__item">
+									<div class="adaptive-gallery__item js-adaptive-gallery-item">
 										<div class="step-to-get steps-to-get__step">
 											<div class="step-to-get__wrap">
 												<div class="step-to-get__order-wrap">
@@ -787,6 +820,17 @@ get_header();
 								<?php endforeach; ?>
 							</div>
 							<!-- /.adaptive-gallery__wrap -->
+							<div class="adaptive-gallery__buttons adaptive-gallery__buttons_top">
+								<button class="adaptive-gallery__prev-button adaptive-gallery__button not-button-style js-adaptive-gallery-prev">
+									<img <?php img_async_src('left-arrow-button.png'); ?> alt="Назад">
+								</button>
+								<!-- /.adaptive-gallery__prev-button -->
+								<button class="adaptive-gallery__next-button adaptive-gallery__button not-button-style js-adaptive-gallery-next">
+									<img <?php img_async_src('right-arrow-button.png'); ?> alt="Вперёд">
+								</button>
+								<!-- /.adaptive-gallery__next-button -->
+							</div>
+							<!-- /.adaptive-gallery__buttons -->
 						</div>
 						<!-- /.adaptive-gallery -->
 					</div>
@@ -802,21 +846,26 @@ get_header();
 									<!-- /.flare__wrap -->
 								</div>
 								<!-- /.flare -->
-								<div class="big-button__text flare-neighbor">Получить консультацию <img <?php img_async_src('right-arrow.png'); ?> alt="Стрелка вперёд" class="big-button__arrow"></div>
+								<div class="big-button__text flare-neighbor">Получить консультацию <img <?php img_async_src('right-arrow.png'); ?> alt="Стрелка вперёд" class="big-button__arrow steps-to-get-section__big-button-arrow"></div>
 							</button>
 							<!-- /.big-button -->
 						</div>
 						<!-- /.steps-to-get-section__call-button -->
-						<div class="steps-to-get-section__messengers steps-to-get-section__call-method">
-							<?php get_template_part('template-parts/messengers'); ?>
+						<div class="steps-to-get-section__contacts">
+							<div class="steps-to-get-section__messengers steps-to-get-section__call-method">
+								<?php get_template_part('template-parts/messengers', '', [
+									'early_min' => true
+								]); ?>
+							</div>
+							<!-- /.steps-to-get-section__messengers -->
+							<div class="steps-to-get-section__phone-block steps-to-get-section__call-method">
+								<?php get_template_part('template-parts/phone-block', '', [
+									'black' => true
+								]); ?>
+							</div>
+							<!-- /.steps-to-get-section__phone-block -->
 						</div>
-						<!-- /.steps-to-get-section__messengers -->
-						<div class="steps-to-get-section__phone-block steps-to-get-section__call-method">
-							<?php get_template_part('template-parts/phone-block', '', [
-								'black' => true
-							]); ?>
-						</div>
-						<!-- /.steps-to-get-section__phone-block -->
+						<!-- /.steps-to-get-section__contacts -->
 					</div>
 					<!-- /.steps-to-get-section__call-to-us -->
 				</div>
@@ -852,12 +901,12 @@ get_header();
 				<div class="consultation-section__container">
 					<div class="consultation-section__left-side">
 						<div class="consultation-section__desktop-static">
-							<h2 class="section-title section-title_white consultation-section__title">
+							<h2 class="section-title section-title_white consultation-section__title non-containerized">
 								<strong>Получите <span class="accent">бесплатную</span></strong><br> консультацию специалиста
 							</h2>
 							<!-- /.section-title -->
 							<div class="section-descr section-descr_white  consultation-section__descr">
-								И закрепите за собой скидку <span class="semi-bold">-10% на первый заказ</span>
+								И закрепите за собой скидку <span class="semi-bold">-10% на первый заказ</span>
 							</div>
 							<!-- /.section-descr -->
 						</div>
@@ -970,7 +1019,9 @@ get_header();
 							<!-- /.row-contact-us__title -->
 							<div class="row-contact-us__methods">
 								<div class="row-contact-us__messengers">
-									<?php get_template_part('template-parts/messengers'); ?>
+									<?php get_template_part('template-parts/messengers', '', [
+										'early_min' => true
+									]); ?>
 								</div>
 								<!-- /.row-contact-us__messengers -->
 								<div class="row-contact-us__phone-block">
@@ -1035,7 +1086,8 @@ get_header();
 								</div>
 								<!-- /.contacts-list__header-text -->
 								<?php get_template_part('template-parts/messengers', '', [
-									'small_icons' => true
+									'small_icons' => true,
+									'early_min' => true
 								]); ?>
 							</li>
 							<!-- /.contacts-list__single-row -->

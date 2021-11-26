@@ -8,4 +8,6 @@ require('./partials/date-picker');
 require('./partials/pop-up');
 require('./partials/dynamic-styles');
 
+require('./partials/adaptive-gallery');
+
 window.replaceElementWithDynamicTag = require('./partials/dynamic-tag').replaceElementWithDynamicTag;

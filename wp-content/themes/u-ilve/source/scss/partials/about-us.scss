@@ -8,6 +8,11 @@
   &__descr {
     margin-bottom: 3.5rem;
   }
+
+  @media (max-width: 1000px) {
+    padding-top: 4rem;
+    padding-bottom: 4.1875rem;
+  }
 }
 
 .our-benefit {
@@ -15,7 +20,7 @@
   padding-top: 3.125rem;
   padding-bottom: 3.7rem;
   background-color: #fff;
-  box-shadow: 0 0 2.5rem rgba($color: #000, $alpha: .05);
+  
   border-radius: .625rem;
   max-width: 24.375rem;
   
@@ -27,6 +32,11 @@
     display: flex;
     justify-content: center;
     margin-bottom: 1.5625rem;
+
+    @media (max-width: 425px) {
+      height: 9.375rem;
+      width: auto;
+    }
   }
   &__title {
     font-size: 1.125rem;
@@ -35,11 +45,34 @@
     font-weight: 600;
     margin-bottom: 1.37rem;
     text-align: center;
+
+    @media (max-width: 425px) {
+      font-size: 1rem;
+    }
   }
   &__descr {
     line-height: 1.2;
     letter-spacing: .02em;
     color: rgba($color: #000, $alpha: .6);
     text-align: center;
+
+    @media (max-width: 425px) {
+      font-size: .875rem;
+    }
+  }
+}
+
+.our-benefit-shadow {
+  box-shadow: 0 0 2.5rem rgba($color: #000, $alpha: .05);
+
+  &_mobile {
+    @media (min-width: 1331px) {
+      box-shadow: none;
+    }
+  }
+  &_desktop {
+    @media (max-width: 1330px) {
+      box-shadow: none;
+    }
   }
 }

@@ -33,4 +33,17 @@
       }
     }
   }
+
+  &_early-min & {
+    &__item {
+      @media (max-width: 480px) {
+        margin-right: .875rem;
+      }
+    }
+    &__icon {
+      @media (max-width: 480px) {
+        height: 1.625rem;
+      }
+    }
+  }
 }

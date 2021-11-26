@@ -9,12 +9,34 @@
     justify-content: space-between;
     align-items: flex-start;
     position: relative;
+
+    @media (max-width: 1330px) {
+      flex-direction: column;
+      align-items: stretch;
+    }
   }
   &__title {
     margin-bottom: 1.5rem;
+
+    @media (max-width: 1330px) {
+      text-align: center;
+    }
+    @media (max-width: 1000px) {
+      margin-bottom: 1.125rem;
+    }
+    @media (max-width: 425px) {
+      font-size: 1.5rem;
+    }
   }
   &__descr {
     margin-bottom: 3.44rem;
+
+    @media (max-width: 1330px) {
+      text-align: center;
+    }
+    @media (max-width: 1000px) {
+      margin-bottom: 1.375rem;
+    }
   }
   &__person-block {
     position: absolute;
@@ -22,20 +44,53 @@
     left: 50%;
     z-index: 0;
     transform: translateX(-97%);
+
+    @media (max-width: 1330px) {
+      transform: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+  &__left-side {
+    @media (max-width: 1330px) {
+      margin-bottom: 2rem;
+    }
   }
   &__desktop-static {
     position: relative;
     z-index: 1;
     max-width: max-content;
+
+    @media (max-width: 1330px) {
+      max-width: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
   }
   &__specialist-benefits {
     max-width: max-content;
   }
   &__right-side {
     position: relative;
+
+    @media (max-width: 1330px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
   }
   &__form {
     margin-bottom: 1.875rem;
+  }
+
+  @media (max-width: 1000px) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 }
 .consultation-specialist-benefits {
@@ -67,6 +122,14 @@
     transform: translateX(2.063rem);
     pointer-events: none;
     user-select: none;
+
+    @media (max-width: 1330px) {
+      position: static;
+      transform: none;
+      height: 20.1875rem;
+      width: auto;
+      margin-bottom: -4.625rem;
+    }
   }
   &__name-block {
     display: flex;
@@ -100,6 +163,11 @@
     letter-spacing: .02em;
     margin-left: 2.625rem;
     line-height: 1.2;
+  }
+
+  @media (max-width: 1330px) {
+    position: static;
+    margin-bottom: 2rem;
   }
 }
 .consultation-person-small {
@@ -151,5 +219,12 @@
   }
   &__messengers {
     margin-right: 2.19rem;
+
+    @media (max-width: 480px) {
+      margin-right: .5rem;
+    }
+    @media (max-width: 370px) {
+      margin-right: 0;
+    }
   }
 }

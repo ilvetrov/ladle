@@ -1,12 +1,69 @@
 .adaptive-gallery {
+  position: relative;
+
   &__wrap {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: flex-start;
+
+    @media (max-width: 1330px) {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      max-width: 24.375rem;
+      transition: transform .3s ease-in-out;
+    }
+    @media (max-width: 425px) {
+      max-width: 21.25rem;
+    }
   }
   &__item {
     display: inline-block;
     margin-bottom: .9375rem;
+
+    @media (max-width: 1330px) {
+      margin-bottom: 0;
+      margin-right: .93rem;
+      flex-shrink: 0;
+    }
+    @media (max-width: 425px) {
+      max-width: 21.25rem;
+    }
+  }
+  &__buttons {
+    top: 50%;
+    left: 1rem;
+    right: 1rem;
+    transform: translateY(-50%);
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+
+    &_top {
+      top: 28%;
+      transform: none;
+    }
+    
+    @media (min-width: 1331px) {
+      display: none;
+    }
+  }
+  &__button {
+    pointer-events: all;
+    transition: opacity .2s;
+
+    &.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  @media (max-width: 1330px) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: max-content;
+    overflow: hidden;
   }
 }

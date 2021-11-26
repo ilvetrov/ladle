@@ -17,3 +17,45 @@
     margin-right: .625rem;
   }
 }
+
+.non-containerized {
+  @media (max-width: 1330px) {
+    margin-left: -4.0625rem;
+    margin-right: -4.0625rem;
+  }
+  @media (max-width: 760px) {
+    margin-left: -2.8vw;
+    margin-right: -2.8vw;
+  }
+  @media (max-width: 360px) {
+    margin-left: -.625rem;
+    margin-right: -.625rem;
+  }
+}
+
+.non-containerized-tech {
+  @media (max-width: 1330px) {
+    margin-left: -4.0625rem;
+    padding-left: 4.0625rem;
+    
+    margin-right: -4.0625rem;
+    padding-right: 4.0625rem;
+    
+  }
+  @media (max-width: 760px) {
+    margin-left: -2.8vw;
+    padding-left: 2.8vw;
+    
+    margin-right: -2.8vw;
+    padding-right: 2.8vw;
+    
+  }
+  @media (max-width: 360px) {
+    margin-left: -.625rem;
+    padding-left: .625rem;
+    
+    margin-right: -.625rem;
+    padding-right: .625rem;
+    
+  }
+}

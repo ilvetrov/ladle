@@ -9,10 +9,14 @@
   &__descr {
     margin-bottom: 3.5rem;
   }
+
+  @media (max-width: 1000px) {
+    padding-top: 4rem;
+    padding-bottom: 4.1875rem;
+  }
 }
 
 .technique-preview {
-  width: 24.375rem;
   position: relative;
 
   &__image-wrap {
@@ -44,6 +48,11 @@
     padding-left: 2.5rem;
     padding-right: 2.5rem;
     padding-bottom: 3.375rem;
+
+    @media (max-width: 425px) {
+      padding-left: 2.1rem;
+      padding-right: 2.1rem;
+    }
   }
   &__title {
     text-align: center;
@@ -52,6 +61,12 @@
     line-height: 1.44;
     letter-spacing: .02em;
     margin-bottom: .9375rem;
+
+    @media (max-width: 1000px) {
+      width: 10.625rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
   &__specifications {
     margin-bottom: 1rem;
@@ -87,6 +102,10 @@
   }
   &__button {
     width: 9.375rem;
+    
+    &:first-child {
+      margin-right: .5rem;
+    }
   }
   &__calc-appeal-wrap {
     display: flex;
