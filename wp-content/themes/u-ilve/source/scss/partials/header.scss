@@ -109,9 +109,4 @@
       display: none;
     }
   }
-  &__mobile-button {
-    @media (min-width: 1331px) {
-      display: none;
-    }
-  }
 }
