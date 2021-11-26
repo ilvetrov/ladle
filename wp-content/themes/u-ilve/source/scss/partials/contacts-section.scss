@@ -13,6 +13,10 @@
   }
   &__title {
     margin-bottom: .625rem;
+
+    @media (max-width: 1000px) {
+      margin-bottom: 1.2rem;
+    }
   }
   &__benefits {
     @media (max-width: 1330px) {

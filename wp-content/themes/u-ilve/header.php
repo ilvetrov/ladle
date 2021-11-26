@@ -95,7 +95,7 @@
 							'container' => '',
 							'menu_class' => 'header-menu__links'
 						]); ?>
-						<button class="mobile-menu-button not-button-style click-extender header-menu__mobile-button">
+						<button class="mobile-menu-button not-button-style click-extender header-menu__mobile-button" data-pop-up-open-button="mobile-menu">
 							<div></div>
 							<div></div>
 							<div></div>
@@ -111,6 +111,7 @@
 		<!-- /.header__menu -->
 	</header>
 	<!-- /#header -->
+	<?php get_template_part('template-parts/mobile-menu'); ?>
 	<?php get_template_part('template-parts/contact-pop-up', '', [
 		'pop_up_name' => 'call-order',
 		'title_text' => 'Оставьте заявку<br> на обратный звонок',
