@@ -26,8 +26,6 @@ function getFormType($data)
 
 $data = $_POST;
 if (!empty(@$data['phone'])
-  && !empty(@$data['token'])
-  && CSRF::checkToken($data['token'])
   ) {
   
   $additional = [];

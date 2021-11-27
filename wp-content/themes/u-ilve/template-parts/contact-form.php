@@ -19,7 +19,6 @@
     <div class="big-button__text flare-neighbor"><?php echo $args['button_text']; ?></div>
   </button>
   <!-- /.big-button -->
-  <input type="hidden" name="token" value="<?php echo CSRF::createToken(); ?>">
   <input type="hidden" name="action" value="site_form">
   <input type="hidden" name="type" value="order_call">
   <div class="privacy-policy privacy-policy_darker contact-from__privacy-policy <?php echo @$args['class_privacy_policy']; ?>">

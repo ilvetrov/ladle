@@ -2,9 +2,6 @@
 
 require_once get_template_directory() . '/inc/remove-whitespaces.php';
 
-require_once get_template_directory() . '/inc/CSRF.php';
-CSRF::init();
-
 require_once get_template_directory() . '/inc/disable-defaults.php';
 require_once get_template_directory() . '/inc/init-setup.php';
 require_once get_template_directory() . '/inc/sidebars.php';

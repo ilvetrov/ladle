@@ -88,7 +88,6 @@
               Мы перезвоним в течении 5 минут и уточним детали заказа
             </div>
             <!-- /.product-form__descr -->
-            <input type="hidden" name="token" value="<?php echo CSRF::createToken(); ?>">
             <input type="hidden" name="action" value="site_form">
             <input type="hidden" name="type" value="order_product">
             <div class="product-form__fields">

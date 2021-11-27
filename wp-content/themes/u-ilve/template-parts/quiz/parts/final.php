@@ -28,7 +28,6 @@
       <!-- /.flare -->
       <span class="flare-neighbor"><?php echo carbon_get_cached_theme_option('quiz_final_button'); ?></span>
     </button>
-    <input type="hidden" name="token" value="<?php echo CSRF::createToken(); ?>">
     <input type="hidden" name="action" value="site_form">
     <input type="hidden" name="type" value="from_quiz">
     <input type="hidden" name="answers" value="from_quiz">
