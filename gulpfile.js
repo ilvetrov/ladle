@@ -45,7 +45,15 @@ class SourceToPublic {
 		SourceToPublic.cssRoutes.push(this.pathPrefix + 'source/scss/**/*.scss');
 	}
 
-	css = () => {
+	cssDev = () => {
+		return gulp.src(this.pathPrefix + 'source/scss/*.scss')
+		.pipe(plumber())
+		.pipe(sass().on('error', sass.logError))
+		.pipe(setNewTime())
+		.pipe(gulp.dest(this.pathPrefix + 'assets/css'));
+	}
+
+	cssMin = () => {
 		return gulp.src(this.pathPrefix + 'source/scss/*.scss')
 		.pipe(plumber())
 		.pipe(sass().on('error', sass.logError))
@@ -205,14 +213,14 @@ class SourceToPublic {
 
 	build = () => {
 		return new Promise((resolve, reject) => {
-			gulp.parallel(this.jsBuild, this.css, this.syncImages)(() => {
+			gulp.parallel(this.jsBuild, this.cssMin, this.syncImages)(() => {
 				resolve();
 			})
 		});
 	}
 
 	dev = () => {
-		gulp.parallel(this.css, this.syncImages)();
+		gulp.parallel(this.cssDev, this.syncImages)();
 	
 		const startJsEntries = this.getJs();
 		this.jsDev(startJsEntries);
@@ -225,7 +233,7 @@ class SourceToPublic {
 			}
 		});
 		
-		gulp.watch(SourceToPublic.cssRoutes).on('change', gulp.series(this.css));
+		gulp.watch(SourceToPublic.cssRoutes).on('change', gulp.series(this.cssDev));
 	
 		gulp.watch(this.pathPrefix + 'source/img-entry/**').on('add', (path, stats) => {
 			this.minifyImg(path, () => {
