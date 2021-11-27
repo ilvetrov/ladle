@@ -22,12 +22,13 @@ function crb_register_technique_options()
     ->add_fields(array_merge([
       Field::make('text', 'price', 'Стоимость в час (₽/час)')
         ->set_required(),
-      Field::make('image', 'self_image', 'Изображение на собственной странице')
-        ->set_required()
-        ->set_help_text('Посмотрите примеры из существующей спецтехники в каталоге.'),
       Field::make('image', 'hello_image', 'Изображение на главной странице сайта')
         ->set_required()
         ->set_help_text('Посмотрите примеры из существующей спецтехники в каталоге.'),
+      Field::make('media_gallery', 'self_gallery', 'Галерея')
+        ->set_type(['image'])
+        ->set_duplicates_allowed(true)
+        ->set_help_text('Выводится на собственной странице.'),
       Field::make('text', 'separate_type', 'Тип отдельно')
         ->set_help_text('Например: <code>Кран стреловой</code>.<br> Нужно для красивой карточки товара на главной.'),
       Field::make('text', 'separate_name', 'Название отдельно')

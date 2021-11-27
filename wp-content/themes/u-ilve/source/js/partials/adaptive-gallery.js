@@ -8,38 +8,51 @@ for (let galleryIteration = 0; galleryIteration < galleries.length; galleryItera
   const nextButton = gallery.getElementsByClassName('js-adaptive-gallery-next')[0];
 
   function updateValues() {
-    if (getCurrentItem(gallery) === 0) {
+    if (getCurrentPosition(gallery) === 0) {
       prevButton.classList.add('hidden');
     } else {
       prevButton.classList.remove('hidden');
     }
-    if (getCurrentItem(gallery) >= items.length - 1) {
+    if (getCurrentPosition(gallery) >= items.length - 1) {
       nextButton.classList.add('hidden');
     } else {
       nextButton.classList.remove('hidden');
     }
     wrap.style.transform = `translateX(-${
-      getPosition(items[getCurrentItem(gallery)], wrap)
+      getPosition(getCurrentItem(gallery, items), wrap)
     }px)`;
+    for (let i = 0; i < items.length; i++) {
+      const item = items[i];
+      if (i === getCurrentPosition(gallery)) {
+        item.children[0].classList.add('current');
+      } else {
+        item.children[0].classList.remove('current');
+      }
+    }
   }
   updateValues();
   
   nextButton.addEventListener('click', function() {
-    if (getCurrentItem(gallery) < items.length - 1) {
+    if (getCurrentPosition(gallery) < items.length - 1) {
       gallery.setAttribute('data-current-item', Number(gallery.getAttribute('data-current-item')) + 1);
     }
     updateValues();
   });
   prevButton.addEventListener('click', function() {
-    if (getCurrentItem(gallery) > 0) {
+    if (getCurrentPosition(gallery) > 0) {
       gallery.setAttribute('data-current-item', Number(gallery.getAttribute('data-current-item')) - 1);
     }
     updateValues();
   });
+
+  window.addEventListener('resize-width', updateValues);
 }
 
-function getCurrentItem(gallery) {
+function getCurrentPosition(gallery) {
   return Number(gallery.getAttribute('data-current-item'));
+}
+function getCurrentItem(gallery, items) {
+  return items[getCurrentPosition(gallery)];
 }
 
 function getPosition(item, wrap) {

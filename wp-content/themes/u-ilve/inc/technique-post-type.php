@@ -16,14 +16,19 @@ function register_technique_post_type()
     ],
 		'description' => 'Спецтехника на сайте',
 		'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true, 
+    'show_in_menu' => true, 
+    'query_var' => false,
 		'menu_position' => 20,
 		'menu_icon' => 'dashicons-screenoptions',
 		'supports' => [
 			'title',
+			'excerpt',
+			'editor'
 		],
+		'rewrite' => ['slug' => 'products'],
 		'has_archive' => false,
-		'rewrite' => true,
-		'query_var' => false,
 		'delete_with_user' => false,
   ]);
 }

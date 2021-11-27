@@ -30,6 +30,16 @@
       bottom: .15rem;
     }
   }
+  &_small-text {
+    font-size: 1.0625rem;
+  }
+  &_small-text & {
+    &__icon {
+      height: .75rem;
+      bottom: .1rem;
+      margin-right: .25rem;
+    }
+  }
 
   &_black {
     color: #000;
@@ -71,6 +81,9 @@
     }
     &_black-yellow {
       color: #4acf2b;
+    }
+    &_small {
+      font-size: .875rem;
     }
   }
 }

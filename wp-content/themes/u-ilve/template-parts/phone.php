@@ -7,6 +7,7 @@
     click-extender
     <?php echo @$args['black'] ? 'phone_black' : ''; ?>
     <?php echo @$args['big_text'] ? 'phone_big-text' : ''; ?>
+    <?php echo @$args['small_text'] ? 'phone_small-text' : ''; ?>
   "
 >
   <?php if (!@$args['without_icon']): ?>

@@ -27,7 +27,14 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<header id="header" class="header">
+	<header id="header" class="
+			header
+			<?php echo (@$args['static'] ? 'header_static' : ''); ?>
+		"
+		<?php if (@$args['with_background']): ?>
+			<?php img_async_src('tractor-field.jpg', true, true); ?>
+		<?php endif; ?>
+	>
 		<div class="header__top header__block header-top">
 			<div class="container-size">
 				<div class="header-top__container">

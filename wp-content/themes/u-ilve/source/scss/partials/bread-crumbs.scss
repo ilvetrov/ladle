@@ -1,0 +1,27 @@
+.bread-crumbs {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  &__item {
+    margin-left: .4rem;
+    font-size: 1.125rem;
+    line-height: 1.2;
+    letter-spacing: .02em;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    @media (max-width: 768px) {
+      font-size: .875rem;
+    }
+  }
+  &__link {
+    transition: color .2s;
+
+    &:hover, &:focus {
+      color: $accent-color;
+    }
+  }
+}

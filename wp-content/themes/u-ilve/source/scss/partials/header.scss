@@ -3,9 +3,18 @@
   width: 100%;
   z-index: 10;
   overflow: hidden;
+  background-position: center top;
 
   &__block {
     border-bottom: .063rem rgba(255, 255, 255, .2) solid;
+  }
+
+  &_static {
+    position: static;
+  }
+
+  @media (min-width: 1900) {
+    background-size: cover;
   }
 }
 .header-top {

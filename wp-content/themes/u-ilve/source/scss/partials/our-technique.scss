@@ -140,6 +140,10 @@
   }
   &__name {
     margin-bottom: .5rem;
+
+    &_without-offset {
+      margin-bottom: 0;
+    }
   }
 
   &:last-child {

@@ -13,9 +13,17 @@
     }
   }
 
+  &_inner-top-padding {
+    padding-top: 4.8125rem;
+  }
+
   @media (max-width: 1000px) {
     padding-top: 8.875rem;
     padding-bottom: 4rem;
+
+    &_inner-top-padding {
+      padding-top: 3.625rem;
+    }
   }
 }
 
