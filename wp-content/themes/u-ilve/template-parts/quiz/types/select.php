@@ -9,10 +9,11 @@
           name="<?php echo $args['question']['select_is_multi'] ? $answer_name : $args['question_name']; ?>"
           id="<?php echo $answer_name; ?>"
           <?php echo ($answer['checked'] ? 'checked' : ''); ?>
+          data-quiz-of="<?php echo $args['name']; ?>"
           data-quiz-store="<?php echo $args['name']; ?>"
+          data-quiz-store-name="<?php echo $args['question']['question']; ?>"
           data-quiz-value="<?php echo $answer['text']; ?>"
           data-quiz-action-exists="<?php echo $args['question_name']; ?>-exists"
-          data-quiz-of="<?php echo $args['name']; ?>"
         >
         <div class="quiz-answer__content">
           <div class="quiz-answer__checkbox"></div>

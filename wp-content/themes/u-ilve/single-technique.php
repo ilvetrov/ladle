@@ -79,7 +79,7 @@
             <!-- /.product-overview__descr -->
           <?php endif; ?>
           <hr class="product-overview__hr">
-          <form class="product-form">
+          <form type="submit" action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="POST" class="product-form js-form">
             <div class="product-form__title">
               Оставить заявку на аренду спецтехники
             </div>
@@ -88,8 +88,11 @@
               Мы перезвоним в течении 5 минут и уточним детали заказа
             </div>
             <!-- /.product-form__descr -->
+            <input type="hidden" name="token" value="<?php echo CSRF::createToken(); ?>">
+            <input type="hidden" name="action" value="site_form">
+            <input type="hidden" name="type" value="order_product">
             <div class="product-form__fields">
-              <input type="tel" placeholder="Ваш телефон (+7...)" class="text-field half-width text-field_form text-field_small-height product-form__input <?php echo @$args['class_input']; ?>">
+              <input type="tel" placeholder="Ваш телефон (+7...)" name="phone" class="text-field half-width text-field_form text-field_small-height product-form__input <?php echo @$args['class_input']; ?>">
               <button href="#" class="big-button big-button_accent half-width big-button_small not-button-style flare-parent product-form__button <?php echo @$args['class_button']; ?>">
                 <div class="flare">
                   <div class="flare__wrap">
@@ -170,17 +173,19 @@
           <!-- /.product-specifications -->
         </div>
         <!-- /.product-info__specifications -->
-        <div class="product-info__descr product-info__block">
-          <h2 class="product-info__title product-info__title_near">
-            Описание
-          </h2>
-          <!-- /.product-info__title -->
-          <div class="product-info__descr-content">
-            <?php the_content(); ?>
+        <?php if (get_the_content()): ?>
+          <div class="product-info__descr product-info__block">
+            <h2 class="product-info__title product-info__title_near">
+              Описание
+            </h2>
+            <!-- /.product-info__title -->
+            <div class="product-info__descr-content">
+              <?php the_content(); ?>
+            </div>
+            <!-- /.product-info__descr-content -->
           </div>
-          <!-- /.product-info__descr-content -->
-        </div>
-        <!-- /.product-info__descr -->
+          <!-- /.product-info__descr -->
+        <?php endif; ?>
       </div>
       <!-- /.product-info__container -->
     </div>

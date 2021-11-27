@@ -107,7 +107,7 @@ get_header();
 					<div class="quiz-wrap">
 						<div class="quiz-wrap__quiz">
 							<?php get_template_part('template-parts/quiz/index', '', [
-								'name' => 'special-equipment'
+								'name' => 'special-technique'
 							]); ?>
 						</div>
 						<!-- /.quiz-wrap__quiz -->

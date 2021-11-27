@@ -1,3 +1,6 @@
+<?php
+require_once get_template_directory() . '/inc/remove-whitespaces.php';
+?>
 <section
   class="
     reviews-section
@@ -53,7 +56,6 @@
                         <div class="review-video-inserted__container">
                           <iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo $video_id; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
-                        <!-- /.review-video-inserted__container -->
                       </div>
                     <?php $video_embed = ob_get_clean(); ?>
                     <a href="<?php echo $video_link; ?>" class="review-video inactive" target="_blank" onclick="return replaceElementWithDynamicTag(this, false);" data-dynamic-tag="<?php echo htmlspecialchars(remove_whitespaces($video_embed)); ?>" data-dynamic-tag-manual>

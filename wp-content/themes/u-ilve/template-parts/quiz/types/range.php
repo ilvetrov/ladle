@@ -9,6 +9,8 @@
         max="<?php echo $args['question']['range_max_value']; ?>"
         min="<?php echo $args['question']['range_min_value']; ?>"
         step="<?php echo $args['question']['range_step']; ?>"
+        data-quiz-store="<?php echo $args['name']; ?>"
+        data-quiz-store-name="<?php echo $args['question']['question']; ?>"
       >
       <label for="<?php echo $args['question_name'] ?>-input" class="range-field__label">
         <?php echo $args['question']['range_plural_name']; ?>

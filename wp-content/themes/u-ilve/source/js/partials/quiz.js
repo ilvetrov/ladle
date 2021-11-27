@@ -18,6 +18,9 @@ class Quiz {
     this.name = Quiz.getName(quiz);
     this.blocksElements = document.querySelectorAll(`[data-quiz-block][data-quiz-of="${this.name}"]`);
     this.blocks = QuizBlock.initAll(this.name, this.blocksElements);
+    this.stores = document.querySelectorAll(`[data-quiz-store="${this.name}"]`);
+
+    this.outputs = document.querySelectorAll(`[data-quiz-output="${this.name}"]`)
 
     this.toButtons = document.querySelectorAll(`[data-quiz-to][data-quiz-of="${this.name}"]`);
     this.currentPosition = 0;
@@ -46,12 +49,35 @@ class Quiz {
         if (this.isInSwitching) return;
         this.isInSwitching = true;
         this.currentPosition = toPosition;
+        if (this.currentPosition >= this.blocksElements.length - 1) {
+          this.dataToForm();
+        }
         QuizBlock.hideAll(this.name, toPosition).then(() => this.isInSwitching = false);
         if (verticalCheck()) {
           smoothScrollToElement(this.quizElement, 10);
         }
       });
     });
+  }
+
+  dataToForm() {
+    const data = {};
+    for (let i = 0; i < this.stores.length; i++) {
+      const store = this.stores[i];
+      const storeName = store.getAttribute('data-quiz-store-name');
+      const value = store.getAttribute('data-quiz-value') || store.value;
+      if ((store.getAttribute('type') !== 'checkbox' && store.getAttribute('type') !== 'radio') || store.checked) {
+        if (!data[storeName]) {
+          data[storeName] = [];
+        }
+        data[storeName].push(value);
+      }
+    }
+    const dataInString = JSON.stringify(data);
+    for (let i = 0; i < this.outputs.length; i++) {
+      const output = this.outputs[i];
+      output.value = dataInString;
+    }
   }
 
   /**

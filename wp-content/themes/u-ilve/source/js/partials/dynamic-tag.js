@@ -43,6 +43,7 @@ function replaceElementWithDynamicTag(element, whatReturn = false) {
 }
 
 function initNewElementAsReal(virtualElement) {
+  
   const newElement = document.createElement(virtualElement.tagName.toLowerCase());
   const attributes = virtualElement.attributes;
   for (let i = 0; i < attributes.length; i++) {

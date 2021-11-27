@@ -9,6 +9,10 @@ function crb_attach_theme_options()
   $main_options_container = Container::make('theme_options', 'Настройки темы')
   ->set_icon('dashicons-admin-site')
   ->set_page_menu_position(21)
+  ->add_tab('Общие', [
+    Field::make('text', 'lead_recipients', 'Получатели заявок')
+      ->set_help_text('Адрес Email, на который будут приходить заявки. Можно указать несколько через запятую.')
+  ])
   ->add_tab('Квиз', [
     Field::make('text', 'quiz_final_title', 'Заголовок финальной секции')
       ->set_required(),

@@ -139,16 +139,18 @@
 		'class_descr' => 'left-side small closer',
 		'class_privacy_policy' => 'left-side',
 	]); ?>
-	<div class="top-level-buttons">
-		<?php get_template_part('template-parts/top-level-button', '', [
-			'text' => 'Рассчитать стоимость',
-			'icon' => 'calc.png'
-		]); ?>
-		<?php get_template_part('template-parts/top-level-button', '', [
-			'icon' => 'chat.png'
-		]); ?>
-		<?php get_template_part('template-parts/top-level-button', '', [
-			'icon' => 'call-red-line.png'
-		]); ?>
-	</div>
-	<!-- /.top-level-buttons -->
+	<?php if (!@$args['without_top_level_buttons']): ?>
+		<div class="top-level-buttons">
+			<?php get_template_part('template-parts/top-level-button', '', [
+				'text' => 'Рассчитать стоимость',
+				'icon' => 'calc.png'
+			]); ?>
+			<?php get_template_part('template-parts/top-level-button', '', [
+				'icon' => 'chat.png'
+			]); ?>
+			<?php get_template_part('template-parts/top-level-button', '', [
+				'icon' => 'call-red-line.png'
+			]); ?>
+		</div>
+		<!-- /.top-level-buttons -->
+	<?php endif; ?>

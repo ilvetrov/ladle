@@ -1,0 +1,132 @@
+.text-img-page {
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: var(--header-height);
+  padding-bottom: 6.875rem;
+  letter-spacing: .02em;
+  background-color: #444;
+  position: relative;
+
+  &__container {
+    margin-top: 5rem;
+    position: relative;
+
+    @media (max-width: 1230px) {
+      margin-bottom: 2rem;
+    }
+    @media (max-width: 425px) {
+      margin-top: 3.5rem;
+    }
+  }
+  &__content {
+    padding-top: 5.625rem;
+    padding-bottom: 8.5625rem;
+    position: relative;
+
+    @media (max-width: 1230px) {
+      padding-top: 0;
+      padding-bottom: 3rem;
+    }
+  }
+  &__upper-title {
+    margin-bottom: 1.125rem;
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1.2;
+
+    @media (max-width: 840px) {
+      font-size: 1.5rem;
+    }
+  }
+  &__upper-descr {
+    margin-bottom: 2.75rem;
+    color: rgba($color: #fff, $alpha: .6);
+    font-size: 1.125rem;
+    line-height: 1.2;
+
+    @media (max-width: 840px) {
+      font-size: 1rem;
+    }
+  }
+  &__title {
+    margin-bottom: 1.75rem;
+    color: #fff;
+    font-size: 2.875rem;
+    line-height: 1.2;
+
+    @media (max-width: 840px) {
+      font-size: 2rem;
+    }
+  }
+  &__descr {
+    margin-bottom: 3rem;
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 1.5;
+
+    @media (max-width: 840px) {
+      font-size: 1rem;
+    }
+  }
+  &__buttons {
+    @media (max-width: 840px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+  &__accent-button {
+    margin-right: .9375rem;
+    
+    @media (max-width: 840px) {
+      margin-right: 0;
+      margin-bottom: .9375rem;
+    }
+  }
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: auto 100%;
+    pointer-events: none;
+    user-select: none;
+
+    @media (max-width: 1230px) {
+      opacity: .2;
+    }
+    @media (max-width: 1000px) {
+      opacity: .08;
+    }
+    @media (max-width: 450px) {
+      background-position: top right;
+      background-size: auto 80%;
+    }
+  }
+  &__shadow-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    pointer-events: none;
+    user-select: none;
+    opacity: 0;
+
+    @media (max-width: 530px) {
+      opacity: .4;
+    }
+  }
+
+  @media (max-width: 1230px) {
+    text-align: center;
+  }
+  @media (max-width: 840px) {
+    padding-bottom: 1px;
+  }
+}

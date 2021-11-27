@@ -52,6 +52,7 @@ define( 'MAX_PARALLEL_HIGH_LOADS', 2 );
  *
  * @since 2.6.0
  */
+define( 'CSRF_KEY',         '12 letters only' ); // 12 letters only
 define( 'AUTH_KEY',         'put your unique phrase here' );
 define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );
 define( 'LOGGED_IN_KEY',    'put your unique phrase here' );
