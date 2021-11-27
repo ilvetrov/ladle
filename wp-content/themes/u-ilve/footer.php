@@ -10,7 +10,7 @@
  */
 
 ?>
-
+<?php if (!@$args['without_footer']): ?>
 	<footer class="footer">
 		<div class="container-size">
 			<div class="footer__container">
@@ -79,7 +79,7 @@
 		</div>
 		<!-- /.container-size -->
 	</footer>
-	<!-- /.footer -->
+<?php endif; ?>
 </div>
 <!-- /#page -->
 
