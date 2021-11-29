@@ -25,7 +25,7 @@
 						</div>
 						<!-- /.footer__copyright -->
 						<div class="footer__privacy-policy-wrap">
-							<a href="#" target="_blank" class="footer__privacy-policy footer__dim-text not-link-style">
+							<a href="/privacy-policy" target="_blank" class="footer__privacy-policy footer__dim-text not-link-style">
 								Политика конфиденциальности
 							</a>
 							<!-- /.footer__privacy-policy -->

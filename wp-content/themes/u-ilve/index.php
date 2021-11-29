@@ -62,7 +62,7 @@ get_header();
 								Вы получите обслуженную, укоплектованную и заправленную технику на Ваш объект с квалифицированным водителем
 							</div>
 							<!-- /.hello-section__descr -->
-							<a href="#" class="big-button big-button_accent not-link-style hello-section__accent-button flare-parent">
+							<a href="/#calc" class="big-button big-button_accent not-link-style hello-section__accent-button flare-parent">
 								<div class="flare">
 									<div class="flare__wrap">
 										<div class="flare__line"></div>
@@ -73,7 +73,7 @@ get_header();
 								<div class="big-button__text flare-neighbor">Получить подбор спецтехники <img <?php img_async_src('right-arrow.png'); ?> alt="Стрелка вперёд" class="big-button__arrow big-button__arrow_too-big-for-mobile"></div>
 							</a>
 							<!-- /.big-button -->
-							<a href="#" class="big-button not-link-style big-button_wide"><div class="big-button__text">Перейти в каталог</div></a>
+							<a href="/#catalog" class="big-button not-link-style big-button_wide"><div class="big-button__text">Перейти в каталог</div></a>
 							<!-- /.big-button -->
 						</div>
 						<!-- /.hello-section__container -->
@@ -472,7 +472,7 @@ get_header();
 												</div>
 												<!-- /.technique-preview__buttons -->
 												<div class="technique-preview__calc-appeal-wrap">
-													<a href="#" class="technique-preview__calc-appeal not-link-style">
+													<a href="/#calc" class="technique-preview__calc-appeal not-link-style">
 														Получить подбор спецтехники
 													</a>
 													<!-- /.technique-preview__calc-appeal -->

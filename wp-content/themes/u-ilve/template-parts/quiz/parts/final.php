@@ -35,7 +35,7 @@
   </form>
   <!-- /.quiz-final__form -->
   <div class="privacy-policy quiz-final__policy">
-    Оставляя заявку, Вы соглашаетесь<br> с <a href="#" target="_blank" class="not-link-style">политикой конфиденциальности</a>
+    Оставляя заявку, Вы соглашаетесь<br> с <a href="/privacy-policy" target="_blank" class="not-link-style">политикой конфиденциальности</a>
   </div>
   <!-- /.privacy-policy -->
 </div>

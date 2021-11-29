@@ -92,7 +92,7 @@
             <input type="hidden" name="type" value="order_product">
             <div class="product-form__fields">
               <input type="tel" placeholder="Ваш телефон (+7...)" name="phone" class="text-field half-width text-field_form text-field_small-height product-form__input <?php echo @$args['class_input']; ?>">
-              <button href="#" class="big-button big-button_accent half-width big-button_small not-button-style flare-parent product-form__button <?php echo @$args['class_button']; ?>">
+              <button type="submit" class="big-button big-button_accent half-width big-button_small not-button-style flare-parent product-form__button <?php echo @$args['class_button']; ?>">
                 <div class="flare">
                   <div class="flare__wrap">
                     <div class="flare__line"></div>
@@ -106,7 +106,7 @@
             </div>
             <!-- /.product-form__fields -->
             <div class="privacy-policy left-side contact-from__privacy-policy privacy-policy_small-font">
-              Оставляя заявку, Вы соглашаетесь<br class="hide-min-581"> с <a href="#" target="_blank" class="not-link-style">политикой конфиденциальности</a>
+              Оставляя заявку, Вы соглашаетесь<br class="hide-min-581"> с <a href="/privacy-policy" target="_blank" class="not-link-style">политикой конфиденциальности</a>
             </div>
             <!-- /.privacy-policy -->
           </form>

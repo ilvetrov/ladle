@@ -97,7 +97,7 @@
 						</div>
 						<!-- /.header-menu__contacts -->
 						<div class="header-menu__calculate-appeal">
-							<a href="/#test-calculator" class="calculate-appeal not-link-style click-extender">
+							<a href="/#calc" class="calculate-appeal not-link-style click-extender">
 								<img <?php img_async_src('calc-white.png'); ?> alt="Тест-калькулятор" class="calculate-appeal__icon">
 								<div class="calculate-appeal__text">
 									Рассчитать стоимость

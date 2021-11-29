@@ -8,7 +8,7 @@
   </div>
   <!-- /.contact-form__descr -->
   <input type="tel" placeholder="Ваш телефон (+7...)" name="phone" class="text-field text-field_form text-field_small-height contact-form__input <?php echo @$args['class_input']; ?>">
-  <button type="submit" href="#" class="big-button big-button_accent big-button_all-width big-button_small not-link-style flare-parent not-button-style contact-form__button <?php echo @$args['class_button']; ?>">
+  <button type="submit" class="big-button big-button_accent big-button_all-width big-button_small not-link-style flare-parent not-button-style contact-form__button <?php echo @$args['class_button']; ?>">
     <div class="flare">
       <div class="flare__wrap">
         <div class="flare__line"></div>
@@ -22,7 +22,7 @@
   <input type="hidden" name="action" value="site_form">
   <input type="hidden" name="type" value="order_call">
   <div class="privacy-policy privacy-policy_darker contact-from__privacy-policy <?php echo @$args['class_privacy_policy']; ?>">
-    Оставляя заявку, Вы соглашаетесь<br> с <a href="#" target="_blank" class="not-link-style">политикой конфиденциальности</a>
+    Оставляя заявку, Вы соглашаетесь<br> с <a href="/privacy-policy" target="_blank" class="not-link-style">политикой конфиденциальности</a>
   </div>
   <!-- /.privacy-policy -->
 </form>
