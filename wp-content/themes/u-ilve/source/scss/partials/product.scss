@@ -277,12 +277,12 @@
   @media (max-width: 580px) and (min-width: 421px) {
     text-align: center;
 
-    > .privacy-policy {
+    > .privacy-policy-text {
       text-align: center;
     }
   }
   @media (max-width: 580px) {
-    > .privacy-policy {
+    > .privacy-policy-text {
       color: rgba($color: #000, $alpha: .6);
     }
   }

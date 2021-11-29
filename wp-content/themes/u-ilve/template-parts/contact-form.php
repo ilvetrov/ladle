@@ -21,9 +21,9 @@
   <!-- /.big-button -->
   <input type="hidden" name="action" value="site_form">
   <input type="hidden" name="type" value="order_call">
-  <div class="privacy-policy privacy-policy_darker contact-from__privacy-policy <?php echo @$args['class_privacy_policy']; ?>">
+  <div class="privacy-policy-text privacy-policy_darker contact-from__privacy-policy <?php echo @$args['class_privacy_policy']; ?>">
     Оставляя заявку, Вы соглашаетесь<br> с <a href="/privacy-policy" target="_blank" class="not-link-style">политикой конфиденциальности</a>
   </div>
-  <!-- /.privacy-policy -->
+  <!-- /.privacy-policy-text -->
 </form>
 <!-- /.contact-form -->

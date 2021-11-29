@@ -1,0 +1,88 @@
+.text-content {
+  line-height: 1.7;
+
+  h2, h3, h4, h5, h6 {
+    margin-top: 1em;
+    margin-bottom: .7em;
+  }
+  h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+
+    @media (max-width: 1000px) {
+      font-size: 1.25rem;
+    }
+  }
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    @media (max-width: 1000px) {
+      font-size: 1.125rem;
+    }
+  }
+  h4, h5, h6 {
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+
+  p, ul, ol {
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+    @media (max-width: 1000px) {
+      margin-top: .8em;
+      margin-bottom: .8em;
+    }
+  }
+  > *:not(ul, ol) + ul, > *:not(ul, ol) + ol {
+    padding-left: 2.5rem;
+  }
+  > ul, ol {
+    ul, ol {
+      padding-left: 2.5rem;
+    }
+  }
+  ul {
+    list-style: disc;
+
+    ul, ol {
+      margin-top: .9375rem;
+    }
+  }
+  ol {
+    list-style: none;
+    counter-reset: mainItem;
+
+    > li {
+      &:before {
+        content: counters(mainItem, '.') ". ";
+        counter-increment: mainItem;
+        color: #fff;
+      }
+    }
+
+    > ol {
+      list-style: none;
+      counter-reset: item;
+
+      > li {
+        &:before {
+          content: mainItem counters(item, '.') ". ";
+          counter-increment: item;
+        }
+      }
+    }
+
+    ol {
+      margin-top: .9375rem;
+    }
+    ul {
+      margin-top: .625rem;
+    }
+  }
+  li {
+    margin-top: .625rem;
+    margin-bottom: .625rem;
+  }
+}

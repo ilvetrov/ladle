@@ -34,9 +34,9 @@
     <input type="hidden" name="more" data-quiz-output="<?php echo $args['name']; ?>">
   </form>
   <!-- /.quiz-final__form -->
-  <div class="privacy-policy quiz-final__policy">
+  <div class="privacy-policy-text quiz-final__policy">
     Оставляя заявку, Вы соглашаетесь<br> с <a href="/privacy-policy" target="_blank" class="not-link-style">политикой конфиденциальности</a>
   </div>
-  <!-- /.privacy-policy -->
+  <!-- /.privacy-policy-text -->
 </div>
 <!-- /.quiz-final -->

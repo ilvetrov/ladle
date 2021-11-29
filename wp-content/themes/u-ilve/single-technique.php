@@ -105,10 +105,10 @@
               <!-- /.big-button -->
             </div>
             <!-- /.product-form__fields -->
-            <div class="privacy-policy left-side contact-from__privacy-policy privacy-policy_small-font">
+            <div class="privacy-policy-text left-side contact-from__privacy-policy privacy-policy_small-font">
               Оставляя заявку, Вы соглашаетесь<br class="hide-min-581"> с <a href="/privacy-policy" target="_blank" class="not-link-style">политикой конфиденциальности</a>
             </div>
-            <!-- /.privacy-policy -->
+            <!-- /.privacy-policy-text -->
           </form>
           <!-- /.product-form -->
           <hr class="product-overview__hr">
