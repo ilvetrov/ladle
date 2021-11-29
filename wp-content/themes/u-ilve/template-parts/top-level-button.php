@@ -1,4 +1,7 @@
-<a href="" class="top-level-button not-link-style">
+<<?php echo @$args['link'] ? ('a href="' . $args['link'] . '" ') : 'div '; ?>
+class="top-level-button not-link-style"
+<?php if (@$args['pop-up']) echo ('data-pop-up-open-button="' . $args['pop-up'] . '"'); ?>
+>
   <div
     class="
       top-level-button__content
@@ -17,5 +20,5 @@
     <?php endif; ?>
   </div>
   <!-- /.top-level-button__content -->
-</a>
+</<?php echo @$args['link'] ? 'a' : 'div'; ?>>
 <!-- /.top-level-button -->

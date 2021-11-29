@@ -17,7 +17,7 @@ get_header();
 
 	<main id="primary" class="site-main">
 
-		<section class="hello-section" <?php img_async_src('tractor-field.jpg', true, true); ?>>
+		<section class="hello-section" id="hello" <?php img_async_src('tractor-field.jpg', true, true); ?>>
 			<script>document.getElementsByClassName('hello-section')[0].style.setProperty('--header-height', document.getElementsByClassName('header')[0].offsetHeight + 'px');</script>
 			<div class="hello-section__wrap">
 				<div class="section-backgrounds">
@@ -86,7 +86,7 @@ get_header();
 		</section>
 		<!-- /.hello-section -->
 
-		<section class="quiz-section">
+		<section class="quiz-section" id="calc">
 			<div class="container-size">
 				<div class="quiz-section__container">
 					<div class="quiz-section__message">
@@ -209,7 +209,7 @@ get_header();
 		</section>
 		<!-- /.quiz-section -->
 
-		<section class="other-companies" <?php img_async_src('other-companies.jpg', true, true); ?>>
+		<section class="other-companies" id="other" <?php img_async_src('other-companies.jpg', true, true); ?>>
 			<div class="container-size">
 				<div class="other-companies__container">
 					<div class="other-companies__content">
@@ -278,23 +278,23 @@ get_header();
 		</section>
 		<!-- /.other-companies -->
 
-		<section class="about-us">
+		<section class="about-benefits" id="about-benefits">
 			<div class="container-size">
-				<div class="about-us__container">
-					<div class="about-us__title">
+				<div class="about-benefits__container">
+					<div class="about-benefits__title">
 						<h2 class="section-title section-title_center">
 							<strong>Благодаря опыту и выполнению<br> уже <span class="accent">более 2000 заказов,</span></strong> мы точно знаем,<br> какой сервис необходим нашим клиентам
 						</h2>
 						<!-- /.section-title -->
 					</div>
-					<!-- /.about-us__title -->
-					<div class="about-us__descr">
+					<!-- /.about-benefits__title -->
+					<div class="about-benefits__descr">
 						<div class="section-descr section-descr_center">
 							Вы получаете ответственный и индивидуальный подход к Вашему заказу
 						</div>
 						<!-- /.section-descr -->
 					</div>
-					<!-- /.about-us__descr -->
+					<!-- /.about-benefits__descr -->
 					<?php
 					$about_us_benefits = [
 						[
@@ -329,7 +329,7 @@ get_header();
 						],
 					];
 					?>
-					<div class="about-us__benefits">
+					<div class="about-benefits__benefits">
 						<div class="adaptive-gallery our-benefit-shadow our-benefit-shadow_mobile js-adaptive-gallery" data-current-item="0" >
 							<div class="adaptive-gallery__wrap js-adaptive-gallery-wrap">
 								<?php foreach ($about_us_benefits as $benefit): ?>
@@ -371,15 +371,15 @@ get_header();
 						</div>
 						<!-- /.adaptive-gallery -->
 					</div>
-					<!-- /.about-us__benefits -->
+					<!-- /.about-benefits__benefits -->
 				</div>
-				<!-- /.about-us__container -->
+				<!-- /.about-benefits__container -->
 			</div>
 			<!-- /.container-size -->
 		</section>
-		<!-- /.about-us -->
+		<!-- /.about-benefits -->
 
-		<section class="our-technique">
+		<section class="our-technique"  id="catalog">
 			<div class="container-size">
 				<div class="our-technique__container">
 					<div class="our-technique__title">
@@ -455,7 +455,7 @@ get_header();
 													</div>
 													<!-- /.technique-preview__price-text -->
 													<div class="technique-preview__price">
-														<?php echo carbon_get_cached_post_meta($technique->ID, 'price'); ?> ₽/час
+														<?php echo beautify_price(carbon_get_cached_post_meta($technique->ID, 'price')); ?> ₽/час
 													</div>
 													<!-- /.technique-preview__price -->
 												</div>
@@ -509,7 +509,7 @@ get_header();
 		</section>
 		<!-- /.our-technique -->
 
-		<section class="founder-section" <?php img_async_src('founder-background.jpg', true, true); ?>>
+		<section class="founder-section" id="about-us" <?php img_async_src('founder-background.jpg', true, true); ?>>
 			<div class="container-size">
 				<div class="founder-section__container">
 					<div class="founder-section__logo-background">

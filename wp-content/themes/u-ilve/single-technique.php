@@ -69,7 +69,7 @@
         <?php endif; ?>
         <div class="product-overview__info">
           <div class="product-overview__price-block">
-            <span class="product-overview__price-label">Стоимость в час </span><span class="product-overview__price"><?php echo carbon_get_cached_post_meta(get_the_ID(), 'price'); ?> ₽/час</span>
+            <span class="product-overview__price-label">Стоимость в час </span><span class="product-overview__price"><?php echo beautify_price(carbon_get_cached_post_meta(get_the_ID(), 'price')); ?> ₽/час</span>
           </div>
           <!-- /.product-overview__price-block -->
           <?php if (get_the_excerpt()): ?>

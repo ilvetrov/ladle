@@ -1,4 +1,4 @@
-<section class="steps-to-get-section">
+<section class="steps-to-get-section" id="steps-to-get">
   <div class="container-size">
     <div class="steps-to-get-section__container">
       <h2 class="section-title section-title_center steps-to-get-section__title">

@@ -2,6 +2,7 @@
 require_once get_template_directory() . '/inc/remove-whitespaces.php';
 ?>
 <section
+  id="reviews"
   class="
     reviews-section
     <?php echo (@$args['inner_top_padding'] ? 'reviews-section_inner-top-padding' : '') ?>

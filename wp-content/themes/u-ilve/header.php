@@ -40,6 +40,7 @@
 		<header id="header" class="
 				header
 				<?php echo (@$args['static'] ? 'header_static' : ''); ?>
+				<?php echo (!@$args['static'] ? 'js-for-replace-scrollbar' : ''); ?>
 			"
 			<?php if (@$args['with_background']): ?>
 				<?php img_async_src('tractor-field.jpg', true, true); ?>
@@ -150,16 +151,19 @@
 			'class_privacy_policy' => 'left-side',
 		]); ?>
 		<?php if (!@$args['without_top_level_buttons']): ?>
-			<div class="top-level-buttons">
+			<div class="top-level-buttons js-for-replace-scrollbar">
 				<?php get_template_part('template-parts/top-level-button', '', [
 					'text' => 'Рассчитать стоимость',
-					'icon' => 'calc.png'
+					'icon' => 'calc.png',
+					'link' => '/#calc'
 				]); ?>
 				<?php get_template_part('template-parts/top-level-button', '', [
-					'icon' => 'chat.png'
+					'icon' => 'chat.png',
+					'link' => '/#consultation'
 				]); ?>
 				<?php get_template_part('template-parts/top-level-button', '', [
-					'icon' => 'call-red-line.png'
+					'icon' => 'call-red-line.png',
+					'pop-up' => 'call-order'
 				]); ?>
 			</div>
 			<!-- /.top-level-buttons -->

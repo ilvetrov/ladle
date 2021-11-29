@@ -1,4 +1,4 @@
-<section class="consultation-section" <?php img_async_src('consultation-background.jpg', true, true); ?>>
+<section class="consultation-section" id="consultation" <?php img_async_src('consultation-background.jpg', true, true); ?>>
   <div class="container-size">
     <div class="consultation-section__container">
       <div class="consultation-section__left-side">

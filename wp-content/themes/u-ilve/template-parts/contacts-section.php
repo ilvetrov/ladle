@@ -1,4 +1,4 @@
-<section class="contacts-section">
+<section class="contacts-section" id="contacts">
   <div class="container-size">
     <div class="contacts-section__container">
       <div class="contacts-section__contacts">
