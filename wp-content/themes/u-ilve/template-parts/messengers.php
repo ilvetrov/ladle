@@ -10,7 +10,7 @@ class="
     <?php echo (@$args['without_adaptation'] ? 'without-adaptation' : ''); ?>
   "
   >
-    <a href="https://t.me/" target="_blank"
+    <a href="https://t.me/Ruslan040590" target="_blank"
     class="
       messengers__link click-extender click-extender_small
     "
