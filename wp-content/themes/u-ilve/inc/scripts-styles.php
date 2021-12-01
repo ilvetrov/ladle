@@ -1,7 +1,7 @@
 <?php
 
 if (!defined('THEME_VERSION')) {
-	define('THEME_VERSION', '1.1.4');
+	define('THEME_VERSION', '1.1.5');
 }
 
 function u_ilve_scripts() {
