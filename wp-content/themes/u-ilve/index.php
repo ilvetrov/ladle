@@ -330,10 +330,10 @@ get_header();
 					];
 					?>
 					<div class="about-benefits__benefits">
-						<div class="adaptive-gallery our-benefit-shadow our-benefit-shadow_mobile js-adaptive-gallery" data-current-item="0" >
-							<div class="adaptive-gallery__wrap js-adaptive-gallery-wrap">
+						<div class="adaptive-gallery adaptive-gallery_grid our-benefit-shadow our-benefit-shadow_mobile js-adaptive-gallery" data-current-item="0" >
+							<div class="adaptive-gallery__wrap adaptive-gallery__wrap_grid js-adaptive-gallery-wrap">
 								<?php foreach ($about_us_benefits as $benefit): ?>
-									<div class="adaptive-gallery__item js-adaptive-gallery-item">
+									<div class="adaptive-gallery__item adaptive-gallery__item_grid js-adaptive-gallery-item">
 										<div class="our-benefit our-benefit-shadow our-benefit-shadow_desktop about-us__benefit">
 											<div class="our-benefit__icon">
 												<img <?php img_async_src($benefit['icon']); ?> alt="">
@@ -401,7 +401,7 @@ get_header();
 						'post_type' => 'technique'
 					]);
 					?>
-					<div class="adaptive-gallery js-adaptive-gallery">
+					<div class="adaptive-gallery adaptive-gallery_center js-adaptive-gallery">
 						<div class="adaptive-gallery__wrap js-adaptive-gallery-wrap">
 							<?php foreach ($our_technique as $technique): ?>
 								<div class="adaptive-gallery__item js-adaptive-gallery-item">

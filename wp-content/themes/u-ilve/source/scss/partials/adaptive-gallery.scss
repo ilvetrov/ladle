@@ -1,41 +1,46 @@
 .adaptive-gallery {
   position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: max-content;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  @media (max-width: 1330px) {
+    max-width: 24.375rem;
+  }
+  @media (max-width: 425px) {
+    max-width: 21.25rem;
+  }
 
   &__wrap {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
     align-items: flex-start;
     transition: transform .3s ease-in-out;
 
-    &_row {
-      flex-wrap: nowrap;
-    }
-
-    @media (max-width: 1330px) {
-      flex-wrap: nowrap;
-      justify-content: flex-start;
-      max-width: 24.375rem;
-
-      &_row {
-        max-width: none;
+    &_grid {
+      flex-wrap: wrap;
+  
+      @media (min-width: 1331px) {
+        width: calc(100% + .9375rem);
+        margin-right: -0.9375rem;
+      }
+      @media (max-width: 1330px) {
+        flex-wrap: nowrap;
       }
     }
-    @media (max-width: 425px) {
-      max-width: 21.25rem;
 
-      &_row {
-        max-width: none;
-      }
-    }
   }
   &__item {
     display: inline-block;
-    margin-bottom: .9375rem;
-
-    &_row {
-      margin-bottom: 0;
-      margin-right: .93rem;
+    margin-right: .9375rem;
+    
+    &_grid {
+      margin-bottom: .9375rem;
     }
 
     @media (max-width: 1330px) {
@@ -66,14 +71,6 @@
       top: 28%;
       transform: none;
     }
-    
-    @media (min-width: 1331px) {
-      display: none;
-
-      &_all-screens {
-        display: flex;
-      }
-    }
   }
   &__button {
     pointer-events: all;
@@ -84,11 +81,27 @@
       pointer-events: none;
     }
   }
-
-  @media (max-width: 1330px) {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: max-content;
-    overflow: hidden;
+  
+  @media (min-width: 1331px) {
+    &_grid {
+      overflow: visible;
+    }
+    &_grid & {
+      &__buttons {
+        display: none;
+      }
+    }
+    &_center & {
+      &__wrap {
+        justify-content: center;
+      }
+      &__item {
+        margin-right: 1.125rem;
+  
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
   }
 }

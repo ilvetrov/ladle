@@ -8,12 +8,24 @@ for (let galleryIteration = 0; galleryIteration < galleries.length; galleryItera
   const nextButton = gallery.getElementsByClassName('js-adaptive-gallery-next')[0];
 
   function updateValues() {
+    if (wrap.offsetWidth <= gallery.offsetWidth) {
+      [prevButton, nextButton].forEach(button => button.classList.add('hidden'));
+      return;
+    } else {
+      [prevButton, nextButton].forEach(button => button.classList.remove('hidden'));
+    }
+    
+    const galleryWidth = gallery.getBoundingClientRect().width;
+
     if (getCurrentPosition(gallery) === 0) {
       prevButton.classList.add('hidden');
     } else {
       prevButton.classList.remove('hidden');
     }
-    if (getCurrentPosition(gallery) >= items.length - 1) {
+    if (
+      getCurrentPosition(gallery) >= items.length - 1
+      || getCapacityPosition(getCurrentPosition(gallery), galleryWidth, items, getCurrentPosition(gallery)) === (items.length - 1)
+    ) {
       nextButton.classList.add('hidden');
     } else {
       nextButton.classList.remove('hidden');
@@ -33,7 +45,9 @@ for (let galleryIteration = 0; galleryIteration < galleries.length; galleryItera
   updateValues();
   
   nextButton.addEventListener('click', function() {
-    if (getCurrentPosition(gallery) < items.length - 1) {
+    if (
+      getCurrentPosition(gallery) < items.length - 1
+    ) {
       gallery.setAttribute('data-current-item', Number(gallery.getAttribute('data-current-item')) + 1);
     }
     updateValues();
@@ -46,6 +60,36 @@ for (let galleryIteration = 0; galleryIteration < galleries.length; galleryItera
   });
 
   window.addEventListener('resize-width', updateValues);
+}
+
+function getCapacityPosition(currentPosition, galleryWidth, items, testPosition) {
+  if (testPosition > items.length - 1) return testPosition - 1;
+  const testWidth = (
+    items[testPosition].getBoundingClientRect().width
+    + (
+      currentPosition === testPosition || currentPosition === 0
+        ? -(
+          currentPosition === 0
+            ? getElementsOffset(items[currentPosition], items[currentPosition + 1])
+            : getElementsOffset(items[currentPosition - 1], items[currentPosition])
+        )
+        : getElementsOffset(items[currentPosition - 1], items[currentPosition])
+    )
+  );
+  // debugger;
+  if (galleryWidth - testWidth == 0) {
+    return testPosition;
+  } else if (galleryWidth - testWidth < 0) {
+    return testPosition - 1;
+  } else {
+    return getCapacityPosition(currentPosition, galleryWidth - testWidth, items, testPosition + 1)
+  }
+}
+
+function getElementsOffset(item1, item2) {
+  const item1Pos = item1.getBoundingClientRect();
+  const item2Pos = item2.getBoundingClientRect();
+  return item2Pos.x - (item1Pos.x + item1Pos.width);
 }
 
 function getCurrentPosition(gallery) {
