@@ -1,7 +1,7 @@
 <div class="contact-pop-up pop-up hidden disabled" data-pop-up="<?php echo $args['pop_up_name']; ?>">
   <div class="contact-pop-up__wrap">
     <div class="contact-pop-up__content" data-pop-up-content>
-      <img <?php img_async_src('consultation-person.png'); ?> alt="Главный механик" class="contact-pop-up__photo">
+      <img <?php img_async_src('consultation-person.png'); ?> alt="Главный менеджер" class="contact-pop-up__photo">
       <div class="contact-pop-up__header">
         <div class="contact-pop-up__logo-wrap">
           <a href="/" class="logo click-extender">
@@ -31,11 +31,11 @@
           <div class="contact-pop-up__consultation-person">
             <div class="consultation-person-small">
               <div class="consultation-person-small__name">
-                Андрей Русланович
+                Виктория
               </div>
               <!-- /.consultation-person-small__name -->
               <div class="consultation-person-small__position">
-                Главный механик<br> автопарка «Ковш»
+                Главный менеджер<br> компании «Ковш»
               </div>
               <!-- /.consultation-person-small__position -->
             </div>

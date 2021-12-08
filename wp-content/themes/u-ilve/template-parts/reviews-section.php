@@ -36,6 +36,7 @@ require_once get_template_directory() . '/inc/remove-whitespaces.php';
           'date' => '05.12.21'
         ],
       ];
+      $reviews = carbon_get_cached_theme_option('reviews_list');
       ?>
       <div class="reviews-section__gallery">
         <div class="adaptive-gallery js-adaptive-gallery">

@@ -42,3 +42,8 @@ function carbon_get_cached_post_meta($id, $name, $container_id = '')
   }
   return $cached_post_options[$cache_name];
 }
+
+function echo_rich_text($text)
+{
+  echo htmlspecialchars_decode($text);
+}

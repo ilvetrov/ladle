@@ -14,14 +14,14 @@
         </div>
         <!-- /.consultation-section__desktop-static -->
         <div class="consultation-person consultation-section__person-block">
-          <img <?php img_async_src('consultation-person.png'); ?> alt="Главный механик" class="consultation-person__photo">
+          <img <?php img_async_src('consultation-person.png'); ?> alt="Главный менеджер" class="consultation-person__photo">
           <div class="consultation-person__name-block">
             <div class="consultation-person__name">
-              Андрей Русланович
+              Виктория
             </div>
             <!-- /.consultation-person__name -->
             <div class="consultation-person__position">
-              Главный механик<br> автопарка «Ковш»
+              Главный менеджер<br> компании «Ковш»
             </div>
             <!-- /.consultation-person__position -->
           </div>
@@ -32,7 +32,7 @@
           <div class="consultation-section__specialist-benefits">
             <div class="consultation-specialist-benefits">
               <div class="consultation-specialist-benefits__title">
-                Андрей Вам поможет:
+                Виктория Вам поможет:
               </div>
               <!-- /.consultation-specialist-benefits__title -->
               <div class="consultation-specialist-benefits__benefits">

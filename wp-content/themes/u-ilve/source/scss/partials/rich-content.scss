@@ -1,0 +1,11 @@
+.rich-content {
+  em {
+    @extend .accent;
+  }
+
+  &_semi {
+    strong {
+      @extend .semi-bold;
+    }
+  }
+}

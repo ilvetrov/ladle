@@ -5,6 +5,11 @@ function img_async_src(String $src, $scroll = true, $isBackground = false, $full
   echo get_img_async_src($src, $scroll, $isBackground, $fullPath, $manual);
 }
 
+function img_async_id($id, $scroll = true, $isBackground = false, $fullPath = true, $manual = false)
+{
+  echo get_img_async_src(wp_get_attachment_image_url($id, 'full'), $scroll, $isBackground, $fullPath, $manual);
+}
+
 function get_img_async_src(String $src, $scroll = true, $isBackground = false, $fullPath = false, $manual = false)
 {
   $outputSrc = get_output_src($src, $fullPath);

@@ -10,7 +10,7 @@ class="
     <?php echo (@$args['without_adaptation'] ? 'without-adaptation' : ''); ?>
   "
   >
-    <a href="https://t.me/Ruslan040590" target="_blank"
+    <a href="<?php echo telegram_link(); ?>" target="_blank"
     class="
       messengers__link click-extender click-extender_small
     "
@@ -33,7 +33,7 @@ class="
     <?php echo (@$args['without_adaptation'] ? 'without-adaptation' : ''); ?>
   "
   >
-    <a href="https://wa.me/79279353399" target="_blank"
+    <a href="<?php echo whatsapp_link(); ?>" target="_blank"
     class="
       messengers__link click-extender click-extender_small
     "
@@ -56,7 +56,7 @@ class="
     <?php echo (@$args['without_adaptation'] ? 'without-adaptation' : ''); ?>
   "
   >
-    <a href="viber://chat/?number=%279279353399""
+    <a href="<?php echo viber_link(); ?>"
     class="
       messengers__link click-extender click-extender_small
     "

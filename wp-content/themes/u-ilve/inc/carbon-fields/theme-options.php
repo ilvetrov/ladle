@@ -3,6 +3,19 @@
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
+function get_rich_help_text($without = [])
+{
+  return '
+  ' . (!@$without['bold'] ? 'Толстый шрифт в редакторе — толстый на сайте. ' : '') . '
+  <br>Курсив в редакторе — акцентный цвет на сайте.
+  <br><code>&amp;nbsp;</code> — неразрывный пробел.
+  <br><code>&lt;br&gt;</code> — символ переноса строки.
+  <br>Перенос строки из редактора не переносится на сайт — используйте символ.
+  <br><strong>• Копируйте символы любым способом — Вставляйте только через комбинацию <code>CTRL + SHIFT + C</code></strong>
+  <br>Или через Правый клик мыши → Вставить без форматирования (как обычный текст)
+  ';
+}
+
 add_action('carbon_fields_register_fields', 'crb_attach_theme_options');
 function crb_attach_theme_options()
 {
@@ -10,6 +23,18 @@ function crb_attach_theme_options()
   ->set_icon('dashicons-admin-site')
   ->set_page_menu_position(21)
   ->add_tab('Общие', [
+    Field::make('text', 'site_phone', 'Номер телефона')
+      ->set_required()
+      ->set_help_text('Пишите номер только в таком стиле: <code>+7 (123) 456-78-90</code>'),
+    Field::make('text', 'telegram_link', 'Телеграмм ссылка')
+      ->set_required()
+      ->set_help_text('Ссылка вида: <code>https://t.me/account_username</code>'),
+    Field::make('text', 'whatsapp_link', 'WhatsApp ссылка')
+      ->set_help_text('Если не задано, то будет сформировано из Номера телефона.
+      <br> Ссылка вида: <code>https://wa.me/71234567890</code>'),
+    Field::make('text', 'viber_link', 'Viber ссылка')
+      ->set_help_text('Если не задано, то будет сформировано из Номера телефона.
+      <br> Ссылка вида: <code>viber://chat/?number=%271234567890</code>'),
     Field::make('text', 'lead_recipients', 'Получатели заявок')
       ->set_help_text('Адрес Email, на который будут приходить заявки. Можно указать несколько через запятую.')
   ])
@@ -29,7 +54,7 @@ function crb_attach_theme_options()
     ])
     ->add_fields([
       Field::make('html', 'question_html', 'Описание секции')
-        ->set_html('<h2>Общие настройки</h2>'),
+        ->set_html('<h2><strong> • Общие настройки</strong></h2>'),
       Field::make('text', 'question', 'Вопрос')
         ->set_required(),
       Field::make('text', 'descr', 'Уточнение'),
@@ -46,7 +71,7 @@ function crb_attach_theme_options()
 
       // Select
       Field::make('html', 'select_html', 'Описание типа')
-        ->set_html('<h2>Тип «Выбрать ответ»</h2>')
+        ->set_html('<h2><strong> • Тип «Выбрать ответ»</strong></h2>')
         ->set_conditional_logic([
           [
             'field' => 'type',
@@ -82,7 +107,7 @@ function crb_attach_theme_options()
       
       // Range
       Field::make('html', 'range_html', 'Описание типа')
-        ->set_html('<h2>Тип «Ползунок»</h2>')
+        ->set_html('<h2><strong> • Тип «Ползунок»</strong></h2>')
         ->set_conditional_logic([
           [
             'field' => 'type',
@@ -152,7 +177,7 @@ function crb_attach_theme_options()
       
       // Text field
       Field::make('html', 'text_field_html', 'Описание типа')
-        ->set_html('<h2>Тип «Текстовое поле»</h2>')
+        ->set_html('<h2><strong> • Тип «Текстовое поле»</strong></h2>')
         ->set_conditional_logic([
           [
             'field' => 'type',
@@ -185,22 +210,105 @@ function crb_attach_theme_options()
           ->set_help_text('Например: <code>кг</code>, <code>л/с</code>, <code>куб.м</code>.<br>Необязательно.'),
         Field::make('text', 'id', 'ID')
           ->set_required()
-          ->set_help_text('
-          Уникальный идентификатор. Задайте один раз и не меняйте.
-          <br><strong>Правила создания:</strong>
-          <br>• Индентификатор должен быть на латинице (английские буквы).
-          <br>Например: <code>country</code>, <code>weight</code>, <code>strana</code>.
-          <br>• Вместо пробела должен быть знак _.
-          <br>Например: <code>engine_power</code>, <code>dvigat_moch</code>.
-          <br>• Не должен начинаться с цифры.
-          <br>Например: пишите <code>engine_3</code> вместо <code>3_engine</code>.
-          <br>• Может быть или на английском языке, или транслитом.
-          <br>Например: <code>country</code> или <code>strana</code> — всё хорошо.
-          <br>• Пишите маленькими буквами.
-          <br>Например: <code>metr</code> вместо <code>Metr</code>.
-          <br>• Не меняйте. Создали один раз — и оставьте так.
-          <br>Если поменяете, то характеристика слетит у всех спецтехники.
-          '),
+          ->set_help_text(get_rich_help_text()),
       ])
   ]);
+
+  Container::make('theme_options', 'Главная страница')
+    ->set_page_parent($main_options_container)
+    ->add_fields([
+      
+      Field::make('html', 'hello_section_html', 'Приветственная секция')
+        ->set_html('<h2><strong> • Приветственная секция</strong></h2>'),
+      Field::make('rich_text', 'hello_title', 'Заголовок')
+        ->set_required()
+        ->set_help_text(get_rich_help_text()),
+      Field::make('rich_text', 'hello_descr', 'Описание')
+        ->set_required()
+        ->set_help_text(get_rich_help_text()),
+      Field::make('text', 'hello_button_text', 'Текст акцентной кнопки')
+        ->set_required(),
+      Field::make('text', 'hello_button_link', 'Ссылка акцентной кнопки')
+        ->set_required(),
+      Field::make('text', 'hello_button_adva_text', 'Текст дополнительной кнопки')
+        ->set_required(),
+      Field::make('text', 'hello_button_adva_link', 'Ссылка дополнительной кнопки')
+        ->set_required(),
+      Field::make('rich_text', 'hello_benefit_text', 'Текст преимущества (на компьютере)')
+        ->set_help_text(get_rich_help_text()),
+      
+      Field::make('html', 'benefits_section_html', 'Секция преимуществ')
+        ->set_html('<h2><strong> • Секция преимуществ</strong></h2>'),
+      Field::make('rich_text', 'benefits_title', 'Заголовок')
+        ->set_required()
+        ->set_help_text(get_rich_help_text()),
+      Field::make('rich_text', 'benefits_descr', 'Описание')
+        ->set_required()
+        ->set_help_text(get_rich_help_text()),
+      Field::make('complex', 'benefits_list', 'Преимущества')
+        ->set_required()
+        ->setup_labels([
+          'plural_name' => 'преимущества',
+          'singular_name' => 'преимущество'
+        ])
+        ->add_fields([
+          Field::make('image', 'image', 'Картинка')
+            ->set_required(),
+          Field::make('rich_text', 'title', 'Заголовок')
+            ->set_required()
+            ->set_help_text(get_rich_help_text([
+              'bold' => true
+            ])),
+          Field::make('rich_text', 'descr', 'Описание')
+            ->set_required()
+            ->set_help_text(get_rich_help_text([
+              'bold' => true
+            ]))
+        ]),
+      
+      Field::make('html', 'about_us_section_html', 'Секция «О компании»')
+        ->set_html('<h2><strong> • Секция «О компании»</strong></h2>'),
+      Field::make('rich_text', 'about_us_title', 'Заголовок')
+        ->set_required()
+        ->set_help_text(get_rich_help_text()),
+      Field::make('rich_text', 'about_us_descr', 'Описание')
+        ->set_required()
+        ->set_help_text(get_rich_help_text()),
+      Field::make('rich_text', 'about_us_block_title', 'Заголовок блока об открытии')
+        ->set_required()
+        ->set_help_text(get_rich_help_text()),
+      Field::make('rich_text', 'about_us_block_text', 'Текст блока об открытии')
+        ->set_required()
+        ->set_help_text(get_rich_help_text()),
+      Field::make('media_gallery', 'about_us_gallery', 'Галерея')
+        ->set_help_text('Чтобы выбрать несколько, зажмите при клике кнопку CTRL.'),
+      
+      Field::make('html', 'reviews_section_html', 'Секция отзывов')
+        ->set_html('<h2><strong> • Секция отзывов</strong></h2>'),
+      Field::make('rich_text', 'reviews_title', 'Заголовок')
+        ->set_required()
+        ->set_help_text(get_rich_help_text()),
+      Field::make('rich_text', 'reviews_descr', 'Описание')
+        ->set_required()
+        ->set_help_text(get_rich_help_text()),
+      Field::make('complex', 'reviews_list', 'Описание')
+        ->set_required()
+        ->setup_labels([
+          'plural_name' => 'отзывы',
+          'singular_name' => 'отзыв'
+        ])
+        ->add_fields([
+          Field::make('text', 'title', 'Заголовок')
+            ->set_required(),
+          Field::make('text', 'video_link', 'Ссылка на YouTube')
+            ->set_required()
+            ->set_help_text('Только ссылка. Всё остальное подгрузится автоматически. Другие площадки не поддерживаются.'),
+          Field::make('date', 'date', 'Дата')
+            ->set_required()
+            ->set_storage_format('d.m.y')
+            ->set_input_format('d.m.y', 'd.m.y')
+            ->set_help_text('День.Месяц.Год'),
+        ]),
+      
+    ]);
 }

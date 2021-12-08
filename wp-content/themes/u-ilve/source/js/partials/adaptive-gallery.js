@@ -8,27 +8,26 @@ for (let galleryIteration = 0; galleryIteration < galleries.length; galleryItera
   const nextButton = gallery.getElementsByClassName('js-adaptive-gallery-next')[0];
 
   function updateValues() {
-    if (wrap.offsetWidth <= gallery.offsetWidth) {
+    if (wrap.offsetWidth <= gallery.offsetWidth + 20) {
       [prevButton, nextButton].forEach(button => button.classList.add('hidden'));
       return;
     } else {
       [prevButton, nextButton].forEach(button => button.classList.remove('hidden'));
     }
-    
     const galleryWidth = gallery.getBoundingClientRect().width;
 
     if (getCurrentPosition(gallery) === 0) {
-      prevButton.classList.add('hidden');
+      prevButton.classList.add('inactive');
     } else {
-      prevButton.classList.remove('hidden');
+      prevButton.classList.remove('inactive');
     }
     if (
       getCurrentPosition(gallery) >= items.length - 1
       || getCapacityPosition(getCurrentPosition(gallery), galleryWidth, items, getCurrentPosition(gallery)) === (items.length - 1)
     ) {
-      nextButton.classList.add('hidden');
+      nextButton.classList.add('inactive');
     } else {
-      nextButton.classList.remove('hidden');
+      nextButton.classList.remove('inactive');
     }
     wrap.style.transform = `translateX(-${
       getPosition(getCurrentItem(gallery, items), wrap)
@@ -76,7 +75,6 @@ function getCapacityPosition(currentPosition, galleryWidth, items, testPosition)
         : getElementsOffset(items[currentPosition - 1], items[currentPosition])
     )
   );
-  // debugger;
   if (galleryWidth - testWidth == 0) {
     return testPosition;
   } else if (galleryWidth - testWidth < 0) {

@@ -107,7 +107,7 @@
           <li class="contacts-benefits__item">
             <img <?php img_async_src('checked-arrow.png'); ?> alt="" class="contacts-benefits__icon">
             <div class="contacts-benefits__text">
-              Замена техники за 24 часа
+              Оперативная замена техники
             </div>
             <!-- /.contacts-benefits__text -->
           </li>

@@ -1,6 +1,7 @@
 <?php
 
 require_once get_template_directory() . '/inc/remove-whitespaces.php';
+require_once get_template_directory() . '/inc/prepare-phone.php';
 
 require_once get_template_directory() . '/inc/disable-defaults.php';
 require_once get_template_directory() . '/inc/init-setup.php';

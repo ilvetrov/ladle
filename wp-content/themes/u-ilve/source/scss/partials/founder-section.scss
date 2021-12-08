@@ -33,7 +33,7 @@
     }
   }
   &__person-wrap {
-    transform: translateX(5.63rem);
+    transform: translateX(4rem) translateY(1rem);
 
     @media (max-width: 1330px) {
       transform: none;
@@ -101,9 +101,14 @@
     z-index: 2;
   }
   &__gallery-photo {
+    display: block;
     border-radius: .625rem;
     box-shadow: 0 .3125rem .3125rem rgba($color: #000, $alpha: .1);
     margin-right: .75rem;
+    width: 230px;
+    height: 160px;
+    position: relative;
+    overflow: hidden;
 
     &.last {
       margin-right: 0;

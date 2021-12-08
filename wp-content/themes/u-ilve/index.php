@@ -32,8 +32,8 @@ get_header();
 												<img <?php img_async_src('a-clock.png'); ?> alt="Часы" class="hello-tractor-message__clock-icon">
 											</div>
 											<!-- /.hello-tractor-message__background-clock -->
-											<div class="hello-tractor-message__content">
-												При поломке заменим технику <span class="semi-bold">за <span class="accent">24 часа</span></span>
+											<div class="hello-tractor-message__content rich-content rich-content_semi">
+												<?php echo_rich_text(carbon_get_cached_theme_option('hello_benefit_text')); ?>
 											</div>
 											<!-- /.hello-tractor-message__content -->
 										</div>
@@ -57,12 +57,12 @@ get_header();
 				<div class="hello-section__container-wrap">
 					<div class="container-size">
 						<div class="hello-section__container">
-							<h1 class="hello-section__title"><strong>Срочная <span class="accent">аренда спецтехники</span></strong> под Ваши задачи с доставкой до объекта</h1>
+							<h1 class="hello-section__title rich-content"><?php echo_rich_text(carbon_get_cached_theme_option('hello_title')); ?></h1>
 							<div class="hello-section__descr">
-								Вы получите обслуженную, укоплектованную и заправленную технику на Ваш объект с квалифицированным водителем
+								<?php echo_rich_text(carbon_get_cached_theme_option('hello_descr')); ?>
 							</div>
 							<!-- /.hello-section__descr -->
-							<a href="/#calc" class="big-button big-button_accent not-link-style hello-section__accent-button flare-parent">
+							<a href="<?php echo carbon_get_cached_theme_option('hello_button_link'); ?>" class="big-button big-button_accent not-link-style hello-section__accent-button flare-parent">
 								<div class="flare">
 									<div class="flare__wrap">
 										<div class="flare__line"></div>
@@ -70,10 +70,10 @@ get_header();
 									<!-- /.flare__wrap -->
 								</div>
 								<!-- /.flare -->
-								<div class="big-button__text flare-neighbor">Получить подбор спецтехники <img <?php img_async_src('right-arrow.png'); ?> alt="Стрелка вперёд" class="big-button__arrow big-button__arrow_too-big-for-mobile"></div>
+								<div class="big-button__text flare-neighbor"><?php echo carbon_get_cached_theme_option('hello_button_text'); ?> <img <?php img_async_src('right-arrow.png'); ?> alt="Стрелка вперёд" class="big-button__arrow big-button__arrow_too-big-for-mobile"></div>
 							</a>
 							<!-- /.big-button -->
-							<a href="/#catalog" class="big-button not-link-style big-button_wide"><div class="big-button__text">Перейти в каталог</div></a>
+							<a href="<?php echo carbon_get_cached_theme_option('hello_button_adva_link'); ?>" class="big-button not-link-style big-button_wide"><div class="big-button__text"><?php echo carbon_get_cached_theme_option('hello_button_adva_text'); ?></div></a>
 							<!-- /.big-button -->
 						</div>
 						<!-- /.hello-section__container -->
@@ -117,11 +117,11 @@ get_header();
 									<div class="quiz-person">
 										<div class="quiz-person__left-side">
 											<div class="quiz-person__position">
-												Главный механик
+												Менеджер
 											</div>
 											<!-- /.quiz-person__position -->
 											<div class="quiz-person__name">
-												Андрей Андреевич
+												Виктория
 											</div>
 											<!-- /.quiz-person__name -->
 											<div class="quiz-person__descr">
@@ -282,52 +282,21 @@ get_header();
 			<div class="container-size">
 				<div class="about-benefits__container">
 					<div class="about-benefits__title">
-						<h2 class="section-title section-title_center">
-							<strong>Благодаря опыту и выполнению<br> уже <span class="accent">более 2000 заказов,</span></strong> мы точно знаем,<br> какой сервис необходим нашим клиентам
+						<h2 class="section-title section-title_center rich-content">
+							<?php echo_rich_text(carbon_get_cached_theme_option('benefits_title')); ?>
 						</h2>
 						<!-- /.section-title -->
 					</div>
 					<!-- /.about-benefits__title -->
 					<div class="about-benefits__descr">
-						<div class="section-descr section-descr_center">
-							Вы получаете ответственный и индивидуальный подход к Вашему заказу
+						<div class="section-descr section-descr_center rich-content">
+							<?php echo_rich_text(carbon_get_cached_theme_option('benefits_descr')); ?>
 						</div>
 						<!-- /.section-descr -->
 					</div>
 					<!-- /.about-benefits__descr -->
 					<?php
-					$about_us_benefits = [
-						[
-							'icon' => 'new-technique.png',
-							'title' => '<span class="accent">Новая техника</span><br> на Вашем объекте',
-							'descr' => 'Перед доставкой до объекта<br> техника обслуживается, укоплектовывается и заправляется'
-						],
-						[
-							'icon' => 'fast-delivery.png',
-							'title' => '<span class="accent">Быстрая доставка</span><br> в день обращения',
-							'descr' => 'А так же бесплатная замена спецтехники в течении 24 часов, при поломке или неисправности'
-						],
-						[
-							'icon' => 'professionals.png',
-							'title' => '<span class="accent">Профессиональный экипаж</span><br> с опытом и квалификацией',
-							'descr' => 'Каждые 2 месяца проводим переаттестацию наших водителей, с повышением квалификации'
-						],
-						[
-							'icon' => 'free-consultation.png',
-							'title' => '<span class="accent">Бесплатный подбор</span><br> и консультация',
-							'descr' => 'Вы можете обратиться к нам и мы бесплатно подберем, рассчитаем и прокконсультируем'
-						],
-						[
-							'icon' => 'all-official.png',
-							'title' => '<span class="accent">Официальный договор</span><br> и закрывающие документы',
-							'descr' => 'Мы официальная компания, которая работает по договору с соблюдением всех обязанностей'
-						],
-						[
-							'icon' => 'good-price.png',
-							'title' => '<span class="accent">Приятная цена</span><br> и партнерские условия',
-							'descr' => 'Цена не изменяется в течении аренды, а так же даём скидки, при постоянном обращении'
-						],
-					];
+					$about_us_benefits = carbon_get_cached_theme_option('benefits_list');
 					?>
 					<div class="about-benefits__benefits">
 						<div class="adaptive-gallery adaptive-gallery_grid our-benefit-shadow our-benefit-shadow_mobile js-adaptive-gallery" data-current-item="0" >
@@ -336,16 +305,16 @@ get_header();
 									<div class="adaptive-gallery__item adaptive-gallery__item_grid js-adaptive-gallery-item">
 										<div class="our-benefit our-benefit-shadow our-benefit-shadow_desktop about-us__benefit">
 											<div class="our-benefit__icon">
-												<img <?php img_async_src($benefit['icon']); ?> alt="">
+												<img <?php img_async_id($benefit['image']); ?> alt="">
 											</div>
 											<!-- /.our-benefit__icon -->
 											<div class="our-benefit__content">
-												<div class="our-benefit__title">
-													<?php echo $benefit['title']; ?>
+												<div class="our-benefit__title rich-content">
+													<?php echo_rich_text($benefit['title']); ?>
 												</div>
 												<!-- /.our-benefit__title -->
-												<div class="our-benefit__descr">
-													<?php echo $benefit['descr']; ?>
+												<div class="our-benefit__descr rich-content">
+													<?php echo_rich_text($benefit['descr']); ?>
 												</div>
 												<!-- /.our-benefit__descr -->
 											</div>
@@ -410,7 +379,7 @@ get_header();
 										<div class="technique-preview__wrap">
 											<div class="technique-preview__image-wrap">
 												<img
-													<?php img_async_src(wp_get_attachment_image_url(carbon_get_cached_post_meta($technique->ID, 'hello_image'), 'full'), true, false, true); ?>
+													<?php img_async_id(carbon_get_cached_post_meta($technique->ID, 'hello_image')); ?>
 													alt="<?php echo $technique->post_title; ?>"
 													class="technique-preview__image"
 												>
@@ -517,29 +486,29 @@ get_header();
 					</div>
 					<!-- /.founder-section__logo-background -->
 					<div class="founder-section__wrap">
-						<h2 class="section-title section-title_white founder-section__title">
-							<strong>Здравствуйте, я Виктор Викторович</strong>
+						<h2 class="section-title section-title_white founder-section__title rich-content">
+							<?php echo_rich_text(carbon_get_cached_theme_option('about_us_title')); ?>
 						</h2>
 						<!-- /.section-title -->
-						<div class="section-descr section-descr_white founder-section__descr">
-							Основатель компании “Ковш” по аренде<br class="hide-max-425"> собственной спецтехники в городе Уфа
+						<div class="section-descr section-descr_white founder-section__descr rich-content">
+							<?php echo_rich_text(carbon_get_cached_theme_option('about_us_descr')); ?>
 						</div>
 						<!-- /.section-descr -->
 						<div class="founder-section__about-block">
 							<div class="founder-section__person-background">
 								<div class="founder-section__person-wrap">
-									<img <?php img_async_src('founder.png'); ?> alt="Виктор Викторович — компания Ковш">
+									<img <?php img_async_src('founder-section-person.png'); ?> alt="Виктор Викторович — компания Ковш">
 								</div>
 								<!-- /.founder-section__person-wrap -->
 							</div>
 							<!-- /.founder-section__person-background -->
 							<div class="founder-about-company founder-section__text-about-us">
-								<div class="founder-about-title founder-about-title_inner founder-about-company__title">
-									<strong><span class="accent">В двух словах о том,</span> как мы решили</strong> открыть своё предприятие
+								<div class="founder-about-title founder-about-title_inner founder-about-company__title rich-content">
+									<?php echo_rich_text(carbon_get_cached_theme_option('about_us_block_title')); ?>
 								</div>
 								<!-- /.founder-about-title -->
-								<div class="founder-about-company__text">
-									Раньше мы были строительной компанией и часто встречались с проблемами аренды спецтехники. Спустя время, мы решили самостоятельно закупить спецтехнику для нашего предприятия. К нам начали обращаться с вопросом о том, что могли бы мы сдать технику в аренду. Первый клиент, второй, третий и мы поняли, что пора открывать свою компанию по аренде спецтехники в городе Уфа
+								<div class="founder-about-company__text rich-content">
+									<?php echo_rich_text(carbon_get_cached_theme_option('about_us_block_text')); ?>
 								</div>
 								<!-- /.founder-about-company__text -->
 							</div>
@@ -602,21 +571,15 @@ get_header();
 						</div>
 						<!-- /.founder-section__about-block -->
 						<?php
-						$photos = [
-							'example-photo.png',
-							'example-photo.png',
-							'example-photo.png',
-							'example-photo.png',
-							'example-photo.png',
-						];
+						$photos = carbon_get_cached_theme_option('about_us_gallery');
 						?>
 						<div class="founder-section__gallery">
 							<div class="not-gallery non-containerized-tech">
 								<?php foreach ($photos as $photo_order => $photo): ?>
 									<div class="not-gallery__item">
-										<div class="founder-section__gallery-photo <?php echo ($photo_order + 1 === count($photos) ? 'last' : ''); ?>">
-											<img <?php img_async_src($photo); ?> alt="">
-										</div>
+										<a href="<?php echo wp_get_attachment_image_url($photo, 'full'); ?>" target="_blank" class="founder-section__gallery-photo not-link-style <?php echo ($photo_order + 1 === count($photos) ? 'last' : ''); ?>">
+											<img <?php img_async_id($photo); ?> alt="" class="img-cover">
+										</a>
 										<!-- /.founder-section__gallery-photo -->
 									</div>
 									<!-- /.not-gallery__item -->
