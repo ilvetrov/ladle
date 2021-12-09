@@ -22,30 +22,6 @@ get_header();
 			<div class="hello-section__wrap">
 				<div class="section-backgrounds">
 					<div class="hello-tractor">
-						<div class="hello-tractor__wrap" style="--image-height:<?php echo get_img_size('tractor.png')[1]; ?>px;">
-							<div class="container-size">
-								<div class="hello-tractor__container dys-hello-tractor-container">
-									<div class="hello-tractor__message">
-										<div class="hello-tractor-message">
-											<div class="hello-tractor-message__background-shadow" <?php img_async_src('hello-tractor-message.png', true, true); ?>></div>
-											<div class="hello-tractor-message__background-clock">
-												<img <?php img_async_src('a-clock.png'); ?> alt="Часы" class="hello-tractor-message__clock-icon">
-											</div>
-											<!-- /.hello-tractor-message__background-clock -->
-											<div class="hello-tractor-message__content rich-content rich-content_semi">
-												<?php echo_rich_text(carbon_get_cached_theme_option('hello_benefit_text')); ?>
-											</div>
-											<!-- /.hello-tractor-message__content -->
-										</div>
-										<!-- /.hello-tractor-message -->
-									</div>
-									<!-- /.hello-tractor__message -->
-								</div>
-								<!-- /.hello-tractor__container -->
-							</div>
-							<!-- /.container-size -->
-						</div>
-						<!-- /.hello-tractor__wrap -->
 						<div class="hello-tractor__image-wrap dys-hello-tractor">
 							<img <?php img_async_src('tractor.png'); ?> alt="Трактор" class="hello-tractor__image">
 						</div>

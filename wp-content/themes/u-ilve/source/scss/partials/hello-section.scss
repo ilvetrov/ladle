@@ -19,7 +19,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      padding-bottom: 18rem;
+      padding-bottom: 16rem;
     }
     @media (max-width: 625px) {
       padding-top: 14.4vw;
@@ -87,7 +87,7 @@
   top: 2.875rem;
   left: 0;
   right: 0;
-  bottom: -7.7rem;
+  bottom: -3.7rem;
   width: 100%;
   display: flex;
   align-items: flex-end;
@@ -111,7 +111,7 @@
   }
   &__image-wrap {
     position: relative;
-    right: -7.3rem;
+    right: -3.3rem;
     pointer-events: none;
     user-select: none;
 
@@ -120,8 +120,8 @@
     }
     @media (max-width: 760px) {
       right: auto;
-      left: 5rem;
-      height: 23.81rem;
+      left: 2rem;
+      height: 18rem;
     }
   }
   &__image {
