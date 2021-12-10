@@ -1,4 +1,5 @@
 const { lookAtMeAnimation } = require("./look-at-me");
+const metrics = require("./metrics");
 const { smoothScrollToElement } = require("./smooth-scroll");
 
 const forms = document.getElementsByClassName('js-form');
@@ -47,7 +48,12 @@ function doFocusOnEmptyInput(form) {
 }
 
 function formConfirmation(form) {
-  return !doFocusOnEmptyInput(form);
+  if (doFocusOnEmptyInput(form)) {
+    return false;
+  } else {
+    if (form.hasAttribute('success-goal')) metrics.reachGoal(form.getAttribute('success-goal') + '-form');
+    return true;
+  }
 }
 
 function checkElementVisibility(element, offset = 0) {

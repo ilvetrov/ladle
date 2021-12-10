@@ -13,7 +13,7 @@
     </div>
     <!-- /.quiz-final__descr -->
   <?php endif; ?>
-  <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="POST" class="quiz-final__form js-form">
+  <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="POST" class="quiz-final__form js-form" success-goal="quiz-final">
     <?php if (carbon_get_cached_theme_option('quiz_final_has_name')): ?>
       <input type="text" placeholder="Ваше имя" name="name" class="text-field text-field_form quiz-final__input">
     <?php endif; ?>

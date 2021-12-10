@@ -79,7 +79,7 @@
             <!-- /.product-overview__descr -->
           <?php endif; ?>
           <hr class="product-overview__hr">
-          <form type="submit" action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="POST" class="product-form js-form">
+          <form type="submit" action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="POST" class="product-form js-form" success-goal="rent-order">
             <div class="product-form__title">
               Оставить заявку на аренду спецтехники
             </div>

@@ -129,7 +129,7 @@
         <div class="contacts-section__map">
           <div class="waiting-background waiting-background_light"></div>
           <div class="dynamic-tag-wrap">
-            <div data-dynamic-tag="<?php echo htmlspecialchars('<div class="bor"><div class="bor-2"><div class="bor-3"></div></div></div>'); ?>" data-dynamic-tag-when-scroll></div>
+            <div data-dynamic-tag="<?php echo htmlspecialchars(carbon_get_cached_theme_option('map_code')); ?>" data-dynamic-tag-when-scroll></div>
           </div>
           <!-- /.dynamic-tag-wrap -->
         </div>

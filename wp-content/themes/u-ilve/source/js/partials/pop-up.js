@@ -1,4 +1,5 @@
 const { blockScroll, unblockScroll } = require("./block-scroll");
+const metrics = require("./metrics");
 const checkThatCurrentElementExistsOutside = require("./outside-checker");
 
 const popUps = document.querySelectorAll('[data-pop-up]');
@@ -24,6 +25,7 @@ for (let i = 0; i < popUps.length; i++) {
         blockScroll();
         popUpButton.blur();
         showPopUp(popUp);
+        metrics.reachGoal(popUpName + '-pop-up');
         if (popUpNeedSetPositionToButton) {
           setPositionTo(popUpContent, popUpButton);
         }

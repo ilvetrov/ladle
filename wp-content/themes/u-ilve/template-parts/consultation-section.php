@@ -111,6 +111,7 @@
             'title_text' => 'Оставьте заявку',
             'descr_text' => 'На бесплатный подбор,<br> консультацию и скидку',
             'button_text' => 'Получить консультацию',
+            'success_goal' => 'consultation'
           ]); ?>
         </div>
         <!-- /.consultation-section__form -->

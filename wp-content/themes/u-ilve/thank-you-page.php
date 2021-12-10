@@ -33,7 +33,7 @@ get_header('', [
           </div>
           <!-- /.text-img-page__descr -->
           <div class="text-img-page__buttons">
-            <a href="https://www.instagram.com/kowsh.bery" class="big-button big-button_accent not-link-style text-img-page__accent-button flare-parent">
+            <a href="https://www.instagram.com/kowsh.bery" target="_blank" class="big-button big-button_accent not-link-style text-img-page__accent-button flare-parent" data-click-goal="instagram-link">
               <div class="flare">
                 <div class="flare__wrap">
                   <div class="flare__line"></div>

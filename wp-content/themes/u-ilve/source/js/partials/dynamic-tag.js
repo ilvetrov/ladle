@@ -38,6 +38,7 @@ for (let elementIteration = 0; elementIteration < elements.length; elementIterat
 }
 
 function replaceElementWithDynamicTag(element, whatReturn = false) {
+  if (!element.getAttribute('data-dynamic-tag')?.trim()) return;
   replaceElement(element, initNewElementAsReal(htmlStringToJs(element.getAttribute('data-dynamic-tag'))));
   return whatReturn;
 }

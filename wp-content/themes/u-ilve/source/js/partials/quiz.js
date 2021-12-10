@@ -1,4 +1,5 @@
 const { lookAtMeAnimation } = require("./look-at-me");
+const { reachGoalOnce } = require("./metrics");
 const { smoothScrollToElement } = require("./smooth-scroll");
 const { getWindowWidth } = require("./width-resize-event");
 
@@ -23,6 +24,7 @@ class Quiz {
     this.outputs = document.querySelectorAll(`[data-quiz-output="${this.name}"]`)
 
     this.toButtons = document.querySelectorAll(`[data-quiz-to][data-quiz-of="${this.name}"]`);
+    this.lastPosition = 0;
     this.currentPosition = 0;
     this.isInSwitching = false;
     this.initToButtons(this.toButtons);
@@ -48,16 +50,28 @@ class Quiz {
         }
         if (this.isInSwitching) return;
         this.isInSwitching = true;
+        this.lastPosition = this.currentPosition;
         this.currentPosition = toPosition;
         if (this.currentPosition >= this.blocksElements.length - 1) {
           this.dataToForm();
         }
-        QuizBlock.hideAll(this.name, toPosition).then(() => this.isInSwitching = false);
+        this.changeTo(toPosition).then(() => this.isInSwitching = false);
         if (verticalCheck()) {
           smoothScrollToElement(this.quizElement, 10);
         }
       });
     });
+  }
+
+  changeTo(toPosition) {
+    if (toPosition > this.lastPosition) {
+      if (toPosition === this.blocksElements.length - 1) {
+        reachGoalOnce(`quiz-position-final`);
+      } else {
+        reachGoalOnce(`quiz-position-${toPosition + 1}`);
+      }
+    }
+    return QuizBlock.hideAll(this.name, toPosition);
   }
 
   dataToForm() {

@@ -1,4 +1,11 @@
-<form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="POST" class="contact-form js-form <?php echo @$args['class_form']; ?>">
+<form
+  action="<?php echo esc_url(admin_url('admin-post.php')); ?>"
+  method="POST"
+  class="contact-form js-form <?php echo @$args['class_form']; ?>"
+  <?php if (@$args['success_goal'] || @$args['pop_up_name']): ?>
+    success-goal="<?php echo @$args['success_goal'] ?? $args['pop_up_name']; ?>"
+  <?php endif; ?>
+>
   <div class="contact-form__title <?php echo @$args['class_title']; ?>">
     <?php echo $args['title_text']; ?>
   </div>
