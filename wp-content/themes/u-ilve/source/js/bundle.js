@@ -1,4 +1,3 @@
-require('./partials/object-extended');
 require('./partials/width-resize-event');
 
 require('./partials/async-img');
