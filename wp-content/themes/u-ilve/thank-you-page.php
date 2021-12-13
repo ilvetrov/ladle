@@ -7,6 +7,10 @@ get_header('', [
   'without_top_level_buttons' => true
 ]);
 ?>
+<!-- Event snippet for Website traffic conversion page -->
+<script>
+  gtag('event', 'conversion', {'send_to': 'AW-10823913442/7_MUCIOinokDEOKfn6ko'});
+</script>
 
 <main class="site-main">
   <section class="text-img-page" <?php img_async_src('tractor-field.jpg', true, true); ?>>
