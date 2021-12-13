@@ -410,7 +410,7 @@ get_header();
 														Заказать
 													</button>
 													<!-- /.mini-button -->
-													<a href="/technique/<?php echo $technique->post_name; ?>" class="mini-button mini-button_secondary not-link-style technique-preview__button">
+													<a href="/products/<?php echo $technique->post_name; ?>/" class="mini-button mini-button_secondary not-link-style technique-preview__button">
 														Подробнее
 													</a>
 													<!-- /.mini-button -->
