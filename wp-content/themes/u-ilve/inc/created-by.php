@@ -24,7 +24,7 @@ function add_toolbar_items($admin_bar){
     'id' => 'instruction-link',
 		'parent' => 'created-by',
 		'title' => 'Инструкция к сайту ©Ковш',
-		'href'  => '/wp-admin/themes.php',
+		'href'  => 'https://docs.google.com/document/d/1GEumgCwTRQDZQdbhqWiBGE--MbWb4gzoM8HFGw_6Bc4/edit?usp=sharing',
 		'meta'  => [
       'target' => '_blank',
 		],
