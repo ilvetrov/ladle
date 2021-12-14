@@ -46,7 +46,7 @@ require_once get_template_directory() . '/inc/remove-whitespaces.php';
               $video_link = $review['video_link'];
               preg_match('/[\/=]([^\/=]+?)$/', $video_link, $video_id_raw);
               $video_id = @$video_id_raw[1];
-              $video_image = "https://i.ytimg.com/vi/$video_id/maxresdefault.jpg";
+              $video_image = "https://i.ytimg.com/vi/$video_id/hqdefault.jpg";
               ?>
               
               <div class="adaptive-gallery__item js-adaptive-gallery-item">
