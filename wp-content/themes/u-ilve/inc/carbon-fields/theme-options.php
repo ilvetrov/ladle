@@ -308,7 +308,7 @@ function crb_attach_theme_options()
       Field::make('rich_text', 'reviews_descr', 'Описание')
         ->set_required()
         ->set_help_text(get_rich_help_text()),
-      Field::make('complex', 'reviews_list', 'Описание')
+      Field::make('complex', 'reviews_list', 'Отзывы')
         ->set_required()
         ->setup_labels([
           'plural_name' => 'отзывы',
