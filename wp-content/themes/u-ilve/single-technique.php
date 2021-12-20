@@ -141,7 +141,7 @@
   <!-- /.product-overview -->
   <section class="product-info">
     <div class="container-size">
-      <div class="product-info__container">
+      <div class="product-info__container <?php echo get_the_content() ? '' : 'without-descr'; ?>">
         <div class="product-info__specifications product-info__block">
           <h2 class="product-info__title">
             Характеристики
