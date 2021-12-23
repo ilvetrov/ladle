@@ -345,13 +345,9 @@ function crb_attach_theme_options()
 
       Field::make('html', 'seo_section_html_title', 'Секция главного SEO текста')
         ->set_html('<h2><strong> • Секция главного SEO текста</strong></h2>'),
-      Field::make('rich_text', 'seo_section_title', 'Заголовок')
-        ->set_required()
-        ->set_help_text(get_rich_help_text())
-        ->set_default_value('Главный текст для SEO-оптимизации'),
       Field::make('rich_text', 'seo_section_text', 'Текст')
         ->set_required()
-        ->set_help_text(get_rich_help_text())
+        ->set_help_text('Не используйте "Заголовок 1".')
         ->set_default_value('Lorem ipsum, dolor sit amet consectetur adipisicing elit. At quas repellat nisi iusto velit necessitatibus quae ea molestiae fugit autem corporis illo, tenetur commodi veniam consectetur. Quod totam repellat facilis? Consequuntur provident quia quaerat laborum nobis nihil, ipsum iusto expedita quos laboriosam placeat dolor voluptatem libero sed natus distinctio incidunt omnis earum illo. Quia dolor veniam ex. Provident, laboriosam ratione! Ad veritatis earum doloremque eos doloribus reprehenderit atque, architecto iste soluta praesentium! Perspiciatis ipsum voluptatem sapiente nesciunt quasi ab accusantium suscipit sint ut, voluptas numquam impedit est minus consectetur maxime? Nobis, voluptatem adipisci laboriosam sequi ratione porro odit dicta molestiae tempora quos repellendus itaque quae ad aperiam saepe temporibus tenetur totam fugit aspernatur enim, eaque debitis consectetur magnam! Praesentium, molestias!'),
 
     ]);

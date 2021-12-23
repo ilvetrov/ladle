@@ -34,10 +34,8 @@ function crb_register_technique_options()
       Field::make('text', 'separate_name', 'Название отдельно')
         ->set_help_text('Например: <code>КС-55713-5К-3</code>.<br> Нужно для красивой карточки товара на главной.'),
         
-      Field::make('rich_text', 'seo_section_local_title', 'Заголовок секции SEO-текста')
-        ->set_help_text('Это заголовок секции, а НЕ текст для тега &lt;title&gt;. Текст для тега &lt;title&gt; настраивается в блоке "Yoast SEO". <br>Если оставить пустым, но заполнить Текст секции, то не выводится. <hr>' . get_rich_help_text()),
       Field::make('rich_text', 'seo_section_local_text', 'Текст секции SEO-текста')
-        ->set_help_text('Это текст секции, а НЕ описание в теге &lt;meta&gt;. Текст для описания через тег &lt;meta&gt; настраивается в блоке "Yoast SEO". <br>Если оставить пустым, то выводится заголовок и текст с главной страницы. <hr>' . get_rich_help_text()),
+        ->set_help_text('Это текст секции, а НЕ описание в теге &lt;meta&gt;. Текст для описания через тег &lt;meta&gt; настраивается в блоке "Yoast SEO". <br>Если оставить пустым, то выводится текст с главной страницы. <hr>Не используйте "Заголовок 1".'),
         
       Field::make('html', 'specifications_html', 'Характеристики')
         ->set_html('<h3>Характеристики</h3>Добавить новые можно <a href="/wp-admin/admin.php?page=crb_carbon_fields_container.php" target="_blank">здесь</a>.'),
