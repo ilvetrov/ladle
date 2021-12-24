@@ -29,6 +29,7 @@
 	<meta name="msapplication-TileColor" content="#ff4f00">
 	<meta name="msapplication-config" content="/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
+	<meta name="yandex-verification" content="7e6ce80b85aedb48" />
 
 	<?php get_template_part('template-parts/metrics'); ?>
 
