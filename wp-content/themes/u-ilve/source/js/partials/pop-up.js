@@ -16,6 +16,7 @@ for (let i = 0; i < popUps.length; i++) {
   const popUpActiveAfterOutClick = popUp.hasAttribute('data-pop-up-active-after-out-click');
   const popUpNeedSetPositionToButton = popUp.hasAttribute('data-pop-up-set-position-to-button');
   const closeAnywhere = popUp.hasAttribute('data-pop-up-close-anywhere');
+  const closeOnAnchor = popUp.hasAttribute('data-pop-up-close-on-anchor');
   const eventName = popUp.getAttribute('data-pop-up-event');
   
   for (let buttonIteration = 0; buttonIteration < popUpButtons.length; buttonIteration++) {
@@ -77,6 +78,16 @@ for (let i = 0; i < popUps.length; i++) {
   if (closeAnywhere) {
     popUp.addEventListener('click', function() {
       if (!popUp.classList.contains('hidden') && popUp.classList.contains('ready-to-close')) {
+        hidePopUp(popUp);
+      }
+    });
+  }
+  if (closeOnAnchor) {
+    popUp.addEventListener('click', function(event) {
+      if (
+        event.target?.tagName === 'A'
+        && !!event.target.getAttribute('href').match(/^\/?#/)
+      ) {
         hidePopUp(popUp);
       }
     });

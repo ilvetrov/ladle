@@ -1,4 +1,4 @@
-<div class="mobile-menu pop-up hidden disabled" data-pop-up="mobile-menu">
+<div class="mobile-menu pop-up hidden disabled" data-pop-up="mobile-menu" data-pop-up-close-on-anchor>
   <div class="container-size">
     <div class="mobile-menu__container">
       <div class="mobile-menu__header">
